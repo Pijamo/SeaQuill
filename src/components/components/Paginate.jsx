@@ -16,9 +16,9 @@ const Paginate = ({ postsPerPage, totalPosts, paginate, currentPage }) => {
                     <li><Link to="#" onClick={() => paginate(currentPage - 1)}><i className="fas fa-angle-double-left" /></Link></li>
                     {pageNumbers.map(number => (
                     <li key={number}>
-                        <a onClick={() => paginate(number)} href='!#/shop-left-sidebar' className='page-link active'>
-                        {number}
-                        </a>
+                        <Link to="#" onClick={() => paginate(number)} className='page-link active'>
+                            {number}
+                        </Link>
                     </li>
                 ))}
                     <li><Link to="#" onClick={() => paginate(currentPage + 1)}><i className="fas fa-angle-double-right" /></Link></li>
