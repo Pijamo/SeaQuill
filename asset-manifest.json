@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/SeaQuill/static/js/main.255881ef.chunk.js",
+    "main.js.map": "/SeaQuill/static/js/main.255881ef.chunk.js.map",
+    "runtime-main.js": "/SeaQuill/static/js/runtime-main.858c1082.js",
+    "runtime-main.js.map": "/SeaQuill/static/js/runtime-main.858c1082.js.map",
+    "static/js/2.eba42a2c.chunk.js": "/SeaQuill/static/js/2.eba42a2c.chunk.js",
+    "static/js/2.eba42a2c.chunk.js.map": "/SeaQuill/static/js/2.eba42a2c.chunk.js.map",
+    "index.html": "/SeaQuill/index.html",
+    "precache-manifest.d10023968b9586df408dc5f2b66a1116.js": "/SeaQuill/precache-manifest.d10023968b9586df408dc5f2b66a1116.js",
+    "service-worker.js": "/SeaQuill/service-worker.js",
+    "static/js/2.eba42a2c.chunk.js.LICENSE.txt": "/SeaQuill/static/js/2.eba42a2c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.858c1082.js",
+    "static/js/2.eba42a2c.chunk.js",
+    "static/js/main.255881ef.chunk.js"
+  ]
+}
