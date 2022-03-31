@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Social from '../section-components/social';
+import LogoURL from '../../assets/img/Logo_dark.svg'
 
 class Navbar extends Component {
 	
@@ -63,7 +64,7 @@ class Navbar extends Component {
 					<div className="col">
 					<div className="site-logo-wrap">
 						<div className="site-logo go-top">
-						<Link to="/"><img src={publicUrl+"assets/img/logo_dark.png"} alt="Logo" style={{height:"50px"}}/></Link>
+						<Link to="/"><img src={LogoURL} alt="Logo" style={{height:"50px"}}/></Link>
 						</div>f
 						<div className="get-support clearfix d-none">
 						<div className="get-support-icon">

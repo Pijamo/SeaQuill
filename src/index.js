@@ -23,12 +23,6 @@ import ProdductDetails from './components/PropertyDetails';
 import ShopLeftSidebar from './components/shop-left-sidebar';
 import ShopRightSidebar from './components/shop-right-sidebar';
 
-import BlogGrid from './components/blog-grid';
-import BlogLeftSidebar from './components/blog-left-sidebar';
-import BlogRightSidebar from './components/blog-right-sidebar';
-import Blog from './components/blog';
-
-import BlogDetails from './components/blog-details';
 import Contact from './components/contact';
 import Cart from './components/cart';
 import Checkout from './components/checkout';
@@ -68,14 +62,7 @@ class Root extends Component {
                         <Route path="/shop-right-sidebar" component={ ShopRightSidebar } />
 
                         <Route path="/property/:id" component={ ProdductDetails } />
-                        {/* blog */}
-                        <Route path="/blog-grid" component={ BlogGrid } />
-                        <Route path="/blog-left-sidebar" component={ BlogLeftSidebar } />
-                        <Route path="/blog-right-sidebar" component={ BlogRightSidebar } />
-                        <Route path="/blog" component={ Blog } />
 
-
-                        <Route path="/blog-details" component={ BlogDetails } />
                         <Route path="/contact" component={ Contact } />
                         <Route path="/cart" component={ Cart } />
                         <Route path="/checkout" component={ Checkout } />

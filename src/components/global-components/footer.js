@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Social from '../section-components/social';
 import Copyright from './copyright';
+import LogoURL from '../../assets/img/Logo_dark.svg'
 
 class Footer_v1 extends Component {
 
@@ -51,7 +52,7 @@ class Footer_v1 extends Component {
 				          <div className="footer-widget footer-about-widget">
 				            <div className="footer-logo">
 				              <div className="site-logo">
-				                <img src={publicUrl+"assets/img/logo_dark.png"} alt="Logo" style={{height:"50px"}}/>
+				                <img src={LogoURL} alt="Logo" style={{height:"50px"}}/>
 				              </div>
 				            </div>
 				            <p>Lorem Ipsum is simply dummy text of the and typesetting industry. Lorem Ipsum is dummy text of the printing.</p>
