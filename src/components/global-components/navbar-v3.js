@@ -65,7 +65,7 @@ class Navbar extends Component {
 					<div className="site-logo-wrap">
 						<div className="site-logo go-top">
 						<Link to="/"><img src={LogoURL} alt="Logo" style={{height:"50px"}}/></Link>
-						</div>f
+						</div>
 						<div className="get-support clearfix d-none">
 						<div className="get-support-icon">
 							<i className="icon-call" />
