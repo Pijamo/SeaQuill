@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6972ed830212f205922db055d88a9bde",
+    "revision": "12e3f992c8f4392fe2301f3a86586047",
     "url": "/SeaQuill/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/SeaQuill/static/js/2.0ac72dbd.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "012c8fc155afe676c74c",
-    "url": "/SeaQuill/static/js/main.7ab90798.chunk.js"
+    "revision": "9a7cda1d21b7df772749",
+    "url": "/SeaQuill/static/js/main.74fc9788.chunk.js"
   },
   {
     "revision": "47619a38325ef1474ebf",
