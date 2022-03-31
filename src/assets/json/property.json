@@ -1,0 +1,1036 @@
+{
+  "status": 200,
+  "data": {
+    "property_detail": {
+      "photos": [
+        {
+          "tags": [
+            { "label": "exterior", "probability": 0.99970322847366 },
+            { "label": "exterior", "probability": 0.99858701229095 },
+            { "label": "exterior", "probability": 0.67618197202682 },
+            { "label": "unknown", "probability": 0.99660158157349 },
+            { "label": "unknown", "probability": 0.99245488643646 }
+          ],
+          "href": "https://ap.rdcpix.com/cd3db6e3676aa3ffdf07c5c6706a88a3l-m944577982x-w1024_h768.jpg",
+          "type": "realtordotcom_mls_listing_image",
+          "description": ""
+        },
+        {
+          "tags": [
+            { "label": "exterior", "probability": 0.99994671344757 },
+            { "label": "exterior", "probability": 0.97878801822662 },
+            { "label": "exterior", "probability": 0.99648785591125 },
+            { "label": "unknown", "probability": 0.6061823964119 },
+            { "label": "unknown", "probability": 0.72249096632004 }
+          ],
+          "href": "https://ap.rdcpix.com/cd3db6e3676aa3ffdf07c5c6706a88a3l-m875852798x-w1024_h768.jpg",
+          "type": "realtordotcom_mls_listing_image",
+          "description": ""
+        },
+        {
+          "tags": [
+            { "label": "exterior", "probability": 0.99319118261337 },
+            { "label": "exterior", "probability": 0.97805404663086 },
+            { "label": "unknown", "probability": 0.99016600847244 },
+            { "label": "unknown", "probability": 0.79355376958847 }
+          ],
+          "href": "https://ap.rdcpix.com/cd3db6e3676aa3ffdf07c5c6706a88a3l-m3758574153x-w1024_h768.jpg",
+          "type": "realtordotcom_mls_listing_image",
+          "description": ""
+        },
+        {
+          "tags": [{ "label": "living_room", "probability": 0.9996417760849 }],
+          "href": "https://ap.rdcpix.com/cd3db6e3676aa3ffdf07c5c6706a88a3l-m1050274689x-w1024_h768.jpg",
+          "type": "realtordotcom_mls_listing_image",
+          "description": ""
+        },
+        {
+          "tags": [{ "label": "living_room", "probability": 0.91337424516678 }],
+          "href": "https://ap.rdcpix.com/cd3db6e3676aa3ffdf07c5c6706a88a3l-m812134837x-w1024_h768.jpg",
+          "type": "realtordotcom_mls_listing_image",
+          "description": ""
+        },
+        {
+          "tags": [{ "label": "dining_room", "probability": 1 }],
+          "href": "https://ap.rdcpix.com/cd3db6e3676aa3ffdf07c5c6706a88a3l-m3040265797x-w1024_h768.jpg",
+          "type": "realtordotcom_mls_listing_image",
+          "description": ""
+        },
+        {
+          "tags": [{ "label": "kitchen", "probability": 0.99999523162842 }],
+          "href": "https://ap.rdcpix.com/cd3db6e3676aa3ffdf07c5c6706a88a3l-m3653842063x-w1024_h768.jpg",
+          "type": "realtordotcom_mls_listing_image",
+          "description": ""
+        },
+        {
+          "tags": [{ "label": "bathroom", "probability": 0.99999964237213 }],
+          "href": "https://ap.rdcpix.com/cd3db6e3676aa3ffdf07c5c6706a88a3l-m2811109321x-w1024_h768.jpg",
+          "type": "realtordotcom_mls_listing_image",
+          "description": ""
+        },
+        {
+          "tags": [{ "label": "living_room", "probability": 0.99989104270935 }],
+          "href": "https://ap.rdcpix.com/cd3db6e3676aa3ffdf07c5c6706a88a3l-m1495984215x-w1024_h768.jpg",
+          "type": "realtordotcom_mls_listing_image",
+          "description": ""
+        },
+        {
+          "tags": [{ "label": "unknown", "probability": 0.99994134902954 }],
+          "href": "https://ap.rdcpix.com/cd3db6e3676aa3ffdf07c5c6706a88a3l-m3372758138x-w1024_h768.jpg",
+          "type": "realtordotcom_mls_listing_image",
+          "description": ""
+        },
+        {
+          "tags": [{ "label": "unknown", "probability": 0.46749219298363 }],
+          "href": "https://ap.rdcpix.com/cd3db6e3676aa3ffdf07c5c6706a88a3l-m703728192x-w1024_h768.jpg",
+          "type": "realtordotcom_mls_listing_image",
+          "description": ""
+        },
+        {
+          "tags": [{ "label": "unknown", "probability": 0.9744781255722 }],
+          "href": "https://ap.rdcpix.com/cd3db6e3676aa3ffdf07c5c6706a88a3l-m1811224519x-w1024_h768.jpg",
+          "type": "realtordotcom_mls_listing_image",
+          "description": ""
+        },
+        {
+          "tags": [{ "label": "bedroom", "probability": 0.99963247776031 }],
+          "href": "https://ap.rdcpix.com/cd3db6e3676aa3ffdf07c5c6706a88a3l-m340493976x-w1024_h768.jpg",
+          "type": "realtordotcom_mls_listing_image",
+          "description": ""
+        },
+        {
+          "tags": [{ "label": "bathroom", "probability": 0.99303621053696 }],
+          "href": "https://ap.rdcpix.com/cd3db6e3676aa3ffdf07c5c6706a88a3l-m2447820342x-w1024_h768.jpg",
+          "type": "realtordotcom_mls_listing_image",
+          "description": ""
+        },
+        {
+          "tags": [{ "label": "unknown", "probability": 0.98053830862045 }],
+          "href": "https://ap.rdcpix.com/cd3db6e3676aa3ffdf07c5c6706a88a3l-m3732891634x-w1024_h768.jpg",
+          "type": "realtordotcom_mls_listing_image",
+          "description": ""
+        },
+        {
+          "tags": [{ "label": "unknown", "probability": 0.94183576107025 }],
+          "href": "https://ap.rdcpix.com/cd3db6e3676aa3ffdf07c5c6706a88a3l-m586136625x-w1024_h768.jpg",
+          "type": "realtordotcom_mls_listing_image",
+          "description": ""
+        },
+        {
+          "tags": [{ "label": "bathroom", "probability": 1 }],
+          "href": "https://ap.rdcpix.com/cd3db6e3676aa3ffdf07c5c6706a88a3l-m354337902x-w1024_h768.jpg",
+          "type": "realtordotcom_mls_listing_image",
+          "description": ""
+        }
+      ],
+      "branding": {
+        "team_name": null,
+        "listing_office": {
+          "photo_attribution": {
+            "slogan": null,
+            "accent_color": null,
+            "show_realtor_logo": false,
+            "link": null,
+            "name": "Realty Executives Home Towne Shelby",
+            "photo": null,
+            "phone": null
+          },
+          "details": {
+            "slogan": null,
+            "accent_color": null,
+            "show_realtor_logo": false,
+            "link": "http://www.rehometowne.com",
+            "name": "Realty Executives Home Towne Shelby",
+            "photo": null,
+            "phone": "(586) 726-4600"
+          }
+        },
+        "listing_agent": {
+          "photo_attribution": {
+            "slogan": null,
+            "accent_color": null,
+            "show_realtor_logo": false,
+            "link": null,
+            "name": "Dale Schwach",
+            "photo": null,
+            "phone": null
+          },
+          "details": {
+            "slogan": null,
+            "link": "/realestateagents/Dale-Schwach_Detroit_MI_4185815_635874405",
+            "accent_color": null,
+            "show_realtor_logo": true,
+            "state_license": null,
+            "name": "Dale Schwach",
+            "photo": null,
+            "phone": null
+          }
+        }
+      },
+      "videos": null,
+      "other_listings": {},
+      "features": [
+        {
+          "parent_category": "Interior",
+          "category": "Bedrooms",
+          "text": [
+            "Bedrooms: 3",
+            "Master Bedroom Dimensions: 20 x 15",
+            "Bedroom 1 Dimensions: 10 x 12",
+            "Bedroom 2 Dimensions: 15 x 12",
+            "Master Bedroom Level: Second",
+            "Bedroom 1 Level: First/Entry",
+            "Bedroom 2 Level: First/Entry"
+          ]
+        },
+        {
+          "parent_category": "Interior",
+          "category": "Other Rooms",
+          "text": [
+            "Total Rooms: 9",
+            "Bath - Lav: 7 x 7",
+            "Bath - Lav Level: Second",
+            "Bath - Lav: 10 x 4",
+            "Bath - Lav Level: Basement",
+            "Bath - Full: 10 x 7",
+            "Bath - Full Level: First/Entry",
+            "Living Room Dimensions: 18 x 12",
+            "Living Room Level: First/Entry",
+            "Basement Description: Partially Finished"
+          ]
+        },
+        {
+          "parent_category": "Interior",
+          "category": "Bathrooms",
+          "text": [
+            "Total Bathrooms: 1 / 2",
+            "Full Bathrooms: 1",
+            "1/2 Bathrooms: 2"
+          ]
+        },
+        {
+          "parent_category": "Interior",
+          "category": "Appliances",
+          "text": [
+            "Dryer",
+            "Free-Standing Gas Oven",
+            "Free-Standing Refrigerator",
+            "Washer"
+          ]
+        },
+        {
+          "parent_category": "Interior",
+          "category": "Heating and Cooling",
+          "text": [
+            "Heating Features: Forced Air",
+            "Heating Fuel: Natural Gas",
+            "Water Heaters: Fuel: Natural Gas"
+          ]
+        },
+        {
+          "parent_category": "Interior",
+          "category": "Kitchen and Dining",
+          "text": [
+            "Dining Room Dimensions: 12 x 10",
+            "Dining Room Level: First/Entry",
+            "Kitchen Dimensions: 10 x 12",
+            "Kitchen Level: First/Entry"
+          ]
+        },
+        {
+          "parent_category": "Exterior",
+          "category": "Exterior and Lot Features",
+          "text": [
+            "Frontage Length: 45",
+            "Road Frontage Type: Paved",
+            "Porch Description: Porch"
+          ]
+        },
+        {
+          "parent_category": "Exterior",
+          "category": "Land Info",
+          "text": [
+            "Lot Size Acres: 0.14",
+            "Lot Size Dimensions: 40.00X147.00",
+            "Lot Size Square Feet: 6098"
+          ]
+        },
+        {
+          "parent_category": "Exterior",
+          "category": "Garage and Parking",
+          "text": [
+            "Garage Spaces: 2",
+            "Garage Description: 24x22",
+            "Garage Features: Detached"
+          ]
+        },
+        {
+          "parent_category": "Community",
+          "category": "Homeowners Association",
+          "text": [
+            "Association: No",
+            "Calculated Total Monthly Association Fees: 0"
+          ]
+        },
+        {
+          "parent_category": "Community",
+          "category": "School Information",
+          "text": ["School District: Detroit"]
+        },
+        {
+          "parent_category": "Listing",
+          "category": "Other Property Info",
+          "text": [
+            "ActivationDate : 2022-03-11",
+            "Annual Tax Amount: 386",
+            "Source Listing Status: Coming Soon",
+            "County: Wayne",
+            "Availability Date: 2022-03-11",
+            "Directions: 7 mile to Morang South, right on Kelly, right on Spring Garden",
+            "Source Property Type: Residential",
+            "Home Warranty: No",
+            "Area: Det Con-Mors/Grat. Hstn/7 Mack",
+            "Source Neighborhood: PARK DRIVE NO 7 (PLATS)",
+            "Ownership Type: Private Owned, Short Sale - No",
+            "Parcel Number: W21I017372S",
+            "Postal Code Plus 4: 3528",
+            "Subdivision: PARK DRIVE NO 7 (PLATS)",
+            "Source System Name: C2C",
+            "Coming Soon Date: 2022-03-11"
+          ]
+        },
+        {
+          "parent_category": "Features",
+          "category": "Building and Construction",
+          "text": [
+            "Total Square Feet Living: 1344",
+            "Year Built: 1948",
+            "Construction Materials: Brick",
+            "Foundation Details: Basement",
+            "Property Age: 74",
+            "Roof: Asphalt",
+            "Levels or Stories: 1 1/2 Story",
+            "House Style: Bungalow",
+            "Total Area Sqft: 1844",
+            "Total Below Grade Area: 1082"
+          ]
+        },
+        {
+          "parent_category": "Features",
+          "category": "Utilities",
+          "text": ["Sewer: Sewer at Street", "Water Source: Municipal Water"]
+        },
+        {
+          "category": "Legal and finance",
+          "text": ["HOA Frequency: Monthly/0", "HOA fee: $0"]
+        }
+      ],
+      "new_construction": null,
+      "address": {
+        "state": "Michigan",
+        "address_validation_code": "121",
+        "unit": null,
+        "line": "15611 Spring Garden St",
+        "boundary": { "coordinates": [-82.960112, 42.428532], "type": "Point" },
+        "street_number": "15611",
+        "street_suffix": "St",
+        "state_code": "MI",
+        "county": "Wayne",
+        "time_zone": "America/New_York",
+        "postal_code": "48205",
+        "county_needed_for_uniq": false,
+        "street_name": "Spring Garden",
+        "country": "USA",
+        "city": "Detroit",
+        "location": { "lon": -82.960112, "lat": 42.428532 },
+        "fips_code": "26163"
+      },
+      "client_display_flags": {
+        "is_co_broke_email": true,
+        "show_contact_a_lender_in_lead_form": true,
+        "price_change": 0,
+        "is_turbo": false,
+        "is_new_plan": false,
+        "is_new_listing": false,
+        "is_coming_soon": true,
+        "is_office_standard_listing": false,
+        "is_new_construction": false,
+        "lead_form_phone_required": true,
+        "show_veterans_united_in_lead_form": true,
+        "is_showcase": false,
+        "has_open_house": false,
+        "is_showcase_choice_enabled": false,
+        "is_foreclosure": false,
+        "is_co_broke_phone": false,
+        "presentation_status": "for_sale",
+        "suppress_map_pin": false,
+        "is_short_sale": false
+      },
+      "flood": {
+        "environmental_risk": 1,
+        "flood_factor_score": 1,
+        "fema_zone": ["X"],
+        "fsid": "260270632",
+        "trend_direction": 0,
+        "flood_factor_severity": "minimal"
+      },
+      "agent": {
+        "slogan": null,
+        "office_name": "Realty Executives Home Towne Shelby",
+        "state_license": null,
+        "name": "Dale Schwach",
+        "nrds_verification_method": "Claimed",
+        "email": "info@amazingmetrodetroit.com",
+        "profile_name": "Dale Schwach",
+        "mls_membership": {
+          "member": {
+            "office_system_id": "417093",
+            "abbreviation": "DEMI",
+            "id": "395916",
+            "agent_system_id": "395916",
+            "name": "Dale Schwach"
+          }
+        },
+        "nrds_verified_id": "495521463",
+        "phones": { "primary": [{ "number": "5862133027", "type": "mobile" }] },
+        "photo": {
+          "href": "https://ap.rdcpix.com/9d0389ae8f2bde224740fce753392f62a-c923829104l.jpg"
+        },
+        "href": "http://www.amazingmetrodetroit.com",
+        "advertiser_id": 4185815,
+        "nrds_id": "495521463"
+      },
+      "product_name": "essentials",
+      "office": {
+        "slogan": null,
+        "name": "Realty Executives Home Towne Shelby",
+        "photo": null,
+        "email": "htrperod@gmail.com",
+        "phones": { "primary": [{ "number": "5867264600", "type": "office" }] },
+        "address": { "city": "Shelby Twp", "state_code": "MI" },
+        "mls_membership": { "member": { "office_system_id": "417093" } },
+        "href": "http://www.rehometowne.com",
+        "advertiser_id": 4555893,
+        "mls_set": "O-DEMI-417093"
+      },
+      "noise": {
+        "score_text": "Medium",
+        "traffic_text": "Medium",
+        "local_text": "Medium",
+        "score": 77,
+        "airport_text": "Low"
+      },
+      "display_property_type": "Single Family Home",
+      "school_districts": [{ "id": "06180015811" }],
+      "parsed_address": { "city": "Detroit" },
+      "duplicate_listings": {},
+      "advertisers": [{ "builder": { "fulfillment_id": null } }],
+      "raw": {
+        "tax_amount": 386,
+        "status": "Coming Soon",
+        "style": ["Bungalow"]
+      },
+      "move_in_date": null,
+      "query": { "client_id": "haven", "schema": "myhome" },
+      "new_listing": true,
+      "search_areas": [{ "city": "detroit", "state_code": "mi" }],
+      "trend": {
+        "geo": {
+          "neighborhood": "Mapleridge",
+          "state_code": "MI",
+          "city": "Detroit"
+        },
+        "sales_to_inventory_count_percent_market_type": null,
+        "month": 2,
+        "year": 2022,
+        "listing_count": { "sold": null, "for_sale": 15, "rental": 2 },
+        "median": {
+          "age_days": null,
+          "listing_price": 53000,
+          "closing_price": null,
+          "listing_price_sqft": 42,
+          "by_prop_type": {
+            "land": {
+              "closing_price": null,
+              "listing_price_sqft": null,
+              "listing_price": null,
+              "age_days": null
+            },
+            "multi_family": {
+              "closing_price": null,
+              "listing_price_sqft": null,
+              "listing_price": null,
+              "age_days": null
+            },
+            "condo_townhome_rowhome_coop": {
+              "closing_price": null,
+              "listing_price_sqft": null,
+              "listing_price": null,
+              "age_days": null
+            },
+            "condos": {
+              "closing_price": null,
+              "listing_price_sqft": null,
+              "listing_price": null,
+              "age_days": null
+            },
+            "townhomes": {
+              "closing_price": null,
+              "listing_price_sqft": null,
+              "listing_price": null,
+              "age_days": null
+            },
+            "home": {
+              "closing_price": null,
+              "listing_price_sqft": 42,
+              "listing_price": 51450,
+              "age_days": null
+            },
+            "single_family": {
+              "closing_price": null,
+              "listing_price_sqft": null,
+              "listing_price": 51450,
+              "age_days": null
+            }
+          },
+          "rental_listing_price": null
+        },
+        "active_listing_count": 15,
+        "asking_to_sold_price_percent_change": null,
+        "sales_to_inventory_count_percent": null
+      },
+      "seller_promotion": {
+        "is_promoted": false,
+        "is_listing_iq": false,
+        "is_new_construction_promoted": false
+      },
+      "foreclosure": null,
+      "photo_attribution": [
+        "Presented by Dale Schwach with Realty Executives Home Towne Shelby"
+      ],
+      "id": 2941040284,
+      "neighborhood": "Mapleridge",
+      "client_flags": {
+        "is_price_reduced": false,
+        "is_tcpa_message_enabled": false,
+        "is_newly_listed": true
+      },
+      "public_records": [
+        {
+          "garage_spaces": 1,
+          "zoning": null,
+          "cooling": null,
+          "view": null,
+          "roofing": "Asphalt",
+          "exterior1": "Brick",
+          "sqft": 1084,
+          "baths": 2,
+          "rooms": null,
+          "baths_1qtr": null,
+          "fireplace": "1 Opening",
+          "heating": "Forced Air",
+          "units": null,
+          "lot_size": 6098,
+          "date_updated": "03/02/2022",
+          "baths_3qtr": null,
+          "exterior2": null,
+          "style": null,
+          "baths_full": 1,
+          "distinct_baths": 2,
+          "baths_half": 1,
+          "cl_id": "C9FFC236517EE7534D3768A178ED18C4",
+          "year_built": 1948,
+          "garage": "Detached",
+          "prop_type": "single_family",
+          "pool": null,
+          "construction": null,
+          "stories": 1,
+          "beds": null,
+          "year_renovated": null
+        }
+      ],
+      "suppression_flags": [
+        "suppress_sold_info",
+        "suppress_all_offmarket_photos",
+        "suppress_on_move_dot_com"
+      ],
+      "search_tags": [
+        "community_outdoor_space",
+        "dining_room",
+        "fireplace",
+        "forced_air",
+        "hardwood_floors",
+        "washer_dryer",
+        "basement",
+        "two_or_more_stories",
+        "garage_1_or_more",
+        "garage_2_or_more",
+        "master_bedroom",
+        "park",
+        "multi_storey",
+        "garage_1",
+        "garage_2"
+      ],
+      "hoa_fee": 0,
+      "listings": [
+        {
+          "zoning": null,
+          "exterior": null,
+          "construction": null,
+          "roofing": null,
+          "baths_partial_calc": 2,
+          "baths_1qtr": null,
+          "fireplace": null,
+          "heating": null,
+          "lot_sqft": 6098,
+          "year_renovated": null,
+          "year_built": 1948,
+          "baths_3qtr": null,
+          "units": null,
+          "baths_half": 2,
+          "baths_full": 1,
+          "styles": ["craftsman_bungalow"],
+          "pool": null,
+          "baths_total": null,
+          "baths_full_calc": 1,
+          "garage": 2,
+          "sqft": 1344,
+          "rooms": null,
+          "cooling": null,
+          "stories": 2,
+          "beds": 3,
+          "type": "single_family"
+        }
+      ],
+      "product_attributes": { "broker": {} },
+      "lead_forms": [
+        {
+          "show_contact_an_agent": true,
+          "google_cashback_enabled": false,
+          "form_type": "classic",
+          "smarthome_enabled": false,
+          "show_contact_a_lender": true,
+          "lead_type": "co_broke",
+          "cashback_enabled": false,
+          "is_lcm_enabled": false,
+          "show_text_leads": true,
+          "show_veterans_united": true,
+          "flip_the_market_enabled": false
+        }
+      ],
+      "forwarded_mpr_ids": [4792447267],
+      "mls": {
+        "disclaimer": {
+          "href": null,
+          "photo": null,
+          "text": "©2022  Realcomp II Ltd. All rights reserved."
+        },
+        "abbreviation": "DEMI",
+        "id": "2220015640",
+        "plan_id": null,
+        "name": "Realcomp",
+        "type": "mls"
+      },
+      "neighborhoods": [
+        {
+          "city": "Detroit",
+          "level": "neighborhood",
+          "name": "Mapleridge",
+          "state_code": "MI",
+          "id": null
+        },
+        {
+          "city": "Detroit",
+          "level": "macro_neighborhood",
+          "name": "Burbank",
+          "state_code": "MI",
+          "id": null
+        }
+      ],
+      "property_history": [
+        {
+          "price_range_min": null,
+          "event_name": "Listed",
+          "date": "03/10/2022",
+          "source": "MLS #2220015640",
+          "sqft": 1344,
+          "price_changed": 0,
+          "datasource_name": "Realcomp",
+          "price": 79500,
+          "price_range_max": null
+        }
+      ],
+      "broker": {
+        "name": "Realty Executives Home Towne Shelby",
+        "advertiser_id": 4275817,
+        "phone1": { "number": "5867264600", "type": "broker" }
+      },
+      "photo_count": 18,
+      "mortgage": {
+        "estimate": {
+          "down_payment": 15900,
+          "term": 30,
+          "monthly_payment": 358,
+          "total_payment": 107796,
+          "monthly_property_taxes": 32,
+          "principal_and_interest": 299,
+          "monthly_mortgage_insurance": 0,
+          "monthly_home_insurance": 26,
+          "rate": 3.885,
+          "hoa_fees": 0,
+          "loan_amount": 63600
+        },
+        "rates_url": "https://www.realtor.com/mortgage/rates/?from=mobile#zip=48205&property_price=79500&mlid=2941040284"
+      },
+      "mpr_id": 4792447267,
+      "short_sale": null,
+      "schools": [
+        {
+          "grades": { "range": { "high": "8", "low": "PK" } },
+          "distance_in_miles": 0.2,
+          "relevance": "assigned",
+          "id": "0737271851",
+          "ratings": { "parent_rating": 5, "great_schools_rating": 3 },
+          "name": "Brewer Elementary-Middle School",
+          "phone": "(313) 866-0404",
+          "funding_type": "public",
+          "greatschools_id": "2609031",
+          "lat": 42.428668,
+          "lon": -82.963541,
+          "student_teacher_ratio": 19,
+          "education_levels": ["elementary", "middle"],
+          "student_count": 543,
+          "location": {
+            "postal_code": "48205",
+            "state": "MI",
+            "street": "18025 Brock Street",
+            "city": "Detroit",
+            "city_slug_id": "Detroit_MI",
+            "county": "Wayne County"
+          },
+          "nces_id": "260110308081"
+        },
+        {
+          "grades": { "range": { "high": "12", "low": "PK" } },
+          "distance_in_miles": 6.9,
+          "relevance": "assigned",
+          "id": "0737270541",
+          "ratings": { "parent_rating": 3, "great_schools_rating": 3 },
+          "name": "Detroit International Academy For Young Women",
+          "phone": "(313) 873-3050",
+          "funding_type": "public",
+          "greatschools_id": "2608939",
+          "lat": 42.382629,
+          "lon": -83.080856,
+          "student_teacher_ratio": 13,
+          "education_levels": ["elementary", "middle", "high"],
+          "student_count": 263,
+          "location": {
+            "postal_code": "48202",
+            "state": "MI",
+            "street": "9026 Woodward Avenue",
+            "city": "Detroit",
+            "city_slug_id": "Detroit_MI",
+            "county": "Wayne County"
+          },
+          "nces_id": "260110307972"
+        },
+        {
+          "grades": { "range": { "high": "12", "low": "9" } },
+          "distance_in_miles": 0.2,
+          "relevance": "assigned",
+          "id": "0737158461",
+          "ratings": { "parent_rating": 4, "great_schools_rating": 1 },
+          "name": "Denby High School",
+          "phone": "(313) 866-7200",
+          "funding_type": "public",
+          "greatschools_id": "2601094",
+          "lat": 42.425639,
+          "lon": -82.958504,
+          "student_teacher_ratio": 23.8,
+          "education_levels": ["high"],
+          "student_count": 505,
+          "location": {
+            "postal_code": "48224",
+            "state": "MI",
+            "street": "12800 Kelly Road",
+            "city": "Detroit",
+            "city_slug_id": "Detroit_MI",
+            "county": "Wayne County"
+          },
+          "nces_id": "260110304693"
+        },
+        {
+          "grades": { "range": { "high": "8", "low": "K" } },
+          "distance_in_miles": 0.5,
+          "relevance": "nearby",
+          "id": "0737273111",
+          "ratings": { "parent_rating": 4, "great_schools_rating": 4 },
+          "name": "Regent Park Scholars Charter Academy",
+          "phone": "(313) 371-1300",
+          "funding_type": "public",
+          "greatschools_id": "2609118",
+          "lat": 42.435991,
+          "lon": -82.957087,
+          "student_teacher_ratio": 22.3,
+          "education_levels": ["elementary", "middle"],
+          "student_count": 749,
+          "location": {
+            "postal_code": "48205",
+            "state": "MI",
+            "street": "15865 Seven Mile East",
+            "city": "Detroit",
+            "city_slug_id": "Detroit_MI",
+            "county": "Wayne County"
+          },
+          "nces_id": "260098508272"
+        },
+        {
+          "grades": { "range": { "high": "12", "low": "6" } },
+          "distance_in_miles": 8.3,
+          "relevance": "assigned",
+          "id": "0737161021",
+          "ratings": { "parent_rating": 5, "great_schools_rating": 3 },
+          "name": "Douglass Academy For Young Men",
+          "phone": "(313) 596-3555",
+          "funding_type": "public",
+          "greatschools_id": "2601272",
+          "lat": 42.349543,
+          "lon": -83.083578,
+          "student_teacher_ratio": 6.6,
+          "education_levels": ["middle", "high"],
+          "student_count": 140,
+          "location": {
+            "postal_code": "48208",
+            "state": "MI",
+            "street": "2001 West Warren Avenue",
+            "city": "Detroit",
+            "city_slug_id": "Detroit_MI",
+            "county": "Wayne County"
+          },
+          "nces_id": "260110307415"
+        },
+        {
+          "grades": { "range": { "high": "12", "low": "9" } },
+          "distance_in_miles": 1.5,
+          "relevance": "nearby",
+          "id": "0737231511",
+          "ratings": { "parent_rating": 4, "great_schools_rating": 4 },
+          "name": "Chandler Park Academy - High School",
+          "phone": "(313) 499-3010",
+          "funding_type": "public",
+          "greatschools_id": "2606206",
+          "lat": 42.446895,
+          "lon": -82.942883,
+          "student_teacher_ratio": 19.5,
+          "education_levels": ["high"],
+          "student_count": 669,
+          "location": {
+            "postal_code": "48225",
+            "state": "MI",
+            "street": "20254 Kelly Road",
+            "city": "Harper Woods",
+            "city_slug_id": "Harper-Woods_MI",
+            "county": "Wayne County"
+          },
+          "nces_id": "260016807800"
+        },
+        {
+          "distance_in_miles": 0.5,
+          "relevance": "nearby",
+          "id": "0737219551",
+          "ratings": { "parent_rating": null, "great_schools_rating": null },
+          "name": "St. Jude's Home for Boys",
+          "funding_type": "private",
+          "lat": 42.422401,
+          "lon": -82.964302,
+          "greatschools_id": "2605370",
+          "education_levels": ["elementary", "middle", "high"],
+          "phone": "(313) 521-6228",
+          "location": {
+            "postal_code": "48205",
+            "state": "MI",
+            "street": "15255 Mayfield",
+            "city": "Detroit",
+            "city_slug_id": "Detroit_MI",
+            "county": "Wayne"
+          },
+          "nces_id": "BB000658"
+        },
+        {
+          "distance_in_miles": 0.5,
+          "relevance": "nearby",
+          "id": "0737199231",
+          "ratings": { "parent_rating": null, "great_schools_rating": null },
+          "name": "East Catholic Elementary School",
+          "funding_type": "private",
+          "grades": { "range": { "high": "8", "low": "1" } },
+          "lat": 42.436089,
+          "lon": -82.957527,
+          "greatschools_id": "2603947",
+          "education_levels": ["elementary", "middle"],
+          "phone": "(313) 839-6792",
+          "location": {
+            "postal_code": "48205",
+            "state": "MI",
+            "street": "15865 E 7 Mile Rd",
+            "city": "Detroit",
+            "city_slug_id": "Detroit_MI",
+            "county": "Wayne"
+          },
+          "nces_id": "00636806"
+        }
+      ],
+      "mls_id": "2220015640",
+      "flags": {
+        "is_new_construction": null,
+        "is_for_rent": null,
+        "is_subdivision": null,
+        "is_contingent": null,
+        "is_deal_available": null,
+        "is_pending": null,
+        "is_garage_present": true,
+        "is_senior_community": null,
+        "is_foreclosure": null,
+        "is_price_excludes_land": null,
+        "is_coming_soon": true,
+        "is_short_sale": null
+      },
+      "products": [
+        "core.agent",
+        "core.broker",
+        "co_broke",
+        "suppress_sold_info",
+        "suppress_all_offmarket_photos",
+        "suppress_on_move_dot_com"
+      ],
+      "is_senior": null,
+      "stories": 2,
+      "price_history": [{ "date": "2022-03-10", "price": 79500 }],
+      "tax_history": [
+        {
+          "assessment": { "building": null, "total": 18000, "land": null },
+          "tax": 1440,
+          "year": "2020"
+        },
+        {
+          "assessment": { "building": null, "total": 16400, "land": null },
+          "tax": 1305,
+          "year": "2019"
+        },
+        {
+          "assessment": { "building": null, "total": 14800, "land": null },
+          "tax": 1250,
+          "year": "2018"
+        },
+        {
+          "assessment": { "building": null, "total": 15100, "land": null },
+          "tax": 1290,
+          "year": "2017"
+        },
+        {
+          "assessment": { "building": null, "total": 15800, "land": null },
+          "tax": 1358,
+          "year": "2016"
+        },
+        {
+          "assessment": { "building": null, "total": 18600, "land": null },
+          "tax": 1538,
+          "year": "2015"
+        },
+        {
+          "assessment": { "building": null, "total": 23289, "land": null },
+          "tax": 1857,
+          "year": "2014"
+        },
+        {
+          "assessment": { "building": null, "total": 25876, "land": null },
+          "tax": 2010,
+          "year": "2013"
+        },
+        {
+          "assessment": { "building": null, "total": 29742, "land": null },
+          "tax": 2083,
+          "year": "2012"
+        },
+        {
+          "assessment": { "building": null, "total": 32626, "land": null },
+          "tax": 2047,
+          "year": "2011"
+        },
+        {
+          "assessment": { "building": null, "total": 37937, "land": null },
+          "tax": 1995,
+          "year": "2010"
+        },
+        {
+          "assessment": { "building": null, "total": 43110, "land": null },
+          "tax": 1959,
+          "year": "2009"
+        },
+        {
+          "assessment": { "building": null, "total": 49838, "land": null },
+          "tax": 1734,
+          "year": "2008"
+        },
+        {
+          "assessment": { "building": null, "total": 49838, "land": null },
+          "tax": 1716,
+          "year": "2007"
+        }
+      ],
+      "primary": true,
+      "prop_common": {
+        "zoning": null,
+        "exterior": null,
+        "pending_date": null,
+        "baths_partial_calc": 2,
+        "virtual_tour": {},
+        "tax_amount": 386,
+        "sub_type": null,
+        "bath_full": 1,
+        "baths_full": 1,
+        "pool": null,
+        "baths_full_calc": 1,
+        "garage": "2",
+        "list_date_raw": "2022-03-10T13:17:37Z",
+        "stories": 2,
+        "type": "single_family",
+        "hoa_historic_fee": null,
+        "construction": null,
+        "bed": 3,
+        "roofing": null,
+        "year_renovated": null,
+        "list_date": "2022-03-10T13:17:37Z",
+        "sqft": 1344,
+        "hoa_fee": 0,
+        "year_built": 1948,
+        "description": "Looking for a well cared home on the east side? This exceptionally maintained home is close to schools and parks on Detroit's east side. 3 bedrooms 1 full bath and 2 half baths gives it plenty of living space for the right family. Beautiful wood floors and trim are featured throughout this home. A spacious master bedroom is upstairs, with built in bookcase and small study area leading into it. Exterior features a 2.5 car garage along with stone fireplace in the back yard. Contact us now for a private showing!",
+        "fireplace": null,
+        "baths_total": null,
+        "lot_sqft": 6098,
+        "price": 79500,
+        "units": null,
+        "baths_3qtr": null,
+        "bath": 3,
+        "contingent": null,
+        "style": ["craftsman_bungalow"],
+        "status": "for_sale",
+        "baths_half": 2,
+        "listing_provider_url": {
+          "url": "http://www.rehometowne.com",
+          "level": "office",
+          "type": "xadvertiser_url"
+        },
+        "rooms": null,
+        "cooling": null,
+        "heating": null,
+        "last_sold_price": null,
+        "last_update": "2022-03-10T08:16:34Z",
+        "pending": null,
+        "bath_half": 2,
+        "permalink": "15611-Spring-Garden-St_Detroit_MI_48205_M47924-47267"
+      }
+    }
+  }
+}
