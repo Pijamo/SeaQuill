@@ -1,19 +1,21 @@
 {
   "files": {
-    "main.js": "/SeaQuill/static/js/main.41f487e0.chunk.js",
-    "main.js.map": "/SeaQuill/static/js/main.41f487e0.chunk.js.map",
-    "runtime-main.js": "/SeaQuill/static/js/runtime-main.858c1082.js",
-    "runtime-main.js.map": "/SeaQuill/static/js/runtime-main.858c1082.js.map",
-    "static/js/2.eba42a2c.chunk.js": "/SeaQuill/static/js/2.eba42a2c.chunk.js",
-    "static/js/2.eba42a2c.chunk.js.map": "/SeaQuill/static/js/2.eba42a2c.chunk.js.map",
+    "main.js": "/SeaQuill/static/js/main.fdbdda7b.chunk.js",
+    "main.js.map": "/SeaQuill/static/js/main.fdbdda7b.chunk.js.map",
+    "runtime-main.js": "/SeaQuill/static/js/runtime-main.16cf801a.js",
+    "runtime-main.js.map": "/SeaQuill/static/js/runtime-main.16cf801a.js.map",
+    "static/js/2.0ac72dbd.chunk.js": "/SeaQuill/static/js/2.0ac72dbd.chunk.js",
+    "static/js/2.0ac72dbd.chunk.js.map": "/SeaQuill/static/js/2.0ac72dbd.chunk.js.map",
     "index.html": "/SeaQuill/index.html",
-    "precache-manifest.513fa80c249a8af491663c1ee471b21c.js": "/SeaQuill/precache-manifest.513fa80c249a8af491663c1ee471b21c.js",
+    "precache-manifest.ba06c82204c63c4af6983db6fa3f372b.js": "/SeaQuill/precache-manifest.ba06c82204c63c4af6983db6fa3f372b.js",
     "service-worker.js": "/SeaQuill/service-worker.js",
-    "static/js/2.eba42a2c.chunk.js.LICENSE.txt": "/SeaQuill/static/js/2.eba42a2c.chunk.js.LICENSE.txt"
+    "static/js/2.0ac72dbd.chunk.js.LICENSE.txt": "/SeaQuill/static/js/2.0ac72dbd.chunk.js.LICENSE.txt",
+    "static/media/Logo_dark.svg": "/SeaQuill/static/media/Logo_dark.8d1ee2d4.svg",
+    "static/media/Logo_light.svg": "/SeaQuill/static/media/Logo_light.e4239510.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.858c1082.js",
-    "static/js/2.eba42a2c.chunk.js",
-    "static/js/main.41f487e0.chunk.js"
+    "static/js/runtime-main.16cf801a.js",
+    "static/js/2.0ac72dbd.chunk.js",
+    "static/js/main.fdbdda7b.chunk.js"
   ]
 }
