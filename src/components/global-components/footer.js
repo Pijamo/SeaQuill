@@ -51,7 +51,7 @@ class Footer_v1 extends Component {
 				          <div className="footer-widget footer-about-widget">
 				            <div className="footer-logo">
 				              <div className="site-logo">
-				                <img src={publicUrl+"assets/img/logo_dark.svg"} alt="Logo" style={{height:"50px"}}/>
+				                <img src={publicUrl+"assets/img/logo_dark.png"} alt="Logo" style={{height:"50px"}}/>
 				              </div>
 				            </div>
 				            <p>Lorem Ipsum is simply dummy text of the and typesetting industry. Lorem Ipsum is dummy text of the printing.</p>
