@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/SeaQuill/precache-manifest.ba06c82204c63c4af6983db6fa3f372b.js"
+  "/SeaQuill/precache-manifest.7657bcc266b6cf2a9b09418118b4c611.js"
 );
 
 self.addEventListener('message', (event) => {
