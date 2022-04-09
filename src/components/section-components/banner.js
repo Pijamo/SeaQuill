@@ -2,10 +2,16 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import parse from 'html-react-parser';
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
+import testRoute from '../../fetcher';
 
 
 class Banner extends Component {
 
+	componentDidMount() {
+		testRoute().then(res => {
+			console.log(res.results)
+		})}
+		
 	render() {
 
 		let publicUrl = process.env.PUBLIC_URL + '/'

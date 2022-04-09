@@ -41,8 +41,10 @@ class Root extends Component {
                 <HashRouter basename="/">
 	                <div>
 	                <Switch>
-	                    <Route exact path="/" component={Home} />          
-                        <Route path="/search" component={Search} />
+	                    <Route exact path="/" component={ Home } />          
+                        <Route path="/search" component={ Search } />
+
+                        <Route path="/quiz" component={ Quiz }/>
 
                         <Route path="/about" component={About} />
                         <Route path="/service" component={Service} />
