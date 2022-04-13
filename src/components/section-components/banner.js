@@ -31,7 +31,7 @@ class Banner extends Component {
 							<Controls visible={false} buttons={['play', 'repeat', 'frame', 'debug']} />
 						</Player>
 					</Link>
-						<Link to="/home-v6" className='col border-start border-2'>
+						<Link to="/quiz" className='col border-start border-2'>
 							<Player
 								hover
 								loop

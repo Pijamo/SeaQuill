@@ -31,19 +31,15 @@ class BannerV5 extends Component {
 															<div className="border">
 																<input className='mb-0' type="text" placeholder="City" /></div>
 														</div>
-														<div className="col-xl-2 col-lg-4 col-md-4">
+														<div className="col-xl-3 col-lg-4 col-md-4">
 															<div className="border">
 																<input className='mb-0' type="text" placeholder="State Code" /></div>
 														</div>
 														<div className="col-xl-2 col-lg-4 col-md-4">
 															<div className="border">
-																<input className='mb-0' type="text" placeholder="Location" /></div>
-														</div>
-														<div className="col-xl-1_5 col-lg-4 col-md-4">
-															<div className="border">
 																<input className='mb-0' type="text" placeholder="Min Price" /></div>
 														</div>
-														<div className="col-xl-1_5 col-lg-4 col-md-4">
+														<div className="col-xl-2 col-lg-4 col-md-4">
 															<div className="border">
 																<input className='mb-0' type="text" placeholder="Max Price" /></div>
 														</div>
@@ -60,19 +56,15 @@ class BannerV5 extends Component {
 															<div className="border">
 																<input className='mb-0' type="text" placeholder="City" /></div>
 														</div>
-														<div className="col-xl-2 col-lg-4 col-md-4">
+														<div className="col-xl-3 col-lg-4 col-md-4">
 															<div className="border">
 																<input className='mb-0' type="text" placeholder="State Code" /></div>
 														</div>
 														<div className="col-xl-2 col-lg-4 col-md-4">
 															<div className="border">
-																<input className='mb-0' type="text" placeholder="Location" /></div>
-														</div>
-														<div className="col-xl-1_5 col-lg-4 col-md-4">
-															<div className="border">
 																<input className='mb-0' type="text" placeholder="Min Price" /></div>
 														</div>
-														<div className="col-xl-1_5 col-lg-4 col-md-4">
+														<div className="col-xl-2 col-lg-4 col-md-4">
 															<div className="border">
 																<input className='mb-0' type="text" placeholder="Max Price" /></div>
 														</div>
