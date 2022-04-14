@@ -4,6 +4,7 @@ const StepperControl = ({ handleClick, currentStep, steps }) => {
     
     return (
     <div className='mt-4 mb-8 absolute bottom-5 right-20'>
+        
         {/* back button */}
         <button 
         onClick={() => handleClick("back")}

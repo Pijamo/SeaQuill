@@ -18384,6 +18384,7 @@ input.cart-plus-minus-box {
 }
 
 .border-t-2 {
+  border-style: solid;
   border-top-width: 2px;
 }
 
