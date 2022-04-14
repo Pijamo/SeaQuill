@@ -1,7 +1,7 @@
 import React, { Component, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import parse from 'html-react-parser';
-import Sidebar from './shop-sidebar';
+import Sidebar from './filter';
 import propertyList from '../../assets/json/propertyList.json';
 import Property from '../components/Property.jsx';
 import PropertyList from '../components/PropertyList';

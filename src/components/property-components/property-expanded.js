@@ -630,9 +630,9 @@ class ShopDetails extends Component {
 							<button type="submit" className="btn theme-btn-1">Send Messege</button>
 						</form>
 						</div>
-						{/* Top Rated Product Widget */}
+						{/* Featured Homes Widget */}
 						<div className="widget ltn__top-rated-product-widget go-top">
-						<h4 className="ltn__widget-title ltn__widget-title-border-2">Top Rated Product</h4>
+						<h4 className="ltn__widget-title ltn__widget-title-border-2">Featured Homes</h4>
 						<ul>
 							<li>
 							<div className="top-rated-product-item clearfix">

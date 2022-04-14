@@ -49,22 +49,22 @@ function App() {
   }
 
   return (
-    <div className={`h-screen w-screen bg-cover bg-center flex items-center bg-[url(./assets/img/environment.jpg)]`}>
-      <div className="container mx-auto md:w-1/2 mx-auto shadow-xl rounded-2xl pb-2 bg-[rgb(255,255,255,0.45)] min-w-[80vw] min-h-[80vh] relative">
+    <div className={`h-screen w-screen bg-cover bg-center flex items-center bg-img`}>
+      <div className="container mx-auto mx-auto shadow-xl rounded-2xl pb-2 bg-white-50 min-w-80vw min-h-80vh relative">
         
         {/* Stepper */}
-        <div className="w-[90%] mx-auto mt-10">
-          {/* <Stepper 
+        <div className="w-90p mx-auto mt-10">
+          <Stepper 
               steps = {steps} 
               currentStep = {currentStep}
-          /> */}
-          <div className="text-blue text-4xl">Hello</div>
+          />
         </div>
         
-        <div className="w-3/4 mx-auto">
-        <div className="container horizontal">
-
+        <div className="w-75 mx-auto">
+          
           {/* Display Components */}
+        
+        <div className="container horizontal">
           <div className="my-10 p-10 ">
             <StepperContext.Provider value = {{
               userData,

@@ -3,29 +3,17 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, HashRouter, Route, Switch } from "react-router-dom";
 import './index.css';
 import Home from './components/home';
-import Search from './components/searchPage'
+import Search from './components/search-form'
 
 import Quiz from './components/quiz-app'
 
-import ServiceDetails from './components/service-details';
-
-import PortfolioDetails from './components/portfolio-details';
-import TeamDetails from './components/team-details';
-
-import Error  from './components/404';
-import Location  from './components/location';
-
-import Shop from './components/shop';
-import ShopGrid from './components/shop-grid';
-import ProdductDetails from './components/PropertyDetails';
-import ShopLeftSidebar from './components/shop-left-sidebar';
-import ShopRightSidebar from './components/shop-right-sidebar';
+import ProdductDetails from './components/property-details';
+import Listings from './components/listings';
 
 
 import MyAccount from './components/my-account';
 import Login from './components/login';
 import Register from './components/register';
-import OrderTracking from './components/order-tracking';
 
 
 class Root extends Component {
@@ -35,11 +23,12 @@ class Root extends Component {
 	                <div>
 	                <Switch>
 	                    <Route exact path="/" component={ Home } />   
-                        <Route path="/Search" component={ Search } />    
+                        <Route path="/search" component={ Search } />    
                         <Route path="/quiz" component= { Quiz } />
-                        <Route path="/shop-left-sidebar" component={ ShopLeftSidebar } />
+                        <Route path="/listings" component={ Listings } />
                         <Route path="/property/:id" component={ ProdductDetails } />
-
+                        <Route path="/login" component={ Login } />
+                        <Route path="/register" component={ Register } />
                         
                         {/* <Route path="/service-details" component={ ServiceDetails } /> */}
                         {/* <Route path="/portfolio-details" component={ PortfolioDetails } />
@@ -56,8 +45,6 @@ class Root extends Component {
                         
 
                         <Route path="/my-account" component={ MyAccount } />
-                        <Route path="/login" component={ Login } />
-                        <Route path="/register" component={ Register } />
                         <Route path="/add-listing" component={ AddListing } />
                         <Route path="/wishlist" component={ Wishlist } />
                         <Route path="/order-tracking" component={ OrderTracking } />

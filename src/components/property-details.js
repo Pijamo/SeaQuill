@@ -2,9 +2,8 @@ import React from "react";
 import { useHistory, useParams } from "react-router-dom";
 import Navbar from "./global-components/navbar";
 import PageHeader from "./global-components/page-header";
-import ProductSlider from "./shop-components/product-slider-v1";
-import ProductDetails from "./shop-components/property-expanded";
-import CallToActionV1 from "./section-components/call-to-action-v1";
+import ProductSlider from "./property-components/property-slider";
+import ProductDetails from "./property-components/property-expanded";
 import Footer from "./global-components/footer";
 import propertyDetails from "../assets/json/property.json";
 
