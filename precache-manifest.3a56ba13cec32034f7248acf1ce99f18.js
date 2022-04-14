@@ -1,19 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "12e3f992c8f4392fe2301f3a86586047",
+    "revision": "c34829d0581a979f8a942e2ff714b31e",
     "url": "/SeaQuill/index.html"
   },
   {
-    "revision": "4146c5eaa3b644df21ff",
-    "url": "/SeaQuill/static/js/2.0ac72dbd.chunk.js"
+    "revision": "5faf5cba3749298687b9",
+    "url": "/SeaQuill/static/css/main.08865457.chunk.css"
+  },
+  {
+    "revision": "7d9272db85c7fc4228e9",
+    "url": "/SeaQuill/static/js/2.411c28cb.chunk.js"
   },
   {
     "revision": "5024038dad139e59dbda0dca8a3194f4",
-    "url": "/SeaQuill/static/js/2.0ac72dbd.chunk.js.LICENSE.txt"
+    "url": "/SeaQuill/static/js/2.411c28cb.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9a7cda1d21b7df772749",
-    "url": "/SeaQuill/static/js/main.74fc9788.chunk.js"
+    "revision": "5faf5cba3749298687b9",
+    "url": "/SeaQuill/static/js/main.0aeae3b7.chunk.js"
   },
   {
     "revision": "47619a38325ef1474ebf",

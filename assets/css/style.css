@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /*
     Template Name: Quarter
     Description: Real Estate HTML Template
@@ -2496,7 +2500,11 @@ ul {
 }
 
 .mt-15 {
-  margin-top: 15px !important;
+  margin-top: 15px!important;
+}
+
+.mt-16 {
+  margin-top: 4rem !important;
 }
 
 .mt-20 {
@@ -18094,3 +18102,292 @@ input.cart-plus-minus-box {
 ---------------------------------------------------- */
 
 /*# sourceMappingURL=style.css.map */
+
+
+/* ----------------------------------------------------
+    Tailwind CSS
+---------------------------------------------------- */
+.bg-img {
+  background-image: url("../img/environment.jpg");
+}
+
+.bg-slate {
+  background-color: rgb(30 41 59);
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-auto {
+  flex: 1 1 auto;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* .md:w-1/2 {
+
+} */
+
+.top-0 {
+  top: 0px;
+}
+
+.shadow-xl {
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.rounded-2xl {
+  border-radius: 1rem; 
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
+.bg-white-50 {
+  background-color: rgba(255,255,255,0.45);
+}
+
+.min-w-80vw {
+  min-width: 80vw;
+}
+
+.min-h-80vh {
+  min-height: 80vh;
+}
+
+.relative {
+  position: relative;
+}
+
+.my-10 {
+  margin-top: 2.5rem; /* 40px */
+  margin-bottom: 2.5rem; /* 40px */
+}
+
+.p-10 {
+  padding: 2.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem; /* 32px */
+}
+
+.absolute {
+  position: absolute;
+}
+
+.bottom-5 {
+  bottom: 1.25rem; /* 20px */
+}
+
+.right-20 {
+  right: 5rem; /* 80px */
+}
+
+/* text sizes*/
+.text-2xl {
+  font-size: 1.25rem; /* 24px */
+  line-height: 1.75rem; /* 32px */
+}
+
+
+.bg-white {
+  background-color: white;
+}
+
+.text-black {
+  color: rgb(0 0 0);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.py-2 {
+  padding-top: 0.5rem; /* 8px */
+  padding-bottom: 0.5rem; /* 8px */
+}
+
+.px-4 {
+  padding-right: 1rem; /* 8px */
+  padding-left: 1rem; /* 8px */
+} 
+
+.rounded {
+  border-radius: 0.25rem; /* 4px */
+} 
+
+.font-semibold {
+  font-weight: 600;
+} 
+
+.cursor-pointer {
+  cursor: pointer;
+} 
+
+.border-slate-300  {
+  border-color: rgb(203 213 225);
+}
+
+.bg-slate-700:hover {
+  background-color: rgb(51 65 85);
+}
+
+.text-white:hover {
+  color: rgb(255 255 255);
+}
+
+.mr-5 {
+  margin-right: 1.25rem;
+}
+
+.transition {
+  transition-property: color, 
+  background-color, border-color, 
+  text-decoration-color, 
+  fill, 
+  stroke, 
+  opacity, 
+  box-shadow, 
+  transform, 
+  filter, 
+  backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.duration-200 {
+  transition-duration: 200ms;
+}
+
+.duration-500 {
+  transition-duration: 200ms;
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.border-gray-300 {
+  border-color: rgb(203 213 225);
+}
+
+.border-gray-400 {
+  border-color: rgb(156 163 175);
+}
+
+.py-3 {
+  padding-top: 0.75rem; /* 12px */
+  padding-bottom: 0.75rem; /* 12px */
+}
+
+.h-12 {
+  height: 3rem; /* 48px */
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.w-90p {
+  width: 90%;
+}
+
+.h-75px {
+  height: 75px;
+}
+
+.w-12 {
+  width: 3rem; /* 48px */
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-32 {
+  width: 8rem;
+}
+
+.text-6r {
+  font-size: 0.60rem;
+}
+
+.w-210px {
+  width: 210px;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.text-gray-400 {
+  color: rgb(107 114 128);
+}
+
+.text-gray-900 {
+  color: rgb(17 24 39);
+}
+
+.border-t-2 {
+  border-style: solid;
+  border-top-width: 2px;
+}
+
+.border-2	{
+  border-width: 2px;
+}
