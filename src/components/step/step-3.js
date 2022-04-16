@@ -1,19 +1,20 @@
 import React from "react";
-import Rating from '../components/Rating'
+import Rate from '../components/Rating'
 
-export default function StepThree() {
+export default function Step3() {
+    
+    const {render, rate} = Rate();
 
-    return <div >
-
-        <h2 className='text-4xl font-bold'> Education </h2>
+    return {rate, render: (<div>
         
+        <h2 className='text-5xl font-bold'> Still Not Education </h2>
         <p className='mt-10'>
             Tation argumentum et usu, dicit viderer evertitur te has. Eu dictas
             concludaturque usu, facete detracto patrioque an per, lucilius
             pertinacia eu vel.
         </p>
 
-        <Rating />
-
-    </div>
+        {render}
+        
+    </div>)}
 }

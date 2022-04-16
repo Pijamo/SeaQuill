@@ -5,7 +5,7 @@ export default function Step1() {
     
     const {render, rate} = Rate();
 
-    return {rate, render2: (<div>
+    return {rate, render: (<div>
         
         <h2 className='text-5xl font-bold'> Education </h2>
         <p className='mt-10'>
