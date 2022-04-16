@@ -16,7 +16,7 @@ const StepperControl = ({ handleClick, currentStep, steps }) => {
         <button 
         onClick={() => handleClick("next")}
         className="h-75px w-210px text-2xl bg-primary text-white uppercase py-2 px-4 rounded font-semibold cursor-pointer bg-primary transition duration-200">
-            { currentStep === steps.length - 1 ? "Confirm": "Next"}
+            { currentStep === steps.length ? "Confirm": "Next"}
         </button>
     </div>
 )};

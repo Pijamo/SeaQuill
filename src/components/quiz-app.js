@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { StepperContext } from "../contexts/StepperContext";
+import Rate from "./components/Rating"
 
 import Stepper from "./components/Stepper";
 import StepperControl from "./components/StepperControl";
@@ -13,9 +14,10 @@ function App() {
   const [currentStep, setCurrentStep] = useState(1)
   const [userData, setUserData] = useState('');
   const [finalData, setFinalData] = useState([]);
+  //const [ratings, setRatings] = useState(0);
 
   const steps = [
-    "Environment",
+    "Education",
     "Personal Freedom",
     "Safety and Security",
     "Social Capital",
@@ -31,7 +33,9 @@ function App() {
   const displayStep = (step) => {
     switch (step) {
       case 1: 
-        return <Step1 />
+        const {render2, rate} = Step1();
+        return <div>{render2}{rate}
+                    </div>;
       case 2:
         return <Step2 />
       case 3:
@@ -39,6 +43,7 @@ function App() {
       default:
     }
   }
+  
 
   const handleClick = ( direction ) => {
     let newStep = currentStep;

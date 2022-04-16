@@ -6,7 +6,7 @@ import { Container, Radio, Rating } from "./RatingStyle";
 
 const Rate = () => {
   const [rate, setRate] = useState(0);
-  return (
+  return {rate, render: (
     <Container>
       {[...Array(5)].map((item, index) => {
         const givenRating = index + 1;
@@ -32,7 +32,7 @@ const Rate = () => {
         );
       })}
     </Container>
-  );
+  )};
 };
   
 export default Rate;
