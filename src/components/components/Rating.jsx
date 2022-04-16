@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { Container, Radio, Rating } from "./RatingStyle";
 
-
-
-const Rate = () => {
+const Rate = ( { name, userData, setUserData }) => {
   const [rate, setRate] = useState(0);
   return (
     <Container>
@@ -14,9 +12,10 @@ const Rate = () => {
           <label>
             <Radio
               type="radio"
-              value={givenRating}
+              value = {givenRating}
               onClick={() => {
                 setRate(givenRating);
+                setUserData({ ...userData, [name]: givenRating })
               }}
             />
             <Rating>

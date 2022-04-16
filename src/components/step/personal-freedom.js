@@ -1,7 +1,12 @@
 import React from "react";
 import Rating from '../components/Rating'
+import { useContext } from "react";
+import { StepperContext } from "../../contexts/StepperContext";
 
-export default function StepTwo() {
+export default function PersonalFreedom() {
+
+    const { userData, setUserData } = useContext(StepperContext);
+    const name = "personal_freedom"
 
     return <div >
 
@@ -13,7 +18,10 @@ export default function StepTwo() {
             pertinacia eu vel.
         </p>
 
-        <Rating />
+        <Rating 
+        name = { name }
+        userData = { userData }
+        setUserData = { setUserData}/>
 
     </div>
 }

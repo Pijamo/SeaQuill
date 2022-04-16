@@ -3,9 +3,18 @@ import { StepperContext } from "../contexts/StepperContext";
 
 import Stepper from "./components/Stepper";
 import StepperControl from "./components/StepperControl";
-import Step1 from "./step/step-1";
-import Step2 from "./step/step-2";
-import Step3 from "./step/step-3";
+import Step1 from "./step/natural-environment";
+import Step2 from "./step/personal-freedom";
+import Step3 from "./step/safety-security";
+import Step4 from "./step/social-capital";
+import Step5 from "./step/business-environment";
+import Step6 from "./step/economic-quality";
+import Step7 from "./step/infrastructure";
+import Step8 from "./step/governance";
+import Step9 from "./step/health";
+import Step10 from "./step/living-conditions";
+import Step11 from "./step/education";
+
 
 
 function App() {
@@ -15,7 +24,7 @@ function App() {
   const [finalData, setFinalData] = useState([]);
 
   const steps = [
-    "Environment",
+    "Natural Environment",
     "Personal Freedom",
     "Safety and Security",
     "Social Capital",
@@ -25,7 +34,7 @@ function App() {
     "Governance",
     "Health",
     "Living Conditions",
-    "Natural Environment",
+    "Education",
   ];
 
   const displayStep = (step) => {
@@ -36,6 +45,22 @@ function App() {
         return <Step2 />
       case 3:
         return <Step3 />
+      case 4:
+        return <Step4 />
+      case 5:
+        return <Step5 />
+      case 6:
+        return <Step6 />
+      case 7:
+        return <Step7 />
+      case 8:
+        return <Step8 />
+      case 9:
+        return <Step9 />
+      case 10:
+        return <Step10 />
+      case 11:
+        return <Step11 />
       default:
     }
   }
@@ -84,6 +109,10 @@ function App() {
             handleClick = {handleClick}
             currentStep = {currentStep}
           />
+
+          <div>
+            {console.log(userData)}
+          </div>
 
       </div>
     </div>
