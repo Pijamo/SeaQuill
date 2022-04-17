@@ -2,21 +2,21 @@ import config from './config.json'
 
 
 //test Route
-const testRoute = async () => {
-    var res = await fetch(`http://${config.server_host}/test`, {
+const getUsers = async (email, password) => {
+    var res = await fetch(`http://${config.server_host}:${config.server_port}/users?email=${email}&password=${password}`, {
         method: 'GET',
     })
     return res.json()
 }
 
-//QUIZ
-//Route 1: Get counties /counties
-const getCounties = async () => {
-    var res = await fetch(`http://${config.server_host}/counties`, {
-        method: 'GET',
-    })
-    return res.json()
-}
+// //QUIZ
+// //Route 1: Get counties /counties
+// const getCounties = async () => {
+//     var res = await fetch(`http://${config.server_host}/counties`, {
+//         method: 'GET',
+//     })
+//     return res.json()
+// }
 
 
 // ********************************************
@@ -71,4 +71,4 @@ const getCounties = async () => {
 //Return: List of counties
 
 
-export default testRoute
+export default getUsers

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const StepperControl = ({ handleClick, currentStep, steps }) => {
     let advance=  "next";
-    if (currentStep != steps.length){
+    if (currentStep !== steps.length){
         advance= <button 
         onClick={() => handleClick("next")}
         className="h-75px w-210px text-2xl bg-primary text-white uppercase py-2 px-4 rounded font-semibold cursor-pointer bg-primary transition duration-200">
@@ -12,7 +12,7 @@ const StepperControl = ({ handleClick, currentStep, steps }) => {
     }
     // Confirm button (links to results page)
     else (
-        advance= <Link to='/'><button 
+        advance= <Link to='/results'><button 
         onClick={() => handleClick("confirm")}
         className="h-75px w-210px text-2xl bg-primary text-white uppercase py-2 px-4 rounded font-semibold cursor-pointer bg-primary transition duration-200">
             Confirm

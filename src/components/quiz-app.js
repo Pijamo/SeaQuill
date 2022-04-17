@@ -14,8 +14,8 @@ import Step8 from "./step/governance";
 import Step9 from "./step/health";
 import Step10 from "./step/living-conditions";
 import Step11 from "./step/education";
-import { Link } from 'react-router-dom';
-
+import testRoute from "../fetcher";
+import getUsers from "../fetcher";
 
 
 function App() {
@@ -73,8 +73,8 @@ function App() {
       newStep++
     }
     else if (direction === "confirm"){
-      
-    }
+      getUsers('test@example.com','abc123').then(res => {console.log(res.results)
+    })}
     else{
       newStep--;
     }
