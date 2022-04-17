@@ -14,6 +14,7 @@ import Step8 from "./step/governance";
 import Step9 from "./step/health";
 import Step10 from "./step/living-conditions";
 import Step11 from "./step/education";
+import { Link } from 'react-router-dom';
 
 
 
@@ -68,7 +69,16 @@ function App() {
   const handleClick = ( direction ) => {
     let newStep = currentStep;
 
-    direction === "next"? newStep++ : newStep--;
+    if (direction === "next"){
+      newStep++
+    }
+    else if (direction === "confirm"){
+      
+    }
+    else{
+      newStep--;
+    }
+   
 
     newStep > 0 && newStep <= steps.length && setCurrentStep(newStep);
   }
