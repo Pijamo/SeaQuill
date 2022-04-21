@@ -9,14 +9,14 @@ const getUsers = async (email, password) => {
     return res.json()
 }
 
-// //QUIZ
-// //Route 1: Get counties /counties
-// const getCounties = async () => {
-//     var res = await fetch(`http://${config.server_host}/counties`, {
-//         method: 'GET',
-//     })
-//     return res.json()
-// }
+//QUIZ
+//Route 1: Get counties /counties
+const getCounties = async (page, pagesize, zip, education, freedom, safety, social, business, economic, infrastructure, governance, health, living, environment) => {
+    var res = await fetch(`http://${config.server_host}:${config.server_port}/counties?page=${page}&pagesize=${pagesize}&zip=${zip}&education=${education}&freedom=${freedom}&safety=${safety}&social=${social}&business=${business}&economic=${economic}&infrastructure=${infrastructure}&governance=${governance}&health=${health}&living=${living}&environment=${environment}`, {
+        method: 'GET',
+    })
+    return res.json()
+}
 
 
 // ********************************************
@@ -71,4 +71,6 @@ const getUsers = async (email, password) => {
 //Return: List of counties
 
 
-export default getUsers
+export {
+    getUsers,
+    getCounties}
