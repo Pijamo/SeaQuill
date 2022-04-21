@@ -12,24 +12,37 @@ import {getCounties} from '../fetcher'
 
 export default function QuizResults(){
     let [results, setResults] = useState()
-
+    let page = 0
+    let pagesize = 0
+    let zip = 0
     const location = useLocation()
     // const ratings = Object.values(location.state.ratingData)
     const ratings = Array(11).fill(5)
     useEffect(()=> {
-        getCounties(1,10,80305, ...ratings)
+        // page, pagesize, userzip, 11 prosperity ratings 
+        getCounties(page,pagesize,zip, ...ratings) 
         .then(data=>setResults(data["results"]))
     }, [])
-        
+    
+    function showResults(results){
+        let CountyList = results.map((item,index)=>{
+            return <div>{item.county}, {item.state}, {item.fips_code} - {item.total_score.toFixed(2)}</div>
+
+        })
+        return CountyList
+       
+    }
+
     return (
         
         <div>
             <Navbar></Navbar>
             <PageHeader headertitle="Quiz Results" />
         
-                {console.log(results)}
-            
-            
+                {results && 
+                    showResults(results)}
+
+        
             <CallToActionV1 />
             <Footer />
         </div>
