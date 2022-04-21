@@ -1,7 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { StepperContext } from '../../contexts/StepperContext';
+import { useContext } from 'react';
 
-const StepperControl = ({ handleClick, currentStep, steps }) => {
+const StepperControl = ({ handleClick, currentStep, steps, userData }) => {
+
+    // const { useContext } = React.useContext(StepperContext)
     let advance=  "next";
     if (currentStep !== steps.length){
         advance= <button 
@@ -12,11 +16,11 @@ const StepperControl = ({ handleClick, currentStep, steps }) => {
     }
     // Confirm button (links to results page)
     else (
-        advance= <Link to='/results'><button 
+        advance= <button 
         onClick={() => handleClick("confirm")}
         className="h-75px w-210px text-2xl bg-primary text-white uppercase py-2 px-4 rounded font-semibold cursor-pointer bg-primary transition duration-200">
             Confirm
-        </button></Link>
+        </button>
     )
   
     return (
