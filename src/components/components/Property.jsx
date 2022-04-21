@@ -1,13 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import DefaultImage from '../../assets/img/sample_house.jpg'
+
 const Property = ({
   property: { primary_photo, property_id, list_price, description, location, status},
 }) => (
     <div className="col-xl-6 col-sm-6 col-12">
     <div className="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
         <div className="product-img go-top">
-            <Link to="/property/4792447267"><img src={primary_photo.href} alt="#" /></Link>
+            <Link to={`/property/${property_id}`}><img src={primary_photo == null ? DefaultImage : primary_photo.href } alt="#" /></Link>
             <div className="real-estate-agent">
                 <div className="agent-img">
                     <Link to="/shop"><img src={process.env.PUBLIC_URL + "/assets/img/blog/author.jpg"} alt="#" /></Link>
@@ -17,10 +19,10 @@ const Property = ({
         <div className="product-info">
             <div className="product-badge">
                 <ul>
-                    <li className="sale-badg">{textFormat(status)}</li>
+                    <li className="sale-badge">{textFormat(status)}</li>
                 </ul>
             </div>
-            <h2 className="product-title go-top"><Link to="/product-details">Some Name To Decide</Link></h2>
+            <h2 className="product-title go-top"><Link to="/product-details">{property_id}</Link></h2>
             <div className="product-img-location go-top">
                 <ul>
                     <li>

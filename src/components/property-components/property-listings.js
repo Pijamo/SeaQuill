@@ -1,7 +1,7 @@
 import React, { Component, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import parse from 'html-react-parser';
-import Sidebar from './filter';
+import Filter from './filter';
 import propertyList from '../../assets/json/propertyList.json';
 import Property from '../components/Property.jsx';
 import PropertyList from '../components/PropertyList';
@@ -10,28 +10,54 @@ import Search from '../components/Search'
 import Posts from '../components/Posts.jsx';
 import Modal from '../components/Modal';
 import Sorter from '../components/Sorter'
+import axios from 'axios';
 
-function ShopGridV1() {
+function PropertyListings() {
 	
 	const [posts, setPosts] = useState([]);
 	const [loading, setLoading] = useState(false);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [postsPerPage, setPostsPerPage] = useState(6);
 
-	useEffect(() => {
-	const fetchPosts = async () => {
-		setLoading(true);
-		// const res = await axios.get('https://jsonplaceholder.typicode.com/posts')
-		const res = {data: propertyList?.data.home_search.results}
-		setPosts(res.data);
-		setLoading(false);
-	}
-	fetchPosts();
-	}, []);
+	
+	//for real estate
 
-	// async componentDidMount() {
-	// 	this.setState({ data: propertyList?.data.home_search.results })
-	// }
+	useEffect(() => {
+		const fetchPosts = async () => {
+			setLoading(true);
+
+			axios.request(options).then(function (response){
+				console.log(response.data.data.home_search.results);
+				const res = {data: response.data.data.home_search.results}
+				console.log(res);
+				setPosts(res.data);
+				setLoading(false);
+			}).catch(function (error) {
+				console.log(error)
+			})
+			// const res = await axios.get('https://jsonplaceholder.typicode.com/posts')
+			// const res = {data: propertyList?.data.home_search.results}
+			// console.log(res)
+			// setPosts(res.data);
+			// setLoading(false);
+		}
+
+		const options = {
+			method: 'GET',
+			url: 'https://us-real-estate.p.rapidapi.com/v2/for-sale',
+			params: {offset: '0', limit: '42', state_code: 'MI', city: 'Detroit', sort: 'newest'},
+			headers: {
+				'X-RapidAPI-Host': 'us-real-estate.p.rapidapi.com',
+				'X-RapidAPI-Key': '3f515e3d43mshd23209238a487dep165accjsn056995b24ad3'
+			}
+		};
+
+		fetchPosts();
+		}, []);
+	
+		// async componentDidMount() {
+		// 	this.setState({ data: propertyList?.data.home_search.results })
+		// }
 
 	//Get current posts
 	const indexOfLastPost = currentPage * postsPerPage;
@@ -52,7 +78,7 @@ function ShopGridV1() {
 								<Posts posts={currentPosts} loading={loading}/>
 								<Paginate postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} currentPage={currentPage}/>
 							</div>
-							<Sidebar />
+							<Filter />
 						</div>
 					</div>
 				</div>
@@ -61,20 +87,8 @@ function ShopGridV1() {
 	)
 }
 
-export default ShopGridV1
+export default PropertyListings
 
-
-export async function getStaticProps() {
-	// const propertyForSale = await fetchApi(`${baseURL}/v2/for-sale?offset=0&limit=6&state_code=MI&city=Detroit`)
-	const propertyForSale = propertyList;
-
-	return {
-		props: {
-			totalCount: propertyForSale?.data.home_search.count,
-			propertyForSale: propertyForSale?.data.home_search.results,
-		}
-	}
-}
 
 
 

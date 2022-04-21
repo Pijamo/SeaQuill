@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import DefaultImage from '../../assets/img/sample_house.jpg'
 
 const PropertyList = ({
     property: { primary_photo, property_id, list_price, description, location, status},
@@ -7,7 +8,7 @@ const PropertyList = ({
     <div className="col-lg-12">
         <div className="ltn__product-item ltn__product-item-4 ltn__product-item-5">
             <div className="product-img go-top">
-                <Link to="/product-details"><img src={primary_photo.href} alt="#" /></Link>
+                <Link to="/product-details"><img src={primary_photo == null ? DefaultImage : primary_photo.href } alt="#" /></Link>
             </div>
             <div className="product-info">
                 <div className="product-badge-price">
