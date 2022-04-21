@@ -7,10 +7,6 @@ import testRoute from '../../fetcher';
 
 class Banner extends Component {
 
-	componentDidMount() {
-		testRoute().then(res => {
-			console.log(res.results)
-		})}
 		
 	render() {
 

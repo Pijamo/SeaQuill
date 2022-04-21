@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { StepperContext } from "../contexts/StepperContext";
 
 import Stepper from "./components/Stepper";
@@ -14,11 +14,14 @@ import Step8 from "./step/governance";
 import Step9 from "./step/health";
 import Step10 from "./step/living-conditions";
 import Step11 from "./step/education";
-
+import testRoute from "../fetcher";
+import getUsers from "../fetcher";
+import { Link, useHistory } from 'react-router-dom';
 
 
 function App() {
-  
+  let history = useHistory();
+
   const [currentStep, setCurrentStep] = useState(1)
   const [userData, setUserData] = useState('');
   const [finalData, setFinalData] = useState([]);
@@ -68,7 +71,15 @@ function App() {
   const handleClick = ( direction ) => {
     let newStep = currentStep;
 
-    direction === "next"? newStep++ : newStep--;
+    if (direction === "next"){
+      newStep++
+    }
+    else if (direction === "confirm"){
+      history.push({ pathname: "/results", state: { ratingData: userData }})
+    }
+    else{
+      newStep--;
+    }
 
     newStep > 0 && newStep <= steps.length && setCurrentStep(newStep);
   }
@@ -103,22 +114,20 @@ function App() {
         </div>
 
         </div>
-          {/* StepperControl */}
-          <StepperControl 
-            steps = {steps}
-            handleClick = {handleClick}
-            currentStep = {currentStep}
-          />
-
-          <div>
-            {console.log(userData)}
-          </div>
-
+            {/* StepperControl */}
+              <StepperControl 
+                steps = {steps}
+                handleClick = {handleClick}
+                currentStep = {currentStep}
+                userData = { userData }
+              />
       </div>
     </div>
   );
 }
 
 export default App;
+
+
 
 
