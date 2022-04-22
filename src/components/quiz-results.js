@@ -9,6 +9,8 @@ import { useLocation } from 'react-router-dom';
 
 import {getCounties} from '../fetcher' 
 
+import ResultsTable from './quiz-results-components/quizResultsTable'
+
 
 export default function QuizResults(){
     let [results, setResults] = useState()
@@ -30,23 +32,18 @@ export default function QuizResults(){
 
         })
         return CountyList
-       
     }
 
     return (
-        
         <div>
             <Navbar></Navbar>
-            <PageHeader headertitle="Quiz Results" />
+            <ResultsTable />
+            {/* <PageHeader headertitle="Quiz Results" /> */}
         
-                {results && 
-                    showResults(results)}
-
-        
-            <CallToActionV1 />
+                {/* {results && 
+                    showResults(results)} */}
             <Footer />
-        </div>
-        
+        </div>  
     )
     
 }
