@@ -18,6 +18,14 @@ const getCounties = async (page, pagesize, zip, education, freedom, safety, soci
     return res.json()
 }
 
+// Route 2: Returns list of city in selected county
+const getCities = async (page, pagesize, popLower, popUpper, countyCode) => {
+    var res = await fetch(`http://${config.server_host}:${config.server_port}/cities?page=${page}&pagesize=${pagesize}&county=${countyCode}&popLower=${popLower}&popUpper=${popUpper}`, {
+        method: 'GET',
+    })
+    return res.json()
+}
+
 
 // ********************************************
 //            SEARCH PAGES ROUTES
@@ -73,4 +81,5 @@ const getCounties = async (page, pagesize, zip, education, freedom, safety, soci
 
 export {
     getUsers,
-    getCounties}
+    getCounties,
+    getCities}
