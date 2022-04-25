@@ -13,7 +13,7 @@ import Listings from './components/listings';
 
 
 import MyAccount from './components/my-account';
-import Login from './components/login';
+import LoginV1 from './components/login';
 import Register from './components/register';
 
 
@@ -29,8 +29,9 @@ class Root extends Component {
                         <Route path="/results" component= { Results } />
                         <Route path="/listings" component={ Listings } />
                         <Route path="/property/:id" component={ ProdductDetails } />
-                        <Route path="/login" component={ Login } />
+                        <Route path="/login" component={ LoginV1 } />
                         <Route path="/register" component={ Register } />
+                        <Route path="/my-account" component={ MyAccount } />
                         
                         {/* <Route path="/service-details" component={ ServiceDetails } /> */}
                         {/* <Route path="/portfolio-details" component={ PortfolioDetails } />
@@ -46,7 +47,7 @@ class Root extends Component {
 
                         
 
-                        <Route path="/my-account" component={ MyAccount } />
+                        
                         <Route path="/add-listing" component={ AddListing } />
                         <Route path="/wishlist" component={ Wishlist } />
                         <Route path="/order-tracking" component={ OrderTracking } />
