@@ -1,15 +1,10 @@
 import config from './config.json'
 
 
-//test Route
-const getUsers = async (email, password) => {
-    var res = await fetch(`http://${config.server_host}:${config.server_port}/users?email=${email}&password=${password}`, {
-        method: 'GET',
-    })
-    return res.json()
-}
 
-//QUIZ
+// ********************************************
+//            QUIZ ROUTES
+// ********************************************
 //Route 1: Get counties /counties
 const getCounties = async (page, pagesize, zip, education, freedom, safety, social, business, economic, infrastructure, governance, health, living, environment) => {
     var res = await fetch(`http://${config.server_host}:${config.server_port}/counties?page=${page}&pagesize=${pagesize}&zip=${zip}&education=${education}&freedom=${freedom}&safety=${safety}&social=${social}&business=${business}&economic=${economic}&infrastructure=${infrastructure}&governance=${governance}&health=${health}&living=${living}&environment=${environment}`, {
@@ -25,6 +20,16 @@ const getCities = async (page, pagesize, popLower, popUpper, countyCode) => {
     })
     return res.json()
 }
+
+//Route 3: Returns climate information for the selected county
+const getClimate = async (countyCode) => {
+    var res = await fetch(`http://${config.server_host}:${config.server_port}/climate?county=${countyCode}`, {
+        method: 'GET',
+    })
+    return res.json()
+}
+
+//Route 4: Returns job information for the selected county
 
 
 // ********************************************
@@ -72,14 +77,20 @@ const getCities = async (page, pagesize, popLower, popUpper, countyCode) => {
 
 
 // ********************************************
-//            QUIZ ROUTES
+//            USER ROUTES
 // ********************************************
-//ROUTE 6: Call to Server for Prosperity Index
-//Value: Prosperity Index Array
-//Return: List of counties
+const getUsers = async (email, password) => {
+    var res = await fetch(`http://${config.server_host}:${config.server_port}/users?email=${email}&password=${password}`, {
+        method: 'GET',
+    })
+    return res.json()
+}
+
+
 
 
 export {
     getUsers,
     getCounties,
-    getCities}
+    getCities,
+    getClimate}

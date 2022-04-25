@@ -7,7 +7,7 @@ import CallToActionV1 from './section-components/call-to-action-v1';
 import Footer from './global-components/footer';
 import { useLocation } from 'react-router-dom';
 
-import {getCounties, getCities} from '../fetcher' 
+import {getCounties, getCities, getClimate} from '../fetcher' 
 
 import ResultsTable from './quiz-results-components/quizResultsTable'
 
@@ -16,8 +16,8 @@ export default function QuizResults(){
 
     // Counties
     let [counties, setCounties] = useState()
-    let [countyPage, setCountyPage] = useState(0)
-    let [countyPagesize, setCountyPagesize ] = useState(0)
+    let [countyPage, setCountyPage] = useState(null)
+    let [countyPagesize, setCountyPagesize ] = useState(null)
     let [zip, setZip] = useState(0)
 
     const location = useLocation()
@@ -41,10 +41,14 @@ export default function QuizResults(){
 
      //Retrieve cities for a particular county
      let [cities, setCities] = useState()
+     let [popLower, setPopLower] = useState(null)
+     let [popUpper, setPopUpper ] = useState(null)
+     let [cityPage, setCityPage] = useState(null)
+     let [cityPagesize, setCityPagesize ] = useState(null)
+     
 
      useEffect(()=> {
-        // page, pagesize, userzip, 11 prosperity ratings 
-        getCities(1, 10, 0, 10000000, 6037) 
+        getCities(cityPage, cityPagesize, popLower, popUpper, 6037) // PLACEHOLDER for county id
         .then(data=>setCities(data["results"]))
     }, [])
 
@@ -56,14 +60,34 @@ export default function QuizResults(){
         return CitiesList
     }
 
+     //Retrieve climate information for the selected county
+     let [climate, setClimate] = useState()
+     
+
+     useEffect(()=> {
+        getClimate(6037) // PLACEHOLDER for county id
+        .then(data=>setClimate(data["results"]))
+    }, [])
+
+    function showClimate(results){
+        let ClimateList = results.map((item,index)=>{
+            return <div>{item.month}, {item.averageTemp.toFixed(1)}, {item.minTemp.toFixed(1)},
+            {item.maxTemp.toFixed(1)}, {item.totalRain.toFixed(2)}, {item.totalSnow.toFixed(2)} </div>
+
+        })
+        return ClimateList
+    }
+
+
     return (
         <div>
             <Navbar></Navbar>
             <ResultsTable />
             {/* <PageHeader headertitle="Quiz Results" /> */}
         
-                {/* {counties && showCounties(counties)} */}
+                {counties && showCounties(counties)}
                 {/* {cities && showCities(cities)} */}
+                {climate && showClimate(climate)}
             <Footer />
         </div>  
     )
