@@ -91,14 +91,6 @@ export default function QuizResults(){
         getJobs(jobPage, jobPagesize, "chem", 6037) // PLACEHOLDER for keyword, county id
         .then(data=>setJobs(data["results"]))  
     }, [])
-
-    function showJobs(results){
-        let JobsList = results.map((item,index)=>{
-            return <div>{item.title}, {item.mean_salary}, {item.total_jobs}, {item.location_quotient}  </div>
-
-        })
-        return JobsList
-    }
     
 
     return (
