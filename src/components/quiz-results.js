@@ -8,7 +8,7 @@ import Footer from './global-components/footer';
 import { useLocation } from 'react-router-dom';
 
 import {getCounties, getCities, getClimate, getJobs} from '../fetcher' 
-
+import Climate from '../components/climate'
 import ResultsTable from './quiz-results-components/quizResultsTable'
 
 
@@ -107,6 +107,7 @@ export default function QuizResults(){
                 {/* {cities && showCities(cities)} */}
                 {/* {climate && showClimate(climate)} */}
                 {/* {jobs && showJobs(jobs)} */}
+                {Climate()}
             <Footer />
         </div>  
     )
