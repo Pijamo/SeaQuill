@@ -100,14 +100,13 @@ export default function QuizResults(){
     return (
         <div>
             <Navbar></Navbar>
-            <ResultsTable />
+            {/* <ResultsTable /> */}
             {/* <PageHeader headertitle="Quiz Results" /> */}
         
-                {counties && showCounties(counties)}
+                {/* {counties && showCounties(counties)} */}
                 {/* {cities && showCities(cities)} */}
-                {/* {climate && showClimate(climate)} */}
                 {/* {jobs && showJobs(jobs)} */}
-                {Climate()}
+                {Climate(climate)}
             <Footer />
         </div>  
     )
