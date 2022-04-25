@@ -84,9 +84,16 @@ const getJobs = async (page, pagesize, jobTitle, countyCode) => {
 // ********************************************
 //            USER ROUTES
 // ********************************************
-const getUsers = async (email, password) => {
+const getUser = async (email, password) => {
     var res = await fetch(`http://${config.server_host}:${config.server_port}/users?email=${email}&password=${password}`, {
         method: 'GET',
+    })
+    return res.json()
+}
+
+const addUser = async (email, password, firstName, lastName, gender, dob, zip) => {
+    var res = await fetch(`http://${config.server_host}:${config.server_port}/users?email=${email}&password=${password}&firstName=${firstName}&lastName=${lastName}&gender=${gender}&dob=${dob}&zip=${zip}`, {
+        method: 'POST',
     })
     return res.json()
 }
@@ -95,7 +102,8 @@ const getUsers = async (email, password) => {
 
 
 export {
-    getUsers,
+    getUser,
+    addUser,
     getCounties,
     getCities,
     getClimate,

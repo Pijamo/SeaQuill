@@ -96,7 +96,7 @@ export default function QuizResults(){
         })
         return JobsList
     }
-    
+
     return (
         <div>
             <Navbar></Navbar>
@@ -106,7 +106,7 @@ export default function QuizResults(){
                 {counties && showCounties(counties)}
                 {/* {cities && showCities(cities)} */}
                 {/* {climate && showClimate(climate)} */}
-                {jobs && showJobs(jobs)}
+                {/* {jobs && showJobs(jobs)} */}
             <Footer />
         </div>  
     )
