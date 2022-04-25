@@ -66,7 +66,7 @@ export default function QuizResults(){
      
 
      useEffect(()=> {
-        getClimate(6037) // PLACEHOLDER for county id
+        getClimate(8035) // PLACEHOLDER for county id (6077, 8035, 48001 )
         .then(data=>setClimate(data["results"]))
     }, [])
 
@@ -110,7 +110,7 @@ export default function QuizResults(){
                 {/* {counties && showCounties(counties)} */}
                 {/* {cities && showCities(cities)} */}
                 {jobs && Jobs(jobs)}
-                {Climate(climate)}
+                {climate && Climate(climate)}
             <Footer />
         </div>  
     )

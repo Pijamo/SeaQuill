@@ -9,6 +9,7 @@ if (!isNaN(climate)){
 }
 
 return(
+    <div><h4>Monthly Averages from 1981 - 2010</h4>
 
     <ComposedChart
     width={600}
@@ -17,22 +18,19 @@ return(
     margin={{ top: 5, right: 10, left: 10, bottom: 20 }}
     >
     <XAxis dataKey="month" label={{value:'month', dy: 25}}/>
-    <YAxis yAxisId={0}  dataKey="Avg Temperature" tickCount="6"  label={{value:'Temperature (˚F)', angle: -90, dx: -25}}/>
-    <YAxis yAxisId={1} hide="true"/>
-    <YAxis yAxisId={2} hide="true"/>
+    <YAxis yAxisId={0}  tickCount="6" label={{value:'Temperature (˚F)', angle: -90, dx: -25}}/>
+    <YAxis yAxisId={1} orientation='right' tickCount="6" label={{value:'Precipitation (Inches)', angle: -90, dx: 15}}/>
     <Tooltip />
     <Legend layout='vertical' verticalAlign="middle" align="right" wrapperStyle={{marginRight: -50}}/>
-    <text x={500 / 2} y={20} fill="black"  textAnchor="middle" dominantBaseline="central">
-            <tspan fontSize="16">Monthly Averages from 1981 - 2010</tspan>
-        </text>
+    
     <CartesianGrid stroke="#f5f5f5" />
-    <Line type="monotone" dataKey="Avg Temperature" stroke="#387908" yAxisId={0} />
-    <Line type="monotone" dataKey="Low Temperature" stroke="#0000ff" yAxisId={0} />
-    <Line type="monotone" dataKey="High Temperature" stroke="#ff0000" yAxisId={0} />
-    <Area type="monotone" dataKey="Total Rain" fill="#000000" yAxisId={1} />
-    <Area type="monotone" dataKey="Total Snow" fill="#cccccc" yAxisId={2} />
+    <Line type="monotone" strokeWidth={1.5} dataKey="Avg Temperature" stroke="#387908" yAxisId={0} />
+    <Line type="monotone" strokeWidth={1.5} dataKey="Low Temperature" stroke="#0000ff" yAxisId={0} />
+    <Line type="monotone" strokeWidth={1.5} dataKey="High Temperature" stroke="#ff0000" yAxisId={0} />
+    <Area type="monotone" dataKey="Total Rain" fillOpacity={0.1} stroke="#0077ff" fill="#00ccff" yAxisId={1} />
+    <Area type="monotone" dataKey="Total Snow" fillOpacity={0.1} stroke="#aaaaaa" fill="#eeeeee" yAxisId={1} />
     </ComposedChart>
-
+    </div>
 )
 
 }
