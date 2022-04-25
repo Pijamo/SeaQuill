@@ -30,7 +30,12 @@ const getClimate = async (countyCode) => {
 }
 
 //Route 4: Returns job information for the selected county
-
+const getJobs = async (page, pagesize, jobTitle, countyCode) => {
+    var res = await fetch(`http://${config.server_host}:${config.server_port}/jobs?page=${page}&pagesize=${pagesize}&keyword=${jobTitle}&county=${countyCode}`, {
+        method: 'GET',
+    })
+    return res.json()
+}
 
 // ********************************************
 //            SEARCH PAGES ROUTES
@@ -93,4 +98,5 @@ export {
     getUsers,
     getCounties,
     getCities,
-    getClimate}
+    getClimate,
+    getJobs}
