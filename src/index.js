@@ -31,6 +31,7 @@ class Root extends Component {
                         <Route path="/property/:id" component={ ProdductDetails } />
                         <Route path="/login" component={ LoginV1 } />
                         <Route path="/register" component={ Register } />
+                        <Route path="/my-account" component={ MyAccount } />
                         
                         {/* <Route path="/service-details" component={ ServiceDetails } /> */}
                         {/* <Route path="/portfolio-details" component={ PortfolioDetails } />
@@ -46,7 +47,7 @@ class Root extends Component {
 
                         
 
-                        <Route path="/my-account" component={ MyAccount } />
+                        
                         <Route path="/add-listing" component={ AddListing } />
                         <Route path="/wishlist" component={ Wishlist } />
                         <Route path="/order-tracking" component={ OrderTracking } />

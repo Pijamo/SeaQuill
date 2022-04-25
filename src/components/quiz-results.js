@@ -9,7 +9,9 @@ import { useLocation } from 'react-router-dom';
 
 import {getCounties, getCities, getClimate, getJobs} from '../fetcher' 
 import Climate from '../components/climate'
+import Jobs from '../components/job-table'
 import ResultsTable from './quiz-results-components/quizResultsTable'
+
 
 
 export default function QuizResults(){
@@ -64,7 +66,7 @@ export default function QuizResults(){
      
 
      useEffect(()=> {
-        getClimate(6037) // PLACEHOLDER for county id
+        getClimate(8035) // PLACEHOLDER for county id (6077, 8035, 48001 )
         .then(data=>setClimate(data["results"]))
     }, [])
 
@@ -79,23 +81,17 @@ export default function QuizResults(){
 
      //Retrieve cities for a particular county
      let [jobs, setJobs] = useState()
+     let [jobTable, setJobTable] = useState()
      let [jobTitle, setJobTitle] = useState()
      let [jobPage, setJobPage] = useState(null)
      let [jobPagesize, setJobPagesize ] = useState(null)
      
 
      useEffect(()=> {
-        getJobs(jobPage, jobPagesize, "data", 6037) // PLACEHOLDER for keyword, county id
-        .then(data=>setJobs(data["results"]))
+        getJobs(jobPage, jobPagesize, "chem", 6037) // PLACEHOLDER for keyword, county id
+        .then(data=>setJobs(data["results"]))  
     }, [])
-
-    function showJobs(results){
-        let JobsList = results.map((item,index)=>{
-            return <div>{item.title}, {item.mean_salary}, {item.total_jobs}, {item.location_quotient}  </div>
-
-        })
-        return JobsList
-    }
+    
 
     return (
         <div>
@@ -105,8 +101,8 @@ export default function QuizResults(){
         
                 {/* {counties && showCounties(counties)} */}
                 {/* {cities && showCities(cities)} */}
-                {/* {jobs && showJobs(jobs)} */}
-                {Climate(climate)}
+                {jobs && Jobs(jobs)}
+                {climate && Climate(climate)}
             <Footer />
         </div>  
     )
