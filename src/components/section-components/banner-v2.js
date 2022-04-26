@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import parse from 'html-react-parser';
+// import parse from 'html-react-parser';
+import { getCityState } from '../../fetcher';
+import {StateAutoComplete} from '../components/StateAutocomplete';
 
 class BannerV5 extends Component {
 
@@ -33,8 +35,10 @@ class BannerV5 extends Component {
 														</div>
 														<div className="col-xl-3 col-lg-4 col-md-4">
 															<div className="border">
-																<input className='mb-0' type="text" placeholder="State Code" /></div>
-														</div>
+																<input className='mb-0' type="text" placeholder="State: Eg. Iowa" /></div>
+												
+
+																</div>
 														<div className="col-xl-2 col-lg-4 col-md-4">
 															<div className="border">
 																<input className='mb-0' type="text" placeholder="Min Price" /></div>
@@ -55,10 +59,16 @@ class BannerV5 extends Component {
 														<div className="col-xl-3 col-lg-6 col-md-6">
 															<div className="border">
 																<input className='mb-0' type="text" placeholder="City" /></div>
+
 														</div>
 														<div className="col-xl-3 col-lg-4 col-md-4">
 															<div className="border">
-																<input className='mb-0' type="text" placeholder="State Code" /></div>
+																<input className='mb-0' type="text" placeholder="State: Eg. Iowa" />
+																
+																<StateAutoComplete data={getCityState} />
+																
+																</div>
+
 														</div>
 														<div className="col-xl-2 col-lg-4 col-md-4">
 															<div className="border">

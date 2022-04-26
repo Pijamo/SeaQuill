@@ -29,6 +29,14 @@ const getCounties = async (page, pagesize, zip, education, freedom, safety, soci
 //Optional Parameter
 //Returns List of State Name & State Code and their Cities
 
+const getCityState = async () => {
+    var res = await fetch(`http://${config.server_host}:${config.server_port}/cityState`, {
+        method: 'GET',
+    })
+
+    return res.json()
+}
+
 
 //Route 3: Get property List
 //Description: Make API call to RealEstate API
@@ -73,4 +81,5 @@ const getCounties = async (page, pagesize, zip, education, freedom, safety, soci
 
 export {
     getUsers,
-    getCounties}
+    getCounties,
+    getCityState}
