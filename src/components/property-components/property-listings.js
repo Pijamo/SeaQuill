@@ -41,7 +41,7 @@ function PropertyListings() {
 			params: {offset: '0', limit: '42', state_code: 'MI', city: 'Detroit', sort: 'newest'},
 			headers: {
 				'X-RapidAPI-Host': 'us-real-estate.p.rapidapi.com',
-				'X-RapidAPI-Key': '3f515e3d43mshd23209238a487dep165accjsn056995b24ad3'
+				'X-RapidAPI-Key': '5acc196857mshe4a6c20d2ae946cp1583d9jsnb9d98e8ac7ef'
 			}
 		};
 
