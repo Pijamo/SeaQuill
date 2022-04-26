@@ -14,9 +14,6 @@ import ResultsTable from './quiz-results-components/quizResultsTable'
 import BootstrapTable from 'react-bootstrap-table-next';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 
-import BootstrapTable from 'react-bootstrap-table-next';
-import paginationFactory from 'react-bootstrap-table2-paginator';
-
 
 export default function QuizResults(){
 
@@ -74,8 +71,6 @@ export default function QuizResults(){
     // let living = isNaN(ratings.living) ? 1 : ratings.living
   
     const ratingsHard = Array(11).fill(5) // HARD CODED VALUES (for quicker testing)
-
-    
     
     useEffect(()=> {
         // page, pagesize, userzip, 11 prosperity ratings 
