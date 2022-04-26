@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import parse from 'html-react-parser';
 
 
 const PropertyDetails = ( { property } ) => {
@@ -8,80 +7,81 @@ const PropertyDetails = ( { property } ) => {
     let publicUrl = process.env.PUBLIC_URL+'/'
 
     return <div className="ltn__shop-details-area pb-10">
-				{console.log(property)}
+			
 				<div className="container">
 				<div className="row">
 					<div className="col-lg-8 col-md-12">
 					<div className="ltn__shop-details-inner ltn__page-details-inner mb-60">
 						<div className="ltn__blog-meta">
 						<ul>
+						
 							<li className="ltn__blog-category">
-							<Link to="#">Featured</Link>
+							<Link className="bg-orange" >{textFormat(property.prop_common?.status)}</Link>
 							</li>
-							<li className="ltn__blog-category">
-							<Link className="bg-orange" to="#">{textFormat(property.prop_common?.status)}</Link>
-							</li>
-							<li className="ltn__blog-date">
-							<i className="far fa-calendar-alt" />This will be Missing
-							</li>
+							
 						</ul>
 						</div>
-						<h1>Some Name To Decide</h1>
-						<label><span className="ltn__secondary-color"><i className="flaticon-pin" /></span> {property.address?.line}, {property.address?.state}</label>
+						<h1> {property.address?.line}</h1>
+				
+                        <i className="flaticon-pin" />  {property.address?.city}, {property.address?.state}   {property.address?.postal_code}
+                   
+						
 						<h4 className="title-2">Description</h4>
 						<p>{property.prop_common?.description}</p>
-						<h4 className="title-2">Property Detail</h4>  
+						<h4 className="title-2">Property Details</h4>  
 						<div className="property-detail-info-list section-bg-1 clearfix mb-60">                          
 						<ul>
-							<li><label>Property ID:</label> <span>HZ29</span></li>
+							{/* <li><label>Property ID:</label> <span>HZ29</span></li> */}
 							
 							{property.prop_common?.sqft && 
-							<li><label>Home Area: </label> <span>{property.prop_common.sqft} sqft</span></li>
+							<li><label>Home Area: </label> <span>{property.prop_common.sqft.toLocaleString()} sqft</span></li>
 							}
-							
+
+							{property.prop_common?.stories && 
+							<li><label>Stories:</label> <span>{property.prop_common.stories}</span></li>
+							}
+
 							{property.prop_common?.rooms && 
 							<li><label>Rooms:</label> <span>{property.prop_common.rooms}</span></li>
 							}
 
-							{property.prop_common?.garage && 
-							<li><label>Garage:</label> <span>{property.prop_common.garage}</span></li>
+							
+
+							{property.prop_common?.bed && 
+							<li><label>Beds:</label> <span>{property.prop_common.bed}</span></li>
 							}
 
 							{property.prop_common?.bath && 
 							<li><label>Baths:</label> <span>{property.prop_common.bath}</span></li>
 							}
 
+							
+
+							
+							
+						</ul>
+						<ul>
+							{/* <li><label>Lot Area:</label> <span>HZ29 </span></li> */}
+							{property.prop_common?.garage && 
+							<li><label>Garage:</label> <span>{property.prop_common.garage}</span></li>
+							}
+							{property.prop_common?.lot_sqft && 
+							<li><label>Lot dimensions:</label> <span>{property.prop_common.lot_sqft.toLocaleString()} sqft</span></li>
+							}
+
 							{property.prop_common?.year_built && 
 							<li><label>Year built:</label> <span>{property.prop_common.year_built}</span></li>
 							}
 
-							{property.prop_common?.stories && 
-							<li><label>Stories:</label> <span>{property.prop_common.stories}</span></li>
-							}
-							
-						</ul>
-						<ul>
-							<li><label>Lot Area:</label> <span>HZ29 </span></li>
-							
-							{property.prop_common?.lot_sqft && 
-							<li><label>Lot dimensions:</label> <span>{property.prop_common.lot_sqft} sqft</span></li>
-							}
-
-							{property.prop_common?.bed && 
-							<li><label>Beds:</label> <span>{property.prop_common.bed}</span></li>
-							}
 							
 							{property.prop_common?.price && 
-							<li><label>Price:</label> <span>$ {property.prop_common.price}</span></li>
+							<li><label>Price:</label> <span>${property.prop_common.price.toLocaleString()}</span></li>
 							}
 							
-							{property.prop_common?.status && 
-							<li><label>Property Status:</label> <span style={{textTransform: "capitalize"}}>{textFormat(property.prop_common.status)}</span></li>
-							}
 							
 						</ul>
 						</div>
-						<h4 className="title-2">Facts and Features</h4>
+						{/* <h4 className="title-2">Facts and Features</h4>
 						<div className="property-detail-feature-list clearfix mb-45">                            
 						<ul>
 							<li>
@@ -288,341 +288,16 @@ const PropertyDetails = ( { property } ) => {
 							</div>
 							</div>
 						</div>
-						</div>
+						</div> */}
 						<h4 className="title-2">Location</h4>
 						<div className="property-details-google-map mb-60">
 						<iframe src={`https://maps.google.com/maps?q=${property.address?.location.lat},${property.address?.location.lon}&hl=en&z=14&amp&output=embed`} width="100%" height="100%" frameBorder={0} allowFullScreen aria-hidden="false" tabIndex={0} />
 						</div>
-						<h4 className="title-2">Floor Plans</h4>
-						{/* APARTMENTS PLAN AREA START */}
-						<div className="ltn__apartments-plan-area product-details-apartments-plan mb-60">
-						<div className="ltn__tab-menu ltn__tab-menu-3 ltn__tab-menu-top-right-- text-uppercase--- text-center---">
-							<div className="nav">
-							<a data-bs-toggle="tab" href="#liton_tab_3_1">First Floor</a>
-							<a className="active show" data-bs-toggle="tab" href="#liton_tab_3_2">Second Floor</a>
-							<a data-bs-toggle="tab" href="#liton_tab_3_3" >Third Floor</a>
-							<a data-bs-toggle="tab" href="#liton_tab_3_4" >Top Garden</a>
-							</div>
-						</div>
-						<div className="tab-content">
-							<div className="tab-pane fade" id="liton_tab_3_1">
-							<div className="ltn__apartments-tab-content-inner">
-								<div className="row">
-								<div className="col-lg-7">
-									<div className="apartments-plan-img">
-									<img src={publicUrl+"assets/img/others/10.png"} alt="#" />
-									</div>
-								</div>
-								<div className="col-lg-5">
-									<div className="apartments-plan-info ltn__secondary-bg--- text-color-white---">
-									<h2>First Floor</h2>
-									<p>Enimad minim veniam quis nostrud exercitation ullamco laboris.
-										Lorem ipsum dolor sit amet cons aetetur adipisicing elit sedo
-										eiusmod tempor.Incididunt labore et dolore magna aliqua.
-										sed ayd minim veniam.</p>
-									</div>
-								</div>
-								<div className="col-lg-12">
-									<div className="product-details-apartments-info-list  section-bg-1">
-									<div className="row">
-										<div className="col-lg-6">
-										<div className="apartments-info-list apartments-info-list-color mt-40---">
-											<ul>
-											<li><label>Total Area</label> <span>2800 Sq. Ft</span></li>
-											<li><label>Bedroom</label> <span>150 Sq. Ft</span></li>
-											</ul>
-										</div>
-										</div>
-										<div className="col-lg-6">
-										<div className="apartments-info-list apartments-info-list-color mt-40---">
-											<ul>
-											<li><label>Belcony/Pets</label> <span>Allowed</span></li>
-											<li><label>Lounge</label> <span>650 Sq. Ft</span></li>
-											</ul>
-										</div>
-										</div>
-									</div>
-									</div>
-								</div>
-								</div>
-							</div>
-							</div>
-							<div className="tab-pane fade active show" id="liton_tab_3_2">
-							<div className="ltn__product-tab-content-inner">
-								<div className="row">
-								<div className="col-lg-7">
-									<div className="apartments-plan-img">
-									<img src={publicUrl+"assets/img/others/10.png"} alt="#" />
-									</div>
-								</div>
-								<div className="col-lg-5">
-									<div className="apartments-plan-info ltn__secondary-bg--- text-color-white---">
-									<h2>Second Floor</h2>
-									<p>Enimad minim veniam quis nostrud exercitation ullamco laboris.
-										Lorem ipsum dolor sit amet cons aetetur adipisicing elit sedo
-										eiusmod tempor.Incididunt labore et dolore magna aliqua.
-										sed ayd minim veniam.</p>
-									</div>
-								</div>
-								<div className="col-lg-12">
-									<div className="product-details-apartments-info-list  section-bg-1">
-									<div className="row">
-										<div className="col-lg-6">
-										<div className="apartments-info-list apartments-info-list-color mt-40---">
-											<ul>
-											<li><label>Total Area</label> <span>2800 Sq. Ft</span></li>
-											<li><label>Bedroom</label> <span>150 Sq. Ft</span></li>
-											</ul>
-										</div>
-										</div>
-										<div className="col-lg-6">
-										<div className="apartments-info-list apartments-info-list-color mt-40---">
-											<ul>
-											<li><label>Belcony/Pets</label> <span>Allowed</span></li>
-											<li><label>Lounge</label> <span>650 Sq. Ft</span></li>
-											</ul>
-										</div>
-										</div>
-									</div>
-									</div>
-								</div>
-								</div>
-							</div>
-							</div>
-							<div className="tab-pane fade" id="liton_tab_3_3">
-							<div className="ltn__product-tab-content-inner">
-								<div className="row">
-								<div className="col-lg-7">
-									<div className="apartments-plan-img">
-									<img src={publicUrl+"assets/img/others/10.png"} alt="#" />
-									</div>
-								</div>
-								<div className="col-lg-5">
-									<div className="apartments-plan-info ltn__secondary-bg--- text-color-white---">
-									<h2>Third Floor</h2>
-									<p>Enimad minim veniam quis nostrud exercitation ullamco laboris.
-										Lorem ipsum dolor sit amet cons aetetur adipisicing elit sedo
-										eiusmod tempor.Incididunt labore et dolore magna aliqua.
-										sed ayd minim veniam.</p>
-									</div>
-								</div>
-								<div className="col-lg-12">
-									<div className="product-details-apartments-info-list  section-bg-1">
-									<div className="row">
-										<div className="col-lg-6">
-										<div className="apartments-info-list apartments-info-list-color mt-40---">
-											<ul>
-											<li><label>Total Area</label> <span>2800 Sq. Ft</span></li>
-											<li><label>Bedroom</label> <span>150 Sq. Ft</span></li>
-											</ul>
-										</div>
-										</div>
-										<div className="col-lg-6">
-										<div className="apartments-info-list apartments-info-list-color mt-40---">
-											<ul>
-											<li><label>Belcony/Pets</label> <span>Allowed</span></li>
-											<li><label>Lounge</label> <span>650 Sq. Ft</span></li>
-											</ul>
-										</div>
-										</div>
-									</div>
-									</div>
-								</div>
-								</div>
-							</div>
-							</div>
-							<div className="tab-pane fade" id="liton_tab_3_4">
-							<div className="ltn__product-tab-content-inner">
-								<div className="row">
-								<div className="col-lg-7">
-									<div className="apartments-plan-img">
-									<img src={publicUrl+"assets/img/others/10.png"} alt="#" />
-									</div>
-								</div>
-								<div className="col-lg-5">
-									<div className="apartments-plan-info ltn__secondary-bg--- text-color-white---">
-									<h2>Top Garden</h2>
-									<p>Enimad minim veniam quis nostrud exercitation ullamco laboris.
-										Lorem ipsum dolor sit amet cons aetetur adipisicing elit sedo
-										eiusmod tempor.Incididunt labore et dolore magna aliqua.
-										sed ayd minim veniam.</p>
-									</div>
-								</div>
-								<div className="col-lg-12">
-									<div className="product-details-apartments-info-list  section-bg-1">
-									<div className="row">
-										<div className="col-lg-6">
-										<div className="apartments-info-list apartments-info-list-color mt-40---">
-											<ul>
-											<li><label>Total Area</label> <span>2800 Sq. Ft</span></li>
-											<li><label>Bedroom</label> <span>150 Sq. Ft</span></li>
-											</ul>
-										</div>
-										</div>
-										<div className="col-lg-6">
-										<div className="apartments-info-list apartments-info-list-color mt-40---">
-											<ul>
-											<li><label>Belcony/Pets</label> <span>Allowed</span></li>
-											<li><label>Lounge</label> <span>650 Sq. Ft</span></li>
-											</ul>
-										</div>
-										</div>
-									</div>
-									</div>
-								</div>
-								</div>
-							</div>
-							</div>
-						</div>
-						</div>
-						{/* APARTMENTS PLAN AREA END */}
-						<h4 className="title-2">Property Video</h4>
-						<div className="ltn__video-bg-img ltn__video-popup-height-500 bg-overlay-black-50 bg-image mb-60" data-bs-bg={publicUrl+"assets/img/others/5.jpg"}>
-						<a className="ltn__video-icon-2 ltn__video-icon-2-border---" href="https://www.youtube.com/embed/eWUxqVFBq74?autoplay=1&showinfo=0" data-rel="lightcase:myCollection">
-							<i className="fa fa-play" />
-						</a>
-						</div>
-						<div className="ltn__shop-details-tab-content-inner--- ltn__shop-details-tab-inner-2 ltn__product-details-review-inner mb-60">
-						<hr />
-						</div>
-						<h4 className="title-2">Related Properties</h4>
-						<div className="row">
-						{/* ltn__product-item */}
-						<div className="col-xl-6 col-sm-6 col-12 go-top">
-							<div className="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
-							<div className="product-img">
-								<Link to="/shop"><img src={publicUrl+"assets/img/product-3/1.jpg"} alt="#" /></Link>
-								<div className="real-estate-agent">
-								<div className="agent-img">
-									<Link to="/team-details"><img src={publicUrl+"assets/img/blog/author.jpg"} alt="#" /></Link>
-								</div>
-								</div>
-							</div>
-							<div className="product-info">
-								<div className="product-badge">
-								<ul>
-									<li className="sale-badg">For Rent</li>
-								</ul>
-								</div>
-								<h2 className="product-title"><Link to="/shop">New Apartment Nice View</Link></h2>
-								<div className="product-img-location">
-								<ul>
-									<li>
-									<Link to="/shop"><i className="flaticon-pin" /> Belmont Gardens, Chicago</Link>
-									</li>
-								</ul>
-								</div>
-								<ul className="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
-								<li><span>3 </span>
-									Bedrooms
-								</li>
-								<li><span>2 </span>
-									Bathrooms
-								</li>
-								<li><span>3450 </span>
-									square Ft
-								</li>
-								</ul>
-								<div className="product-hover-action">
-								<ul>
-									<li>
-									<a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
-										<i className="flaticon-expand" />
-									</a>
-									</li>
-									<li>
-									<a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
-										<i className="flaticon-heart-1" /></a>
-									</li>
-									<li>
-									<Link to="/shop" title="Compare">
-										<i className="flaticon-add" />
-									</Link>
-									</li>
-								</ul>
-								</div>
-							</div>
-							<div className="product-info-bottom">
-								<div className="product-price">
-								<span>$349,00<label>/Month</label></span>
-								</div>
-							</div>
-							</div>
-						</div>
-						{/* ltn__product-item */}
-						<div className="col-xl-6 col-sm-6 col-12 go-top">
-							<div className="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
-							<div className="product-img">
-								<Link to="/shop"><img src={publicUrl+"assets/img/product-3/2.jpg"} alt="#" /></Link>
-								<div className="real-estate-agent">
-								<div className="agent-img">
-									<Link to="/team-details"><img src={publicUrl+"assets/img/blog/author.jpg"} alt="#" /></Link>
-								</div>
-								</div>
-							</div>
-							<div className="product-info">
-								<div className="product-badge">
-								<ul>
-									<li className="sale-badg">For Sale</li>
-								</ul>
-								</div>
-								<h2 className="product-title"><Link to="/shop">New Apartment Nice View</Link></h2>
-								<div className="product-img-location">
-								<ul>
-									<li>
-									<Link to="/shop"><i className="flaticon-pin" /> Belmont Gardens, Chicago</Link>
-									</li>
-								</ul>
-								</div>
-								<ul className="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
-								<li><span>3 </span>
-									Bedrooms
-								</li>
-								<li><span>2 </span>
-									Bathrooms
-								</li>
-								<li><span>3450 </span>
-									square Ft
-								</li>
-								</ul>
-								<div className="product-hover-action">
-								<ul>
-									<li>
-									<a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
-										<i className="flaticon-expand" />
-									</a>
-									</li>
-									<li>
-									<a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
-										<i className="flaticon-heart-1" /></a>
-									</li>
-									<li>
-									<a href="portfolio-details.html" title="Compare">
-										<i className="flaticon-add" />
-									</a>
-									</li>
-								</ul>
-								</div>
-							</div>
-							<div className="product-info-bottom">
-								<div className="product-price">
-								<span>$349,00<label>/Month</label></span>
-								</div>
-							</div>
-							</div>
-						</div>
-						</div>
-					</div>
-					</div>
-					<div className="col-lg-4">
-					<aside className="sidebar ltn__shop-sidebar ltn__right-sidebar---">
 						
-						{/* Banner Widget */}
-						<div className="widget ltn__banner-widget d-none go-top">
-						<Link to="/shop"><img src={publicUrl+"assets/img/banner/2.jpg"} alt="#" /></Link>
-						</div>
-					</aside>
+						
 					</div>
+					</div>
+					
 				</div>
 				</div>
 				

@@ -35,8 +35,6 @@ class Navbar extends Component {
 						<Link to="/"><img src={LogoURL} alt="Logo" style={{height:"50px"}}/></Link>
 						</div>
 						
-						
-						
 					</div>
 					</div>
 					<div className="col header-menu-column">
@@ -64,7 +62,7 @@ class Navbar extends Component {
 				</div>
 			</div>
 			</header>
-			<div id="ltn__utilize-mobile-menu" className="ltn__utilize ltn__utilize-mobile-menu">
+			{/* <div id="ltn__utilize-mobile-menu" className="ltn__utilize ltn__utilize-mobile-menu">
 				<div className="ltn__utilize-menu-inner ltn__scrollbar">
 					<div className="ltn__utilize-menu-head">
 					<div className="site-logo">
@@ -80,7 +78,7 @@ class Navbar extends Component {
 					</div>
 					
 				</div>
-			</div>
+			</div> */}
 
 		</div>
         )

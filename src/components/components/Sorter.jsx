@@ -1,8 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
-import Property from './Property';
-import Search from './Search'
-import PropertyList from './PropertyList'
 
 const Sorter = ( {perPage} ) => {
 

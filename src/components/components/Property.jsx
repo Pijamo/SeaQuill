@@ -18,11 +18,11 @@ const Property = ({
                     <li className="sale-badge">{textFormat(status)}</li>
                 </ul>
             </div>
-            <h2 className="product-title go-top">{property_id}</h2>
+            <h2 className="product-title go-top">{location.address.line}</h2>
             <div className="product-img-location go-top">
                 <ul>
                     <li>
-                        <i className="flaticon-pin" /> {`${location.address.postal_code}`}, {`${location.address.state}, ${location.address.city}`}
+                        <i className="flaticon-pin" />  {`${location.address.city}, ${location.address.state} `}  {`${location.address.postal_code}`}
                     </li>
                 </ul>
             </div>
@@ -33,7 +33,7 @@ const Property = ({
                 <li><span>{description.baths} </span>
                     Bath
                 </li>
-                <li><span>{description.sqft} </span>
+                <li><span>{description.sqft.toLocaleString()} </span>
                     Square Ft
                 </li>
             </ul>

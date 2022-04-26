@@ -1,14 +1,8 @@
 import React, { Component, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import parse from 'html-react-parser';
+
 import Filter from './filter';
-import propertyList from '../../assets/json/propertyList.json';
-import Property from '../components/Property.jsx';
-import PropertyList from '../components/PropertyList';
 import Paginate from '../components/Paginate'
-import Search from '../components/Search'
 import Posts from '../components/Posts.jsx';
-import Modal from '../components/Modal';
 import Sorter from '../components/Sorter'
 import axios from 'axios';
 
@@ -82,7 +76,7 @@ function PropertyListings() {
 						</div>
 					</div>
 				</div>
-			<Modal/>
+			
 		</div>
 	)
 }
