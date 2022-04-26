@@ -8,7 +8,7 @@ import CallToActionV1 from './section-components/call-to-action-v1';
 import Footer from './global-components/footer';
 import { useLocation, Link } from 'react-router-dom';
 
-import {getCounties} from '../fetcher' 
+import {getCounties, getCities, getClimate, getJobs} from '../fetcher' 
 
 import ResultsTable from './quiz-results-components/quizResultsTable'
 import BootstrapTable from 'react-bootstrap-table-next';
@@ -22,7 +22,6 @@ export default function QuizResults(){
     let [countyPage, setCountyPage] = useState(1)
     let [countyPagesize, setCountyPagesize ] = useState(20)
     let [zip, setZip] = useState(0)
-
 
     //Retrieve cities for a particular county
      let [cities, setCities] = useState([])
