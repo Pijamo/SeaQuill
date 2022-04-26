@@ -48,7 +48,6 @@ function PropertyDetails() {
     <div>
       <Navbar />
       <ProductDetails property={data}/>
-      <h4 className="title-2">Images</h4>
       <div class='container'><ProductSlider photos={data.photos}/></div>
       <Footer />
     </div>

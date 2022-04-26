@@ -33,7 +33,7 @@ const Property = ({
                 <li><span>{description.baths} </span>
                     Bath
                 </li>
-                <li><span>{description.sqft.toLocaleString()} </span>
+                <li><span>{description.sqft} </span>
                     Square Ft
                 </li>
             </ul>

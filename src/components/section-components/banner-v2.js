@@ -21,7 +21,7 @@ class BannerV5 extends Component {
 											<div className="ltn__tab-menu  text-uppercase">
 												<div className="nav">
 													<a className="active show" data-bs-toggle="tab" href="#ltn__form_tab_1_1"><i className="fas fa-home" />For Sale</a>
-													<a data-bs-toggle="tab" href="#ltn__form_tab_1_2" className><i className="fas fa-home" />For Rent</a>
+													{/* <a data-bs-toggle="tab" href="#ltn__form_tab_1_2" className><i className="fas fa-home" />For Rent</a> */}
 												</div>
 											</div>
 											<div className="tab-content">
@@ -50,7 +50,7 @@ class BannerV5 extends Component {
 														</div>
 													</div>
 												</div>
-												<div className="tab-pane fade" id="ltn__form_tab_1_2">
+												{/* <div className="tab-pane fade" id="ltn__form_tab_1_2">
 												<div className='row'>
 														<div className="col-xl-3 col-lg-6 col-md-6">
 															<div className="border">
@@ -74,7 +74,7 @@ class BannerV5 extends Component {
 															</div>
 														</div>
 													</div>
-												</div>
+												</div> */}
 											</div>
 										</div>
 									</div>

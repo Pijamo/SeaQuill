@@ -122,8 +122,8 @@ export default function QuizResults(){
                 {counties && showCounties(counties)}
                 {/* {cities && showCities(cities)} */}
                  {jobs && Jobs(jobs)}
-                {/* {climate && Climate(climate)}  */}
-                {/* {scores && Prosperity(scores)} */}
+                {climate && Climate(climate)} 
+                {scores && Prosperity(scores)}
             <Footer />
         </div>  
     )

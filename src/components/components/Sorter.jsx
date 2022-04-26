@@ -13,7 +13,7 @@ const Sorter = ( {perPage} ) => {
 						</div>
 					</div>
 				</li>
-				<li className="d-none">
+				{/* <li className="d-none">
 					<div className="showing-product-number text-right">
 						<span>Showing 1–12 of 18 results</span>
 					</div>
@@ -38,7 +38,7 @@ const Sorter = ( {perPage} ) => {
 							<option>Per Page: 12</option>
 						</select>
 					</div>
-				</li>
+				</li> */}
 			</ul>
 		</div>
 	)

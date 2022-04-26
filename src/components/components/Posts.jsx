@@ -18,7 +18,7 @@ const Posts = ({posts, loading }) => {
               {posts.map((property) => (
                 <Property property={property} key={property.property_id} />
               ))}
-              {/*  */}
+              
             </div>
           </div>
         </div>

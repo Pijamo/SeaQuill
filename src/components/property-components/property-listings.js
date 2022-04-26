@@ -1,6 +1,5 @@
 import React, { Component, useEffect, useState } from 'react';
 
-import Filter from './filter';
 import Paginate from '../components/Paginate'
 import Posts from '../components/Posts.jsx';
 import Sorter from '../components/Sorter'
@@ -11,7 +10,7 @@ function PropertyListings() {
 	const [posts, setPosts] = useState([]);
 	const [loading, setLoading] = useState(false);
 	const [currentPage, setCurrentPage] = useState(1);
-	const [postsPerPage, setPostsPerPage] = useState(6);
+	const [postsPerPage, setPostsPerPage] = useState(9);
 
 	
 	//for real estate
@@ -72,7 +71,7 @@ function PropertyListings() {
 								<Posts posts={currentPosts} loading={loading}/>
 								<Paginate postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} currentPage={currentPage}/>
 							</div>
-							<Filter />
+							
 						</div>
 					</div>
 				</div>
