@@ -6,9 +6,13 @@ import { Modal, Button } from 'react-bootstrap';
 import Footer from './global-components/footer';
 import { useLocation, Link } from 'react-router-dom';
 
-import {getCounties, getCities, getClimate, getJobs} from '../fetcher' 
-import Climate from '../components/climate'
-import Jobs from '../components/job-table-v1'
+import {getCounties, getScores, getCities, getClimate, getJobs} from '../fetcher' 
+import Climate from './climate'
+import Jobs from './job-table-v1'
+import Prosperity from './prosperity';
+import ResultsTable from './quiz-results-components/quizResultsTable'
+import BootstrapTable from 'react-bootstrap-table-next';
+import paginationFactory from 'react-bootstrap-table2-paginator';
 
 import BootstrapTable from 'react-bootstrap-table-next';
 import paginationFactory from 'react-bootstrap-table2-paginator';
