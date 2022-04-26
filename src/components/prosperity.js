@@ -7,22 +7,21 @@ var data = scores;
 
 
 return(
-    <div><h4>Individual Propserity Scores (out of 100)</h4>
+    <div><h4>Individual Prosperity Scores</h4>
 
     <BarChart
     width={600}
-    height={400}
+    height={600}
     data={data}
+    layout='vertical'
     margin={{ top: 5, right: 10, left: 10, bottom: 20 }}
     >
-    <CartesianGrid vertical={false} strokeDasharray="3 3" />
-    <XAxis dataKey='metric'  label={{value:'Metric', dy: 25}}/>
-    <YAxis yAxisId={0}  tickCount="6" domain={[0,100]} label={{value:'Score ', angle: -90, dx: -25}}/>
+    <CartesianGrid horizontal={false} strokeDasharray="3 3" />
+    <XAxis  dataKey='score' type='number' tickCount='10' domain={[10, 100]} label={{value:'Score (out of 100)', dy: 25}}/>
+    <YAxis width={200} dataKey='metric' type='category'/>
     
-    <Bar dataKey='score' fill='#ffffff' stroke='#444444'>
-        <LabelList dataKey="score" position="end" angle="0"  />
+    <Bar dataKey='score' label={{value:'Score', position: "right"}} fill='#097969' stroke='#444444'>
     </Bar>
-    <Tooltip />
 
     </BarChart>
     </div>

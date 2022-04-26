@@ -2,7 +2,6 @@ import React,{useState, useEffect} from 'react';
 import Navbar from './global-components/navbar';
 import PageHeader from './global-components/page-header';
 import Login from './section-components/login';
-import CallToActionV1 from './section-components/call-to-action-v1';
 import Footer from './global-components/footer';
 import {getUser, addUser} from '../fetcher' 
 
@@ -37,7 +36,6 @@ const LoginV1 = () => {
         <Login />
         {console.log(accountInfo[0])}
         {console.log(createdAccount)}
-        <CallToActionV1 />
         <Footer />
     </div>
 }

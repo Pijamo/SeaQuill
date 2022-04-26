@@ -33,25 +33,6 @@ class Root extends Component {
                         <Route path="/register" component={ Register } />
                         <Route path="/my-account" component={ MyAccount } />
                         
-                        {/* <Route path="/service-details" component={ ServiceDetails } /> */}
-                        {/* <Route path="/portfolio-details" component={ PortfolioDetails } />
-                        <Route path="/team" component={ Team } />
-                        <Route path="/team-details" component={ TeamDetails } />
-                        <Route path="/coming-soon" component={ ComingSoon } />
-                        <Route path="/404" component={ Error } />
-                        <Route path="/location" component={ Location } />
-                        <Route path="/shop" component={ Shop } />
-                        <Route path="/shop-grid" component={ ShopGrid } />
-                        
-                        <Route path="/shop-right-sidebar" component={ ShopRightSidebar } />
-
-                        
-
-                        
-                        <Route path="/add-listing" component={ AddListing } />
-                        <Route path="/wishlist" component={ Wishlist } />
-                        <Route path="/order-tracking" component={ OrderTracking } />
-                        <Route path="/history" component={ History } /> */}
 	                </Switch>
 	                </div>
                 </HashRouter>

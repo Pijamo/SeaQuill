@@ -3,13 +3,12 @@ import React, { useContext, useState, useEffect } from 'react';
 import Navbar from './global-components/navbar';
 import PageHeader from './global-components/page-header';
 
-import CallToActionV1 from './section-components/call-to-action-v1';
 import Footer from './global-components/footer';
 import { useLocation } from 'react-router-dom';
 
 import {getCounties, getScores, getCities, getClimate, getJobs} from '../fetcher' 
 import Climate from './climate'
-import Jobs from './job-table'
+import Jobs from './job-table-v1'
 import Prosperity from './prosperity';
 import ResultsTable from './quiz-results-components/quizResultsTable'
 
@@ -89,7 +88,7 @@ export default function QuizResults(){
      
 
      useEffect(()=> {
-        getJobs(jobPage, jobPagesize, "chem", 6037) // PLACEHOLDER for keyword, county id
+        getJobs(jobPage, jobPagesize, "d", 6037) // PLACEHOLDER for keyword, county id
         .then(data=>setJobs(data["results"]))  
     }, [])
 
@@ -97,7 +96,7 @@ export default function QuizResults(){
         let [scores, setScores] = useState()
     
         useEffect(()=> {
-        getScores(6037) // PLACEHOLDER for keyword, county id
+        getScores(31171) // PLACEHOLDER for keyword, county id
         .then(data=>setScores(data["results"]))  
     }, [])
 
@@ -110,9 +109,9 @@ export default function QuizResults(){
         
                 {/* {counties && showCounties(counties)} */}
                 {/* {cities && showCities(cities)} */}
-                {/* {jobs && Jobs(jobs)}
-                {climate && Climate(climate)} */}
-                {scores && Prosperity(scores)}
+                 {jobs && Jobs(jobs)}
+                {/* {climate && Climate(climate)}  */}
+                {/* {scores && Prosperity(scores)} */}
             <Footer />
         </div>  
     )
