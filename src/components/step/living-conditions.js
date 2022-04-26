@@ -6,7 +6,7 @@ import { StepperContext } from "../../contexts/StepperContext";
 export default function LivingConditions() {
 
     const { userData, setUserData } = useContext(StepperContext);
-    const name = "living_conditions"
+    const name = "living"
 
     return <div >
 

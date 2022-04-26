@@ -6,7 +6,7 @@ import { StepperContext } from "../../contexts/StepperContext";
 export default function SocialCapital() {
 
     const { userData, setUserData } = useContext(StepperContext);
-    const name = "social_capital"
+    const name = "social"
 
     return <div >
 

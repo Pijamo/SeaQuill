@@ -6,7 +6,7 @@ import { StepperContext } from "../../contexts/StepperContext";
 export default function PersonalFreedom() {
 
     const { userData, setUserData } = useContext(StepperContext);
-    const name = "personal_freedom"
+    const name = "freedom"
 
     return <div >
 

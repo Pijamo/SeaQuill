@@ -24,11 +24,23 @@ export default function QuizResults(){
 
     const location = useLocation()
     
-    // const ratings = Object.values(location.state.ratingData)
-    const ratings = Array(11).fill(5) // HARD CODED VALUES (for quicker testing)
+    // let ratings = location.state.ratingData
+    // let environment = isNaN(ratings.environment) ? 1 : ratings.environment
+    // let business = isNaN(ratings.business) ? 1 : ratings.business
+    // let education = isNaN(ratings.education) ? 1 : ratings.education
+    // let freedom = isNaN(ratings.freedom) ? 1 : ratings.freedom
+    // let safety = isNaN(ratings.safety) ? 1 : ratings.safety
+    // let social = isNaN(ratings.social) ? 1 : ratings.social
+    // let economic = isNaN(ratings.economic) ? 1 : ratings.economic
+    // let infrastructure = isNaN(ratings.infrastructure) ? 1 : ratings.infrastructure
+    // let governance = isNaN(ratings.governance) ? 1 : ratings.governance
+    // let health= isNaN(ratings.health) ? 1 : ratings.health
+    // let living = isNaN(ratings.living) ? 1 : ratings.living
+  
+    const ratingsHard = Array(11).fill(5) // HARD CODED VALUES (for quicker testing)
     useEffect(()=> {
         // page, pagesize, userzip, 11 prosperity ratings 
-        getCounties(countyPage,countyPagesize,zip, ...ratings) 
+        getCounties(countyPage,countyPagesize,zip,...ratingsHard) //education,freedom,safety,social,business,economic,infrastructure,governance,health,living,environment
         .then(data=>setCounties(data["results"]))
     }, [])
     
@@ -107,7 +119,7 @@ export default function QuizResults(){
             {/* <ResultsTable /> */}
             {/* <PageHeader headertitle="Quiz Results" /> */}
         
-                {/* {counties && showCounties(counties)} */}
+                {counties && showCounties(counties)}
                 {/* {cities && showCities(cities)} */}
                  {jobs && Jobs(jobs)}
                 {/* {climate && Climate(climate)}  */}

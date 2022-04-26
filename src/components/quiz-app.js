@@ -14,9 +14,9 @@ import Step8 from "./step/governance";
 import Step9 from "./step/health";
 import Step10 from "./step/living-conditions";
 import Step11 from "./step/education";
-import testRoute from "../fetcher";
+
 import getUsers from "../fetcher";
-import { Link, useHistory } from 'react-router-dom';
+import {  useHistory } from 'react-router-dom';
 
 
 function App() {
