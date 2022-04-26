@@ -4,7 +4,7 @@ import Property from './Property';
 import Search from './Search'
 import PropertyList from './PropertyList'
 
-const Posts = ({posts, loading }) => {
+const Posts = ({ posts, loading }) => {
 
     return (
 		<div>
