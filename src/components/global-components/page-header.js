@@ -36,5 +36,4 @@ class Page_header extends Component {
     }
 }
 
-
 export default Page_header

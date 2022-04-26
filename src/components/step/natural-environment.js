@@ -6,7 +6,7 @@ import { StepperContext } from "../../contexts/StepperContext";
 export default function NaturalEnvironment() {
 
     const { userData, setUserData } = useContext(StepperContext);
-    const name = "natural_environment"
+    const name = "environment"
 
     return <div >
 

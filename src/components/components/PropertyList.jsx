@@ -8,7 +8,7 @@ const PropertyList = ({
     <div className="col-lg-12">
         <div className="ltn__product-item ltn__product-item-4 ltn__product-item-5">
             <div className="product-img go-top">
-                <Link to="/product-details"><img src={primary_photo == null ? DefaultImage : primary_photo.href } alt="#" /></Link>
+                <Link to={`/property/${property_id}`}><img src={primary_photo == null ? DefaultImage : primary_photo.href } alt="#" /></Link>
             </div>
             <div className="product-info">
                 <div className="product-badge-price">
@@ -21,11 +21,11 @@ const PropertyList = ({
                         <span>{formatter.format(list_price)}</span>
                     </div>
                 </div>
-                <h2 className="product-title go-top"><Link to="/product-details">Some Name To Decide</Link></h2>
+                <h2 className="product-title go-top">{location.address.line}</h2>
                 <div className="product-img-location go-top">
                     <ul>
                         <li>
-                            <Link to="/contact"><i className="flaticon-pin" /> {`${location.address.postal_code}`}, {`${location.address.state}, ${location.address.city}`}</Link>
+                            <i className="flaticon-pin" /> {`${location.address.city}, ${location.address.state} `}  {`${location.address.postal_code}`}
                         </li>
                     </ul>
                 </div>
@@ -41,35 +41,8 @@ const PropertyList = ({
                     </li>
                 </ul>
             </div>
-            <div className="product-info-bottom">
-                <div className="real-estate-agent">
-                    <div className="agent-img">
-                        <Link to="/shop"><img src={process.env.PUBLIC_URL + "/assets/img/blog/author.jpg"} alt="#" /></Link>
-                    </div>
-                    <div className="agent-brief">
-                        <h6><Link to="/team-details">William Seklo</Link></h6>
-                        <small>Estate Agents</small>
-                    </div>
-                </div>
-                <div className="product-hover-action">
-                    <ul>
-                        <li>
-                            <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
-                                <i className="flaticon-expand" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
-                                <i className="flaticon-heart-1" /></a>
-                        </li>
-                        <li className="go-top">
-                            <Link to="/product-details" title="Product Details">
-                                <i className="flaticon-add" />
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            
+            
         </div>
     </div>
 );

@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import Navbar from "./global-components/navbar";
-import PageHeader from "./global-components/page-header";
 import ProductSlider from "./components/PhotoSlider";
 import ProductDetails from "./property-components/property-expanded";
 import Footer from "./global-components/footer";
-import propertyDetails from "../assets/json/property.json";
+
 const axios = require("axios");
 
 function PropertyDetails() {
@@ -48,9 +47,8 @@ function PropertyDetails() {
   return (
     <div>
       <Navbar />
-      <PageHeader headertitle="Product Details" customclass="mb-0" />
-      <ProductSlider photos={data.photos}/>
       <ProductDetails property={data}/>
+      <div class='container'><ProductSlider photos={data.photos}/></div>
       <Footer />
     </div>
   );

@@ -1,8 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
-import Property from './Property';
-import Search from './Search'
-import PropertyList from './PropertyList'
 
 const Sorter = ( {perPage} ) => {
 
@@ -17,7 +13,7 @@ const Sorter = ( {perPage} ) => {
 						</div>
 					</div>
 				</li>
-				<li className="d-none">
+				{/* <li className="d-none">
 					<div className="showing-product-number text-right">
 						<span>Showing 1–12 of 18 results</span>
 					</div>
@@ -42,7 +38,7 @@ const Sorter = ( {perPage} ) => {
 							<option>Per Page: 12</option>
 						</select>
 					</div>
-				</li>
+				</li> */}
 			</ul>
 		</div>
 	)

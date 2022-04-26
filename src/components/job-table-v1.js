@@ -1,35 +1,50 @@
 import React from 'react';
-import {Table, Column, HeaderCell} from 'rsuite-table';
+import BootstrapTable from 'react-bootstrap-table-next';
+import paginationFactory from 'react-bootstrap-table2-paginator';
+require('bootstrap')
 
 
 export default function Jobs(jobs){
+
+    function salaryFormatter(cell, row) {
+       
+      
+        return (
+          <span>$ { cell.toLocaleString() }</span>
+        );
+    }
 
     const data = jobs
 
     const columns = [
             {
-              title: 'Job Title',
-              dataIndex: 'title', 
-              width: 500
+              text: 'Job Title',
+              dataField: 'title', 
+              sort: true
+      
             },
             {
-              title: 'Average Salary',
-              dataIndex: 'mean_salary',
-              width: 150
+              text: 'Average Salary',
+              dataField: 'mean_salary',
+              formatter: salaryFormatter,
+              sort: true
+
             },
             {
-                title: 'Total',
-                dataIndex: 'total_jobs',
-                width: 80
+                text: 'Total',
+                dataField: 'total_jobs',
+                sort: true
+
               },
               {
-                title: 'Hotspot',
-                dataIndex: 'location_quotient',
+                text: 'Hotspot',
+                dataField: 'location_quotient',
+                sort: true
               },
           ]
 
         
         
-    return <Table data={data} />
+    return <BootstrapTable  keyField={'title'} data={data} noDataIndication="Table is Empty" columns={columns} pagination={paginationFactory()}/>
 
 }

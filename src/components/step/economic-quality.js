@@ -6,7 +6,7 @@ import { StepperContext } from "../../contexts/StepperContext";
 export default function EconomicQuality() {
 
     const { userData, setUserData } = useContext(StepperContext);
-    const name = "economic_quality"
+    const name = "economic"
 
     return <div >
 

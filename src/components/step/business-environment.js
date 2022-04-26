@@ -6,7 +6,7 @@ import { StepperContext } from "../../contexts/StepperContext";
 export default function Business() {
 
     const { userData, setUserData } = useContext(StepperContext);
-    const name = "business_environment"
+    const name = "business"
 
     return <div >
 

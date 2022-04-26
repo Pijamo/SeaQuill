@@ -6,7 +6,7 @@ import { StepperContext } from "../../contexts/StepperContext";
 export default function SafetySecurity() {
 
     const { userData, setUserData } = useContext(StepperContext);
-    const name = "safety_security"
+    const name = "safety"
 
     return <div >
 

@@ -3,13 +3,13 @@ import React, { useContext, useState, useEffect } from 'react';
 import Navbar from './global-components/navbar';
 import PageHeader from './global-components/page-header';
 
-import CallToActionV1 from './section-components/call-to-action-v1';
 import Footer from './global-components/footer';
 import { useLocation } from 'react-router-dom';
 
-import {getCounties, getCities, getClimate, getJobs} from '../fetcher' 
-import Climate from '../components/climate'
-import Jobs from '../components/job-table'
+import {getCounties, getScores, getCities, getClimate, getJobs} from '../fetcher' 
+import Climate from './climate'
+import Jobs from './job-table-v1'
+import Prosperity from './prosperity';
 import ResultsTable from './quiz-results-components/quizResultsTable'
 import BootstrapTable from 'react-bootstrap-table-next';
 import paginationFactory from 'react-bootstrap-table2-paginator';
@@ -26,11 +26,23 @@ export default function QuizResults(){
 
     const location = useLocation()
     
-    // const ratings = Object.values(location.state.ratingData)
-    const ratings = Array(11).fill(5) // HARD CODED VALUES (for quicker testing)
+    // let ratings = location.state.ratingData
+    // let environment = isNaN(ratings.environment) ? 1 : ratings.environment
+    // let business = isNaN(ratings.business) ? 1 : ratings.business
+    // let education = isNaN(ratings.education) ? 1 : ratings.education
+    // let freedom = isNaN(ratings.freedom) ? 1 : ratings.freedom
+    // let safety = isNaN(ratings.safety) ? 1 : ratings.safety
+    // let social = isNaN(ratings.social) ? 1 : ratings.social
+    // let economic = isNaN(ratings.economic) ? 1 : ratings.economic
+    // let infrastructure = isNaN(ratings.infrastructure) ? 1 : ratings.infrastructure
+    // let governance = isNaN(ratings.governance) ? 1 : ratings.governance
+    // let health= isNaN(ratings.health) ? 1 : ratings.health
+    // let living = isNaN(ratings.living) ? 1 : ratings.living
+  
+    const ratingsHard = Array(11).fill(5) // HARD CODED VALUES (for quicker testing)
     useEffect(()=> {
         // page, pagesize, userzip, 11 prosperity ratings 
-        getCounties(countyPage,countyPagesize,zip, ...ratings) 
+        getCounties(countyPage,countyPagesize,zip,...ratingsHard) //education,freedom,safety,social,business,economic,infrastructure,governance,health,living,environment
         .then(data=>setCounties(data["results"]))
     }, [])
     
@@ -90,10 +102,18 @@ export default function QuizResults(){
      
 
      useEffect(()=> {
-        getJobs(jobPage, jobPagesize, "chem", 6037) // PLACEHOLDER for keyword, county id
+        getJobs(jobPage, jobPagesize, "d", 6037) // PLACEHOLDER for keyword, county id
         .then(data=>setJobs(data["results"]))  
     }, [])
+
+        //Retrieve prosperity score for a given county
+        let [scores, setScores] = useState()
     
+        useEffect(()=> {
+        getScores(31171) // PLACEHOLDER for keyword, county id
+        .then(data=>setScores(data["results"]))  
+    }, [])
+
 
     return (
         <div>
@@ -101,10 +121,11 @@ export default function QuizResults(){
             {/* <ResultsTable /> */}
             {/* <PageHeader headertitle="Quiz Results" /> */}
         
-                {/* {counties && showCounties(counties)} */}
+                {counties && showCounties(counties)}
                 {/* {cities && showCities(cities)} */}
-                {jobs && Jobs(jobs)}
-                {climate && Climate(climate)}
+                 {jobs && Jobs(jobs)}
+                {climate && Climate(climate)} 
+                {scores && Prosperity(scores)}
             <Footer />
         </div>  
     )
