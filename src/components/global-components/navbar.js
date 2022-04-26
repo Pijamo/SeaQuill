@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Social from '../section-components/social';
+
 import LogoURL from '../../assets/img/Logo_light.svg'
 
 class Navbar extends Component {
@@ -42,9 +42,7 @@ class Navbar extends Component {
 								</ul>
 							</div>
 							</li>
-							<li>
-								<Social />
-							</li>
+							
 							<li>
 							{/* header-top-btn */}
 							<div className="header-top-btn">

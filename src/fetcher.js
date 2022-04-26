@@ -13,6 +13,14 @@ const getCounties = async (page, pagesize, zip, education, freedom, safety, soci
     return res.json()
 }
 
+//Route 1: Get prosperity scores for a particular county
+const getScores = async (county_id) => {
+    var res = await fetch(`http://${config.server_host}:${config.server_port}/prosperity?county=${county_id}`, {
+        method: 'GET',
+    })
+    return res.json()
+}
+
 // Route 2: Returns list of city in selected county
 const getCities = async (page, pagesize, popLower, popUpper, countyCode) => {
     var res = await fetch(`http://${config.server_host}:${config.server_port}/cities?page=${page}&pagesize=${pagesize}&county=${countyCode}&popLower=${popLower}&popUpper=${popUpper}`, {
@@ -105,6 +113,7 @@ export {
     getUser,
     addUser,
     getCounties,
+    getScores,
     getCities,
     getClimate,
     getJobs}
