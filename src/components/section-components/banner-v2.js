@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import parse from 'html-react-parser';
+import parse from 'html-react-parser';
 import { getCityState } from '../../fetcher';
-import {StateAutoComplete} from '../components/StateAutocomplete';
+import AutoCompleteApp from '../autocomplete-app';
+// import {StateAutoComplete} from '../components/StateAutocomplete';
 
 class BannerV5 extends Component {
 
 	render() {
 
 		let publicUrl = process.env.PUBLIC_URL + '/'
+
+		
 
 		return <div className="ltn__slider-area ltn__slider-4">
 			<div className="ltn__slide-one-active----- slick-slide-arrow-1----- slick-slide-dots-1----- arrow-white----- ltn__slide-animation-active">
@@ -37,7 +40,7 @@ class BannerV5 extends Component {
 															<div className="border">
 																<input className='mb-0' type="text" placeholder="State: Eg. Iowa" /></div>
 												
-
+																
 																</div>
 														<div className="col-xl-2 col-lg-4 col-md-4">
 															<div className="border">
@@ -63,11 +66,9 @@ class BannerV5 extends Component {
 														</div>
 														<div className="col-xl-3 col-lg-4 col-md-4">
 															<div className="border">
-																<input className='mb-0' type="text" placeholder="State: Eg. Iowa" />
+																<input className='mb-0' type="text" placeholder="State: Eg. Iowa" /></div>
 																
-																<StateAutoComplete data={getCityState} />
-																
-																</div>
+																<AutoCompleteApp/>
 
 														</div>
 														<div className="col-xl-2 col-lg-4 col-md-4">
@@ -95,7 +96,12 @@ class BannerV5 extends Component {
 				</div>
 			</div>
 		</div>
-	}
+		
+	
 }
+	
+}
+
+
 
 export default BannerV5

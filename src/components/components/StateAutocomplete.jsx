@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 import parse from 'html-react-parser';
-import {getCityState} from '../../fetcher' 
+// import {getCityState} from '../../fetcher' 
 import { useState} from "react";
 
 
@@ -16,7 +16,7 @@ const StateAutoComplete = ({data}) => {
   const handleChange = (e) => {
     const enteredState = e.target.value.toLowerCase(); //what the user is typing (user types a state)
     setValue(enteredState );
-    if (enteredState .length > 1) {
+    if (enteredState.length > 1) {
       var usStates = [] //list of keys
       var usStateCodes = [] //list of keys
       var cities = [] //list of lists
@@ -95,7 +95,8 @@ const StateAutoComplete = ({data}) => {
       />
       {suggestionsActive && <Suggestions />}
     </div>
-  );
+  )
+  
   
 };
 

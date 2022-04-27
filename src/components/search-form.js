@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './global-components/navbar-v2';
 import BannerV2 from './section-components/banner-v2';
 import Footer from './global-components/footer';
+import StateAutoComplete from './components/StateAutocomplete';
 
 const SearchForm = () => {
     return <div>
