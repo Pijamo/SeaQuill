@@ -39,10 +39,16 @@ export default function QuizResults(){
      let [keyword, setKeyword] = useState('data')
      let [jobPagesize, setJobPagesize ] = useState(null)
 
+     let [fips, setFips] = useState('')
+
      const KeywordChangeHandler = (event) => {
-        setKeyword(event.target.value);
-        console.log(event.target.value)
+         const value = event.target.value
+         setKeyword(value)
       };
+
+      function submitHandler(event){
+          testJobs(keyword, fips)
+      }
 
 
      //modal
@@ -54,8 +60,9 @@ export default function QuizResults(){
     const handleShow = useCallback(
         
         (fips_code) => () => {
+            setFips(fips_code)
             testClimate(fips_code);
-            testJobs(fips_code);
+            testJobs(keyword, fips_code);
             testScores(fips_code);
             setShow(true);
         },
@@ -95,7 +102,7 @@ export default function QuizResults(){
         .then(data=>setClimate(data["results"]))
     }
 
-    function testJobs(countyId) {
+    function testJobs(keyword, countyId) {
         getJobs(jobPage, jobPagesize, keyword, countyId)
         .then(data=>setJobs(data["results"])) 
     }
@@ -246,7 +253,7 @@ export default function QuizResults(){
     <Container>
         
         {/*Advanced Filter */}
-        <Form>
+        <Form onSubmit={submitHandler}>
             <Row className="mb-2">
         
             <Col>
