@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect, useCallback } from 'react';
 
 import Navbar from './global-components/navbar';
-import { Modal, Button, Container, Col, Row, Form} from 'react-bootstrap';
+import { Modal, Button, Container, Col, Row, Form, Tooltip, OverlayTrigger} from 'react-bootstrap';
 import PageHeader from './global-components/page-header'
 import Footer from './global-components/footer';
 import { useLocation, Link } from 'react-router-dom';
@@ -15,7 +15,7 @@ import BootstrapTable from 'react-bootstrap-table-next';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 
 
-export default function QuizResults(){
+const QuizResults = () =>{
 
     // Counties
     let [counties, setCounties] = useState([])
@@ -40,6 +40,8 @@ export default function QuizResults(){
      let [jobPagesize, setJobPagesize ] = useState(null)
 
      let [fips, setFips] = useState('')
+
+     let [state, setState] = useState('')
      
      const KeywordChangeHandler = (event) => {
          const value = event.target.value
@@ -70,7 +72,7 @@ export default function QuizResults(){
 
     const location = useLocation()
 
-    const [ratings, setRatings] = ([
+    const [userRatings, setUserRatings] = useState([
         {
             environment: 1,
             business: 1,
@@ -86,37 +88,7 @@ export default function QuizResults(){
         },
     ])
 
-    // useEffect(() => {
-    //     const data = localStorage.getItem("user-ratings");
-        
-    //     if(location.state == null){
-    //         if (data) {
-    //             setRatings(JSON.parse(ratings));
-    //         }
-    //     } else {
-    //         console.log(location.state.ratingData)
-    //         setRatings([
-    //             {
-    //                 environment: location.state.ratingData.environment,
-    //                 business: location.state.ratingData.business,
-    //                 education: location.state.ratingData.education,
-    //                 freedom: location.state.ratingData.freedom,
-    //                 safety: location.state.ratingData.safety,
-    //                 social: location.state.ratingData.social,
-    //                 economic: location.state.ratingData.economic,
-    //                 infrastructure: location.state.ratingData.infrastructure,
-    //                 governance: location.state.ratingData.governance,
-    //                 health: location.state.ratingData.health,
-    //                 living: location.state.ratingData.living
-    //              }
-    //         ])
-    //     }
-        
-    // }, [])
-
-    useEffect(() => {
-        localStorage.setItem('user-ratings', JSON.stringify(ratings))
-    })
+    
 
     // let ratings = location.state.ratingData
     // let environment = isNaN(ratings.environment) ? 1 : ratings.environment
@@ -132,11 +104,38 @@ export default function QuizResults(){
     // let living = isNaN(ratings.living) ? 1 : ratings.living
     
     useEffect(()=> {
-        // page, pagesize, userzip, 11 prosperity ratings 
-        getCounties(countyPage, countyPagesize, zip, ratings.education, ratings.freedom, ratings.safety, ratings.social, ratings.business, ratings.economic, ratings.infrastructure, ratings.governance, ratings.health, ratings.living, ratings.environment) 
+        const data = localStorage.getItem("user-ratings");
+
+        if (location.state == null){
+            if(data){
+                setUserRatings(JSON.parse(data));
+            }
+            } else {
+                setUserRatings(
+                    {
+                        environment: location.state.ratingData.environment,
+                        business: location.state.ratingData.business,
+                        education: location.state.ratingData.education,
+                        freedom: location.state.ratingData.freedom,
+                        safety: location.state.ratingData.safety,
+                        social: location.state.ratingData.social,
+                        economic: location.state.ratingData.economic,
+                        infrastructure: location.state.ratingData.infrastructure,
+                        governance: location.state.ratingData.governance,
+                        health: location.state.ratingData.health,
+                        living: location.state.ratingData.living,
+                    }
+                )
+            }
+        
+        getCounties(countyPage, countyPagesize, zip, userRatings[0].education, userRatings[0].freedom, userRatings[0].safety, userRatings[0].social, userRatings[0].business, userRatings[0].economic, userRatings[0].infrastructure, userRatings[0].governance, userRatings[0].health, userRatings[0].living, userRatings[0].environment) 
         .then(data => setCounties(data["results"]))
     }, [])
 
+    useEffect(() => {
+        localStorage.setItem('user-ratings', JSON.stringify(userRatings))
+    })
+    
     function testCities(countyID) {
         getCities(cityPage, cityPagesize, popLower, popUpper, countyID)
         .then(data=>setCities(data["results"]))
@@ -156,9 +155,21 @@ export default function QuizResults(){
         let CitiesList = results.map((item,index)=>{
             return (
                 <div className="card p-2 m-2" style={{width: "18%"}}>
-                    <Link to = "/listings">
-                        <h5 className="card-title align-self-center ">{item.city} ({item.Population})</h5>
+                    <OverlayTrigger
+                    delay={{ hide: 450, show: 300 }}
+                    overlay={(props) => (
+                        <Tooltip {...props}>
+                            {`Population: ${item.Population}`}
+                        </Tooltip>
+                    )}
+                    placement="bottom">
+                    <Link to ={{
+                        pathname: "/listings", 
+                        state: { stateData: { state: state, city: item.city } }
+                        }}>
+                        <h5 className="card-title align-self-center ">{item.city}</h5>
                     </Link>
+                    </OverlayTrigger>
                 </div>
             )
         })
@@ -171,19 +182,17 @@ export default function QuizResults(){
         getScores(countyId)
         .then(data=>setScores(data["results"])) 
     }
-  
-
 
     const expandRow = {
         
         renderer: (row) => (
-                <div>
-                    <h3> Cities in {row.county}, {row.state}</h3>
+                <div className='p-4'>
+                    <h3 className='mb-0'> Cities in {row.county}, {row.state}</h3>
+                    <p className='text-danger'> *Population on Hover</p>
                     
                     <div className = "d-flex flex-row flex-wrap">
                         {cities && showCities(cities)}
                     </div>
-
                     
                     <br/>
                 </div>
@@ -213,6 +222,7 @@ export default function QuizResults(){
 
             onExpand: (row, isExpand, rowIndex, e) => {
                 if (isExpand) {
+                    setState(row.id)
                     testCities(row.fips_code)
                 }
             },
@@ -249,7 +259,7 @@ export default function QuizResults(){
             text: '',
             formatter: (cellContent, row) => {
                 return (
-                    <div class='container'>
+                    <div>
                         <Button variant="primary"  onClick={handleShow(row.fips_code)}> 
                             Show Details 
                         </Button>
@@ -268,13 +278,13 @@ export default function QuizResults(){
         
             <div className='w-75 m-auto'>
                 <BootstrapTable 
-                keyField='fips_code' 
-                columns={ columns } 
-                data={ counties } 
-                hover 
-                condensed
-                expandRow={ expandRow }
-                pagination={paginationFactory(options)}
+                    keyField='fips_code' 
+                    columns={ columns } 
+                    data={ counties } 
+                    hover 
+                    condensed
+                    expandRow={ expandRow }
+                    pagination={paginationFactory(options)}
                 />
             </div>   
         
@@ -331,3 +341,5 @@ export default function QuizResults(){
         </div>  
     )
 }
+
+export default QuizResults

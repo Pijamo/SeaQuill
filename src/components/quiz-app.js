@@ -75,6 +75,7 @@ function App() {
       newStep++
     }
     else if (direction === "confirm"){
+      console.log(userData)
       history.push({ pathname: "/results", state: { ratingData: userData }})
     }
     else{
