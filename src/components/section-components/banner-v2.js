@@ -38,6 +38,7 @@ function BannerV5() {
 
 		const state = states.find(isState)
 
+		console.log(state)
 		history.push({ pathname: "/listings", state: { stateData: { state: state.stateCode, city: selCity } } })
 		// history.push({ pathname: "/listings", state: { ratingData: userData }})
 	}
