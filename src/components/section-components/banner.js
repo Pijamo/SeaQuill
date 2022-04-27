@@ -48,7 +48,7 @@ class Banner extends Component {
 						<div className="row">
 						<div className="col-lg-12">
 						<div className="section-title-area text-center">
-						<h1 className="section-title"> <br /> Find a new city</h1>
+						<h1 className="section-title"> <br /> Find new city</h1>
 						<p>Not sure where to move? Take this quiz to help help you decide.<br />
 						</p>
 						</div>
