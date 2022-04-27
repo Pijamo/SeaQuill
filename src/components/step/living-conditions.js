@@ -13,9 +13,8 @@ export default function LivingConditions() {
         <h2 className='text-4xl font-bold'> Living Conditions </h2>
         
         <p className='mt-10'>
-            Tation argumentum et usu, dicit viderer evertitur te has. Eu dictas
-            concludaturque usu, facete detracto patrioque an per, lucilius
-            pertinacia eu vel.
+        This pillar measures the degree to which a reasonable quality of life is 
+        experienced by all, including material resources, shelter, basic services, and connectivity.
         </p>
 
         <Rating 

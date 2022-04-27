@@ -13,9 +13,9 @@ export default function NaturalEnvironment() {
         <h2 className='text-4xl font-bold'> Natural Environment </h2>
         
         <p className='mt-10'>
-            Tation argumentum et usu, dicit viderer evertitur te has. Eu dictas
-            concludaturque usu, facete detracto patrioque an per, lucilius
-            pertinacia eu vel.
+            This pillar measures the aspects of the physical environment that have a direct 
+            effect on people in their daily lives and changes that might impact the prosperity 
+            of future generations.
         </p>
 
         <Rating 

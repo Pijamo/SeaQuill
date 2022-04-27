@@ -13,9 +13,9 @@ export default function Health() {
         <h2 className='text-4xl font-bold'> Health </h2>
         
         <p className='mt-10'>
-            Tation argumentum et usu, dicit viderer evertitur te has. Eu dictas
-            concludaturque usu, facete detracto patrioque an per, lucilius
-            pertinacia eu vel.
+        This pillar measures the extent to which people are healthy and have access to 
+        the necessary services to maintain good health, including health outcomes, 
+        health systems, illness and risk factors, and mortality rates.
         </p>
 
         <Rating 

@@ -13,9 +13,8 @@ export default function SocialCapital() {
         <h2 className='text-4xl font-bold'> Social Capital </h2>
         
         <p className='mt-10'>
-            Tation argumentum et usu, dicit viderer evertitur te has. Eu dictas
-            concludaturque usu, facete detracto patrioque an per, lucilius
-            pertinacia eu vel.
+        This pillar measures the strength of personal and social relationships, 
+        institutional trust, social norms, and civic participation in a country.
         </p>
 
         <Rating 
