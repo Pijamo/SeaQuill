@@ -12,19 +12,14 @@ function PropertyListings({ userChoice: { state, city } }) {
 	const [loading, setLoading] = useState(false);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [postsPerPage, setPostsPerPage] = useState(9);
-	const [userChoice, setUserChoice] = useState({
-		state: "MI",
-		city: "Detroit"
-	})
 
 	useEffect(() => {
 		const fetchPosts = async () => {
 			setLoading(true);
-
 			axios.request(options).then(function (response){
-				console.log(response.data.data.home_search.results);
+				// console.log(response.data.data.home_search.results);
 				const res = {data: response.data.data.home_search.results}
-				console.log(res);
+				// console.log(res);
 				setPosts(res.data);
 				setLoading(false);
 			}).catch(function (error) {
@@ -40,7 +35,7 @@ function PropertyListings({ userChoice: { state, city } }) {
 		const options = {
 			method: 'GET',
 			url: 'https://us-real-estate.p.rapidapi.com/v2/for-sale',
-			params: {offset: '0', limit: '42', state_code: state == null ? userChoice.state : state, city: city == null ? userChoice.city : city, sort: 'newest'},
+			params: {offset: '0', limit: '42', state_code: state, city: city, sort: 'newest'},
 			headers: {
 				'X-RapidAPI-Host': config.API_host,
 				'X-RapidAPI-Key': config.API_key

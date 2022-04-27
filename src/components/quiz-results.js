@@ -40,7 +40,7 @@ export default function QuizResults(){
      let [jobPagesize, setJobPagesize ] = useState(null)
 
      let [fips, setFips] = useState('')
-
+     
      const KeywordChangeHandler = (event) => {
          const value = event.target.value
          setKeyword(value)
@@ -49,7 +49,6 @@ export default function QuizResults(){
       function submitHandler(event){
           testJobs(keyword, fips)
       }
-
 
      //modal
      const [show, setShow] = useState(false);
@@ -71,6 +70,54 @@ export default function QuizResults(){
 
     const location = useLocation()
 
+    const [ratings, setRatings] = ([
+        {
+            environment: 1,
+            business: 1,
+            education: 1,
+            freedom: 1,
+            safety: 1,
+            social: 1,
+            economic: 1,
+            infrastructure: 1,
+            governance: 1,
+            health: 1,
+            living: 1
+        },
+    ])
+
+    // useEffect(() => {
+    //     const data = localStorage.getItem("user-ratings");
+        
+    //     if(location.state == null){
+    //         if (data) {
+    //             setRatings(JSON.parse(ratings));
+    //         }
+    //     } else {
+    //         console.log(location.state.ratingData)
+    //         setRatings([
+    //             {
+    //                 environment: location.state.ratingData.environment,
+    //                 business: location.state.ratingData.business,
+    //                 education: location.state.ratingData.education,
+    //                 freedom: location.state.ratingData.freedom,
+    //                 safety: location.state.ratingData.safety,
+    //                 social: location.state.ratingData.social,
+    //                 economic: location.state.ratingData.economic,
+    //                 infrastructure: location.state.ratingData.infrastructure,
+    //                 governance: location.state.ratingData.governance,
+    //                 health: location.state.ratingData.health,
+    //                 living: location.state.ratingData.living
+    //              }
+    //         ])
+    //     }
+        
+    // }, [])
+
+    useEffect(() => {
+        localStorage.setItem('user-ratings', JSON.stringify(ratings))
+    })
+
     // let ratings = location.state.ratingData
     // let environment = isNaN(ratings.environment) ? 1 : ratings.environment
     // let business = isNaN(ratings.business) ? 1 : ratings.business
@@ -83,12 +130,10 @@ export default function QuizResults(){
     // let governance = isNaN(ratings.governance) ? 1 : ratings.governance
     // let health= isNaN(ratings.health) ? 1 : ratings.health
     // let living = isNaN(ratings.living) ? 1 : ratings.living
-  
-    const ratingsHard = Array(11).fill(5) // HARD CODED VALUES (for quicker testing)
     
     useEffect(()=> {
         // page, pagesize, userzip, 11 prosperity ratings 
-        getCounties(countyPage, countyPagesize, zip, ...ratingsHard) 
+        getCounties(countyPage, countyPagesize, zip, ratings.education, ratings.freedom, ratings.safety, ratings.social, ratings.business, ratings.economic, ratings.infrastructure, ratings.governance, ratings.health, ratings.living, ratings.environment) 
         .then(data => setCounties(data["results"]))
     }, [])
 
