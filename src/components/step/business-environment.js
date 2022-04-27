@@ -13,9 +13,8 @@ export default function Business() {
         <h2 className='text-4xl font-bold'> Business Environment </h2>
         
         <p className='mt-10'>
-            Tation argumentum et usu, dicit viderer evertitur te has. Eu dictas
-            concludaturque usu, facete detracto patrioque an per, lucilius
-            pertinacia eu vel.
+        This pillar measures the extent to which investments are 
+        adequately protected and are readily accessible.
         </p>
 
         <Rating 
