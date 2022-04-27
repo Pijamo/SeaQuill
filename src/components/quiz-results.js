@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect, useCallback } from 'react';
 
 import Navbar from './global-components/navbar';
-import { Modal, Button, Container, Col, Row} from 'react-bootstrap';
+import { Modal, Button, Container, Col, Row, Form} from 'react-bootstrap';
 import PageHeader from './global-components/page-header'
 import Footer from './global-components/footer';
 import { useLocation, Link } from 'react-router-dom';
@@ -98,7 +98,7 @@ export default function QuizResults(){
             return (
                 <div className="card p-2 m-2" style={{width: "18%"}}>
                     <Link to = "/listings">
-                        <h5 className="card-title align-self-center">{item.city}</h5>
+                        <h5 className="card-title align-self-center ">{item.city} ({item.Population})</h5>
                     </Link>
                 </div>
             )
@@ -199,11 +199,65 @@ export default function QuizResults(){
             }
         }
     ];
-
+    const options = {sizePerPageList: [{text: '10', value: 10}, {text: '20', value: 20}, {text: '50', value: 50}
+    ] };
     return (
         <div>
             <Navbar />
             <PageHeader headertitle="Quiz Results"/>
+            
+            <Form>
+  <Row className="mb-3">
+    <Form.Group as={Col} controlId="formGridEmail">
+      <Form.Label>Email</Form.Label>
+      <Form.Control type="email" placeholder="Enter email" />
+    </Form.Group>
+
+    <Form.Group as={Col} controlId="formGridPassword">
+      <Form.Label>Password</Form.Label>
+      <Form.Control type="password" placeholder="Password" />
+    </Form.Group>
+  </Row>
+
+  <Form.Group className="mb-3" controlId="formGridAddress1">
+    <Form.Label>Address</Form.Label>
+    <Form.Control placeholder="1234 Main St" />
+  </Form.Group>
+
+  <Form.Group className="mb-3" controlId="formGridAddress2">
+    <Form.Label>Address 2</Form.Label>
+    <Form.Control placeholder="Apartment, studio, or floor" />
+  </Form.Group>
+
+  <Row className="mb-3">
+    <Form.Group as={Col} controlId="formGridCity">
+      <Form.Label>City</Form.Label>
+      <Form.Control />
+    </Form.Group>
+
+    <Form.Group as={Col} controlId="formGridState">
+      <Form.Label>State</Form.Label>
+      <Form.Select defaultValue="Choose...">
+        <option>Choose...</option>
+        <option>...</option>
+      </Form.Select>
+    </Form.Group>
+
+    <Form.Group as={Col} controlId="formGridZip">
+      <Form.Label>Zip</Form.Label>
+      <Form.Control />
+    </Form.Group>
+  </Row>
+
+  <Form.Group className="mb-3" id="formGridCheckbox">
+    <Form.Check type="checkbox" label="Check me out" />
+  </Form.Group>
+
+  <Button variant="primary" type="submit">
+    Submit
+  </Button>
+</Form>
+
             <div className='w-75 m-auto'>
                 <BootstrapTable 
                 keyField='fips_code' 
@@ -212,9 +266,11 @@ export default function QuizResults(){
                 hover 
                 condensed
                 expandRow={ expandRow }
-                pagination={paginationFactory()}
+                pagination={paginationFactory(options)}
                 />
             </div>   
+
+            
 
             <Modal show={show} onHide={handleClose}  >
                 <Modal.Header>

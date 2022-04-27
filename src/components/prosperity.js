@@ -16,7 +16,7 @@ return(
     margin={{ top: 5, right: 10, left: 0, bottom: 20 }}
     >
     <CartesianGrid horizontal={false} strokeDasharray="3 3" />
-    <XAxis  dataKey='score' type='number' tickCount='10' domain={[10, 100]} label={{value:'Score (out of 100)', dy: 25}}/>
+    <XAxis  dataKey='score' type='number' tickCount='6' domain={[0, 100]} label={{value:'Score (out of 100)', dy: 25}}/>
     <YAxis width={200} dataKey='metric' type='category'/>
     
     <Bar dataKey='score' label={{value:'Score', position: "right"}} fill='#097969' stroke='#444444'>
