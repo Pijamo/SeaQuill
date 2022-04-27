@@ -4,16 +4,18 @@ import Paginate from '../components/Paginate'
 import Posts from '../components/Posts.jsx';
 import Sorter from '../components/Sorter'
 import axios from 'axios';
+import config from '../../config.json'
 
-function PropertyListings() {
+function PropertyListings({ userChoice: { state, city } }) {
 	
 	const [posts, setPosts] = useState([]);
 	const [loading, setLoading] = useState(false);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [postsPerPage, setPostsPerPage] = useState(9);
-
-	
-	//for real estate
+	const [userChoice, setUserChoice] = useState({
+		state: "MI",
+		city: "Detroit"
+	})
 
 	useEffect(() => {
 		const fetchPosts = async () => {
@@ -38,10 +40,10 @@ function PropertyListings() {
 		const options = {
 			method: 'GET',
 			url: 'https://us-real-estate.p.rapidapi.com/v2/for-sale',
-			params: {offset: '0', limit: '42', state_code: 'MI', city: 'Detroit', sort: 'newest'},
+			params: {offset: '0', limit: '42', state_code: state == null ? userChoice.state : state, city: city == null ? userChoice.city : city, sort: 'newest'},
 			headers: {
-				'X-RapidAPI-Host': 'us-real-estate.p.rapidapi.com',
-				'X-RapidAPI-Key': '5acc196857mshe4a6c20d2ae946cp1583d9jsnb9d98e8ac7ef'
+				'X-RapidAPI-Host': config.API_host,
+				'X-RapidAPI-Key': config.API_key
 			}
 		};
 

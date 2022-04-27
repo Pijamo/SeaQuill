@@ -38,7 +38,7 @@ function BannerV5() {
 
 		const state = states.find(isState)
 
-		history.push({ pathname: "/listings", state: { stateData: { id: state.stateCode, city: selCity } } })
+		history.push({ pathname: "/listings", state: { stateData: { state: state.stateCode, city: selCity } } })
 		// history.push({ pathname: "/listings", state: { ratingData: userData }})
 	}
 
@@ -95,14 +95,49 @@ function BannerV5() {
 										</div>
 										<div className="tab-content">
 											<div className="tab-pane fade active show" id="ltn__form_tab_1_1">
+												<form onSubmit={handleSubmit}>
 												<div className='row'>
 													<div className="col-xl-3 col-lg-6 col-md-6">
 														<div className="border">
-															<input className='mb-0' type="text" placeholder="City" /></div>
+															<input 
+																list="cities"
+																className='mb-0' 
+																type="text" 
+																placeholder="City" 
+																value={selCity}
+																required onChange={handleCity}
+																/>
+															
+															<datalist id="cities">
+																{citiesMatch.splice(0,10).map((item, key) =>
+																<option key={key} value={item}/>
+																)}
+															</datalist>
+														</div>
 													</div>
 													<div className="col-xl-3 col-lg-4 col-md-4">
 														<div className="border">
-															<input className='mb-0' type="text" placeholder="State Code" /></div>
+														<input 
+																className='mb-0' 
+																type="text" 
+																placeholder="State: Eg. Iowa"
+																list= {(statesMatch.length == 0) ? "ada" : "states" }
+																value = {selState}
+																required onChange = {handleState}
+															/>
+
+															<datalist id="ada">
+																{states.map((item, key) =>
+																<option key={key} value={item.state}/>
+																)}
+															</datalist>
+															
+															<datalist id="states">
+																{statesMatch.map((item, key) =>
+																<option key={key} value={item.state}/>
+																)}
+															</datalist>
+															</div>
 													</div>
 													<div className="col-xl-2 col-lg-4 col-md-4">
 														<div className="border">
@@ -114,10 +149,12 @@ function BannerV5() {
 													</div>
 													<div className="col-xl-2 col-lg-4 col-md-4">
 														<div className="btn-wrapper text-center mt-1 go-top">
-															<Link to="/listings" className="btn theme-btn-1 btn-effect-1 text-uppercase">Search</Link>
+															{/* <Link to="/listings" className="btn theme-btn-1 btn-effect-1 text-uppercase">Search</Link> */}
+															<input className="btn mb-0" type='submit' value="Submit"/>
 														</div>
 													</div>
 												</div>
+												</form>
 											</div>
 											{/* <div className="tab-pane fade" id="ltn__form_tab_1_2">
 												<div className='row'>
