@@ -64,6 +64,18 @@ const addUser = async (email, password, firstName, lastName, gender, dob, zip) =
 }
 
 
+// ********************************************
+//            SEARCH ROUTES
+// ********************************************
+
+const getCityState = async () => {
+    var res = await fetch(`http://${config.server_host}:${config.server_port}/cityState`, {
+        method: 'GET',
+    })
+
+    return res.json()
+}
+
 export {
     getUser,
     addUser,
@@ -71,4 +83,6 @@ export {
     getScores,
     getCities,
     getClimate,
-    getJobs}
+    getJobs,
+    getCityState
+}
