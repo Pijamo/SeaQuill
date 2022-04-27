@@ -8,7 +8,7 @@ class Navbar extends Component {
     render() {
         let publicUrl = process.env.PUBLIC_URL+'/'
         return (
-		<div>
+		<div >
            <header className="ltn__header-area ltn__header-5 ltn__header-transparent--- gradient-color-4---">
 			<div className="ltn__header-top-area section-bg-6 top-area-color-white---">
 				<div className="container">

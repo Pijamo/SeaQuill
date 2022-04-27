@@ -1,8 +1,8 @@
 import React, { useContext, useState, useEffect, useCallback } from 'react';
 
 import Navbar from './global-components/navbar';
-import { Modal, Button } from 'react-bootstrap';
-
+import { Modal, Button, Container, Col, Row, Form} from 'react-bootstrap';
+import PageHeader from './global-components/page-header'
 import Footer from './global-components/footer';
 import { useLocation, Link } from 'react-router-dom';
 
@@ -33,12 +33,23 @@ export default function QuizResults(){
      //Retrieve climate information for the selected county
      let [climate, setClimate] = useState([])
 
-     //Retrieve cities for a particular county
+     //Retrieve jobs for a particular county
      let [jobs, setJobs] = useState([])
-     let [jobTable, setJobTable] = useState()
-     let [jobTitle, setJobTitle] = useState()
      let [jobPage, setJobPage] = useState(null)
+     let [keyword, setKeyword] = useState('data')
      let [jobPagesize, setJobPagesize ] = useState(null)
+
+     let [fips, setFips] = useState('')
+
+     const KeywordChangeHandler = (event) => {
+         const value = event.target.value
+         setKeyword(value)
+      };
+
+      function submitHandler(event){
+          testJobs(keyword, fips)
+      }
+
 
      //modal
      const [show, setShow] = useState(false);
@@ -47,9 +58,12 @@ export default function QuizResults(){
     //      setShow(true);
     //     };
     const handleShow = useCallback(
+        
         (fips_code) => () => {
+            setFips(fips_code)
             testClimate(fips_code);
-            testJobs(fips_code);
+            testJobs(keyword, fips_code);
+            testScores(fips_code);
             setShow(true);
         },
         [],
@@ -88,17 +102,9 @@ export default function QuizResults(){
         .then(data=>setClimate(data["results"]))
     }
 
-    function testJobs(countyId) {
-        getJobs(jobPage, jobPagesize, "chem", countyId)
+    function testJobs(keyword, countyId) {
+        getJobs(jobPage, jobPagesize, keyword, countyId)
         .then(data=>setJobs(data["results"])) 
-    }
-
-    function showCounties(results){
-        let CountiesList = results.map((item,index)=>{
-            return <div>{item.county}, {item.state}, {item.fips_code} - {item.total_score.toFixed(2)}</div>
-
-        })
-        return CountiesList
     }
 
     function showCities(results){
@@ -106,35 +112,29 @@ export default function QuizResults(){
             return (
                 <div className="card p-2 m-2" style={{width: "18%"}}>
                     <Link to = "/listings">
-                        <h5 className="card-title align-self-center">{item.city}</h5>
+                        <h5 className="card-title align-self-center ">{item.city} ({item.Population})</h5>
                     </Link>
                 </div>
             )
         })
         return CitiesList
     }
-
-    function showClimate(results){
-        let ClimateList = results.map((item,index)=>{
-            return <div>{item.month}, {item.averageTemp.toFixed(1)}, {item.minTemp.toFixed(1)},
-            {item.maxTemp.toFixed(1)}, {item.totalRain.toFixed(2)}, {item.totalSnow.toFixed(2)} </div>
-
-        })
-        return ClimateList
-    }
     
+    //Retrieve prosperity score for a given county
+    let [scores, setScores] = useState()
+    function testScores(countyId) {
+        getScores(countyId)
+        .then(data=>setScores(data["results"])) 
+    }
+  
+
 
     const expandRow = {
         
         renderer: (row) => (
                 <div>
-                    <p>{ `This Expand row is belong to rowKey ${row.county}` }</p>
+                    <h3> Cities in {row.county}, {row.state}</h3>
                     
-                    {/* {jobs && Jobs(jobs)}
-                    <br/>
-
-                    {climate && Climate(climate)}
-                    <br/> */}
                     <div className = "d-flex flex-row flex-wrap">
                         {cities && showCities(cities)}
                     </div>
@@ -158,21 +158,17 @@ export default function QuizResults(){
             expandColumnRenderer: ({ expanded }) => {
             if (expanded) {
                 return (
-                <b>-</b>
+                '\u25BC'
                 );
             }
             return (
-                <b>...</b>
+                '\u27A4'
             )
             },
 
             onExpand: (row, isExpand, rowIndex, e) => {
                 if (isExpand) {
-                    console.log(row.fips_code)
-                    // testJobs(row.fips_code)
-                    // testClimate(row.fips_code)
                     testCities(row.fips_code)
-                    console.log(jobs)
                 }
             },
 
@@ -205,22 +201,26 @@ export default function QuizResults(){
         {
             dataField: "df1",
             isDummyField: true,
-            text: 'Action 1',
+            text: '',
             formatter: (cellContent, row) => {
                 return (
-                    <>
-                        <Button variant="primary" size="sm" onClick={handleShow(row.fips_code)}> 
+                    <div class='container'>
+                        <Button variant="primary"  onClick={handleShow(row.fips_code)}> 
                             Show Details 
                         </Button>
-                    </>
+                    </div>
                 )
             }
         }
     ];
-
+    const options = {sizePerPageList: [{text: '10', value: 10}, {text: '20', value: 20}, {text: '50', value: 50}
+    ] };
     return (
         <div>
             <Navbar />
+            <PageHeader headertitle="Quiz Results"/>
+            
+        
             <div className='w-75 m-auto'>
                 <BootstrapTable 
                 keyField='fips_code' 
@@ -229,18 +229,51 @@ export default function QuizResults(){
                 hover 
                 condensed
                 expandRow={ expandRow }
-                pagination={paginationFactory()}
+                pagination={paginationFactory(options)}
                 />
             </div>   
+        
 
-            <Modal show={show} onHide={handleClose} dialogClassName="modal-90w">
-                <Modal.Header closeButton>
-                <Modal.Title>Modal heading</Modal.Title>
+            <Modal show={show} onHide={handleClose}  >
+                <Modal.Header>
+                <Modal.Title id='modal-header'>County Details</Modal.Title>
                 </Modal.Header>
 
                 <Modal.Body>
-                    {jobs && Jobs(jobs)}
-                    {climate && Climate(climate)}
+                    
+               
+                    <Container>
+                        <Row>
+                        <Col>
+                            {climate && Climate(climate)} </Col>
+                            <Col>{scores && Prosperity(scores)} </Col>
+                        </Row>
+                       
+                    </Container>
+    <Container>
+        
+        {/*Advanced Filter */}
+        <Form onSubmit={submitHandler}>
+            <Row className="mb-2">
+        
+            <Col>
+                <Form.Group as={Col} controlId="formGridJob">
+                    <Form.Control onChange={KeywordChangeHandler} type="text" placeholder="Job Keyword (E.g. Data)" />
+                </Form.Group>
+            </Col>
+            
+            <Col>
+                <Button variant="secondary" type="submit">
+                    Submit
+                </Button>
+                </Col>
+                </Row>  
+    </Form>
+    {jobs && Jobs(jobs)}   
+         
+    </Container>
+    
+      
                 </Modal.Body>
                 
                 <Modal.Footer>

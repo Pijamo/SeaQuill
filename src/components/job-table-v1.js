@@ -7,20 +7,21 @@ export default function Jobs(jobs){
 
     function salaryFormatter(cell, row) {
        
-      
         return (
           <span>$ { cell.toLocaleString() }</span>
         );
     }
 
     const data = jobs
+    const options = {
+      sizePerPageList: [{text: '5', value: 5}, {text: '10', value: 10}, {text: '20', value: 20}
+    ] };
 
     const columns = [
             {
               text: 'Job Title',
               dataField: 'title', 
               sort: true
-      
             },
             {
               text: 'Average Salary',
@@ -44,6 +45,12 @@ export default function Jobs(jobs){
 
         
         
-    return <BootstrapTable  keyField={'title'} data={data} noDataIndication="Table is Empty" columns={columns} pagination={paginationFactory()}/>
+    return <BootstrapTable  
+              keyField={'title'} 
+              data={data} 
+              noDataIndication="Table is Empty" 
+              columns={columns} 
+              pagination={paginationFactory(options)}
+            />
 
 }
