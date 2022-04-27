@@ -1,5 +1,5 @@
 import React from 'react';
-import {BarChart, LabelList, XAxis, YAxis, Tooltip,CartesianGrid, Legend, Bar} from 'recharts';
+import {BarChart, LabelList, XAxis, YAxis, Tooltip,CartesianGrid, Legend, Bar, ResponsiveContainer} from 'recharts';
 
 export default function Prosperity(scores){
 
@@ -7,14 +7,13 @@ var data = scores;
 
 
 return(
-    <div><h4>Individual Prosperity Scores</h4>
-
+    <div><h4>Individual Prosperity Scores</h4><div  id='sub-plot'>
+    <ResponsiveContainer>
     <BarChart
-    width={600}
-    height={600}
+
     data={data}
     layout='vertical'
-    margin={{ top: 5, right: 10, left: 10, bottom: 20 }}
+    margin={{ top: 5, right: 10, left: 0, bottom: 20 }}
     >
     <CartesianGrid horizontal={false} strokeDasharray="3 3" />
     <XAxis  dataKey='score' type='number' tickCount='10' domain={[10, 100]} label={{value:'Score (out of 100)', dy: 25}}/>
@@ -24,6 +23,8 @@ return(
     </Bar>
 
     </BarChart>
+    </ResponsiveContainer>
+    </div>
     </div>
 )
 
