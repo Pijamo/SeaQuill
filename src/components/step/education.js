@@ -13,9 +13,9 @@ export default function Education() {
         <h2 className='text-4xl font-bold'> Education </h2>
         
         <p className='mt-10'>
-            Tation argumentum et usu, dicit viderer evertitur te has. Eu dictas
-            concludaturque usu, facete detracto patrioque an per, lucilius
-            pertinacia eu vel.
+        This pillar measures enrolment, outcomes, and quality across four 
+        stages of education (pre-primary, primary, secondary, and tertiary education), 
+        as well as the skills in the adult population.
         </p>
 
 
