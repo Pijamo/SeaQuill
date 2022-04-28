@@ -13,9 +13,9 @@ export default function SafetySecurity() {
         <h2 className='text-4xl font-bold'> Safety Security </h2>
         
         <p className='mt-10'>
-            Tation argumentum et usu, dicit viderer evertitur te has. Eu dictas
-            concludaturque usu, facete detracto patrioque an per, lucilius
-            pertinacia eu vel.
+        This pillar the degree to which war, conflict, terror, and crime have 
+        destabilised the security of individuals, both immediately 
+        and through longer lasting effects.
         </p>
 
         <Rating 

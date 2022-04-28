@@ -27,17 +27,17 @@ function App() {
   const [finalData, setFinalData] = useState([]);
 
   const steps = [
-    "Natural Environment",
-    "Personal Freedom",
-    "Safety and Security",
-    "Social Capital",
-    "Business Environment",
-    "Economic Quality",
-    "Infrastructure",
-    "Governance",
-    "Health",
-    "Living Conditions",
-    "Education",
+    "", //Natural Environment
+    "", //Personal Freedom
+    "", //Safety and Security"
+    "", //Social Capital
+    "", //Business Environment
+    "", //Economic Quality
+    "", //Infrastructure
+    "", //Governance
+    "", //Health
+    "", //Living Conditions"
+    "", //Education
   ];
 
   const displayStep = (step) => {

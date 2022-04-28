@@ -17,6 +17,18 @@ class Banner extends Component {
 			<div className='position-relative'>
 				<div className='row vh-100 position-relative'>
 					<Link to="/Search" className='col border-end border-2'>
+						
+						<div className="container">
+						<div className="row">
+						<div className="col-lg-12">
+						<div className="section-title-area text-center">
+						<h1 className="section-title"> <br />Search active listings</h1>
+						<p>Already know where you want to move? See what's available! <br />
+						</p>
+						</div>
+						</div>
+						</div>
+						</div>
 						<Player
 							hover
 							loop
@@ -28,6 +40,17 @@ class Banner extends Component {
 						</Player>
 					</Link>
 						<Link to="/quiz" className='col border-start border-2'>
+						<div className="container">
+						<div className="row">
+						<div className="col-lg-12">
+						<div className="section-title-area text-center">
+						<h1 className="section-title"> <br /> Find new city</h1>
+						<p>Not sure where to move? Take this quiz to help help you decide.<br />
+						</p>
+						</div>
+						</div>
+						</div>
+						</div>
 							<Player
 								hover
 								loop

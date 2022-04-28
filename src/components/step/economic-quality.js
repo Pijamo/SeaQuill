@@ -13,9 +13,8 @@ export default function EconomicQuality() {
         <h2 className='text-4xl font-bold'> Economic Quality </h2>
         
         <p className='mt-10'>
-            Tation argumentum et usu, dicit viderer evertitur te has. Eu dictas
-            concludaturque usu, facete detracto patrioque an per, lucilius
-            pertinacia eu vel.
+        This pillar measures how well an economy is 
+        equipped to generate wealth sustainably and with the full engagement of the workforce.
         </p>
 
         <Rating 
