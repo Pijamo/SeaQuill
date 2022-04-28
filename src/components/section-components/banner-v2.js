@@ -151,7 +151,7 @@ function BannerV5() {
 													<div className="col-xl-2 col-lg-4 col-md-4">
 														<div className="btn-wrapper text-center mt-1 go-top">
 															{/* <Link to="/listings" className="btn theme-btn-1 btn-effect-1 text-uppercase">Search</Link> */}
-															<input className="btn mb-0" type='submit' value="Submit"/>
+															<input className="btn mb-0" type='submit' value="Submit" style={{backgroundColor:"rgb(0,99,167)", color:"white"}}/>
 														</div>
 													</div>
 												</div>

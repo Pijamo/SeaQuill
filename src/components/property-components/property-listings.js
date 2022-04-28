@@ -4,6 +4,7 @@ import Paginate from '../components/Paginate'
 import Posts from '../components/Posts.jsx';
 import Sorter from '../components/Sorter'
 import axios from 'axios';
+import Sidebar from './filter'
 import config from '../../config.json'
 
 function PropertyListings({ userChoice: { state, city } }) {
@@ -11,7 +12,7 @@ function PropertyListings({ userChoice: { state, city } }) {
 	const [posts, setPosts] = useState([]);
 	const [loading, setLoading] = useState(false);
 	const [currentPage, setCurrentPage] = useState(1);
-	const [postsPerPage, setPostsPerPage] = useState(9);
+	const [postsPerPage, setPostsPerPage] = useState(6);
 
 	useEffect(() => {
 		const fetchPosts = async () => {
@@ -68,7 +69,6 @@ function PropertyListings({ userChoice: { state, city } }) {
 								<Posts posts={currentPosts} loading={loading}/>
 								<Paginate postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} currentPage={currentPage}/>
 							</div>
-							
 						</div>
 					</div>
 				</div>
