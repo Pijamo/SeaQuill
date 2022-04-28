@@ -13,6 +13,8 @@ function BannerV5() {
 	const [selCity, setSelCity] = useState('')
 	const [selState, setSelState] = useState('')
 	const [loading, setLoading] = useState(false);
+	const [minPrice, setMinPrice] = useState('');
+	const [maxPrice, setMaxPrice] = useState('')
 
 	useEffect(() => {
 
@@ -39,7 +41,7 @@ function BannerV5() {
 		const state = states.find(isState)
 
 		console.log(state)
-		history.push({ pathname: "/listings", state: { stateData: { state: state.stateCode, city: selCity } } })
+		history.push({ pathname: "/listings", state: { stateData: { state: state.stateCode, city: selCity, minPrice: minPrice, maxPrice: maxPrice }} })
 		// history.push({ pathname: "/listings", state: { ratingData: userData }})
 	}
 
@@ -51,6 +53,14 @@ function BannerV5() {
 		const value = event.target.value
 		setSelCity(value)
 		searchCity(value)
+	}
+
+	function handleMaxPrice(e){
+		setMaxPrice(e.target.value)
+	}
+
+	function handleMinPrice(e){
+		setMinPrice(e.target.value)
 	}
 
 	function searchCity(value) {
@@ -142,16 +152,27 @@ function BannerV5() {
 													</div>
 													<div className="col-xl-2 col-lg-4 col-md-4">
 														<div className="border">
-															<input className='mb-0' type="text" placeholder="Min Price" /></div>
+															<input className='mb-0' 
+															type="text" 
+															placeholder="Min Price"
+															value={minPrice}
+															onChange={handleMinPrice}
+															/>
+															</div>
 													</div>
 													<div className="col-xl-2 col-lg-4 col-md-4">
 														<div className="border">
-															<input className='mb-0' type="text" placeholder="Max Price" /></div>
+															<input className='mb-0' 
+															type="text" 
+															placeholder="Max Price"
+															value={maxPrice}
+															onChange={handleMaxPrice}
+															/></div>
 													</div>
 													<div className="col-xl-2 col-lg-4 col-md-4">
 														<div className="btn-wrapper text-center mt-1 go-top">
 															{/* <Link to="/listings" className="btn theme-btn-1 btn-effect-1 text-uppercase">Search</Link> */}
-															<input className="btn mb-0" type='submit' value="Submit"/>
+															<input className="btn mb-0" type='submit' value="Submit" style={{backgroundColor:"rgb(0,99,167)", color:"white"}}/>
 														</div>
 													</div>
 												</div>

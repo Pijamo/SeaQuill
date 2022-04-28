@@ -34,7 +34,7 @@ class Banner extends Component {
 							loop
 							src="https://assets7.lottiefiles.com/packages/lf20_xycki5.json"
 							style={{width: '80%' }}
-							className="position-absolute top-50 start-50 translate-middle"
+							className="position-absolute top-50 start-50 translate-middle teste"
 						>
 							<Controls visible={false} buttons={['play', 'repeat', 'frame', 'debug']} />
 						</Player>
@@ -45,7 +45,7 @@ class Banner extends Component {
 						<div className="col-lg-12">
 						<div className="section-title-area text-center">
 						<h1 className="section-title"> <br /> Find new city</h1>
-						<p>Not sure where to move? Take this quiz to help help you decide.<br />
+						<p>Not sure where to move? Take this quiz to help you decide.<br />
 						</p>
 						</div>
 						</div>
@@ -56,7 +56,7 @@ class Banner extends Component {
 								loop
 								src="https://assets7.lottiefiles.com/packages/lf20_OKUNmn.json"
 								style={{width: '80%' }}
-								className="position-absolute top-50 start-50 translate-middle"
+								className="position-absolute top-50 start-50 translate-middle teste"
 							>
 								<Controls visible={false} buttons={['play', 'repeat', 'frame', 'debug']} />
 							</Player>

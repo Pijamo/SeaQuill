@@ -87,21 +87,6 @@ const QuizResults = () =>{
             living: 1
         },
     ])
-
-    
-
-    // let ratings = location.state.ratingData
-    // let environment = isNaN(ratings.environment) ? 1 : ratings.environment
-    // let business = isNaN(ratings.business) ? 1 : ratings.business
-    // let education = isNaN(ratings.education) ? 1 : ratings.education
-    // let freedom = isNaN(ratings.freedom) ? 1 : ratings.freedom
-    // let safety = isNaN(ratings.safety) ? 1 : ratings.safety
-    // let social = isNaN(ratings.social) ? 1 : ratings.social
-    // let economic = isNaN(ratings.economic) ? 1 : ratings.economic
-    // let infrastructure = isNaN(ratings.infrastructure) ? 1 : ratings.infrastructure
-    // let governance = isNaN(ratings.governance) ? 1 : ratings.governance
-    // let health= isNaN(ratings.health) ? 1 : ratings.health
-    // let living = isNaN(ratings.living) ? 1 : ratings.living
     
     useEffect(()=> {
         const data = localStorage.getItem("user-ratings");
@@ -308,7 +293,7 @@ const QuizResults = () =>{
     <Container>
         
         {/*Advanced Filter */}
-        <Form onSubmit={submitHandler}>
+        <Form onSubmit={submitHandler} className="mt-5">
             <Row className="mb-2">
         
             <Col>

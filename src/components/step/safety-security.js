@@ -13,7 +13,7 @@ export default function SafetySecurity() {
         <h2 className='text-4xl font-bold'> Safety Security </h2>
         
         <p className='mt-10'>
-        This pillar the degree to which war, conflict, terror, and crime have 
+        This pillar measures the degree to which war, conflict, terror, and crime have 
         destabilised the security of individuals, both immediately 
         and through longer lasting effects.
         </p>

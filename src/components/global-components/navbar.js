@@ -49,9 +49,9 @@ class Navbar extends Component {
 						<li>
 							<Link to="#"><i className="icon-user" /></Link>
 							<ul className="go-top">
-							<li><Link to="/login">Sign in</Link></li>
-							<li><Link to="/register">Register</Link></li>
-							<li><Link to="/my-account">My Account</Link></li>
+							<li><Link to="#">Sign in</Link></li>
+							<li><Link to="#">Register</Link></li>
+							<li><Link to="#">My Account</Link></li>
 							</ul>
 						</li>
 						</ul>
