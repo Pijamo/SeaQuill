@@ -42,12 +42,11 @@ const Listings = () => {
         localStorage.setItem('user-choice', JSON.stringify(userData))
     })
 
-    
-
     if(loading){
         return <div>...Loading</div>
     } else {
         return <div>
+            {console.log(userData)}
         <Navbar />
         <PageHeader headertitle="Listings" />
         <PropertyListings userChoice={userData}/>

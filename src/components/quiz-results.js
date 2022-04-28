@@ -23,6 +23,8 @@ const QuizResults = () =>{
     let [countyPagesize, setCountyPagesize ] = useState(20)
     let [zip, setZip] = useState(0)
 
+    const [loading, setLoading] = useState(false)
+
     //Retrieve cities for a particular county
      let [cities, setCities] = useState([])
      let [popLower, setPopLower] = useState(null)
@@ -42,6 +44,8 @@ const QuizResults = () =>{
      let [fips, setFips] = useState('')
 
      let [state, setState] = useState('')
+
+     const [testData, setTestData] = useState(null)
      
      const KeywordChangeHandler = (event) => {
          const value = event.target.value
@@ -74,21 +78,22 @@ const QuizResults = () =>{
 
     const [userRatings, setUserRatings] = useState([
         {
-            environment: 1,
-            business: 1,
-            education: 1,
-            freedom: 1,
-            safety: 1,
-            social: 1,
-            economic: 1,
-            infrastructure: 1,
-            governance: 1,
-            health: 1,
-            living: 1
+            environment: location.state.ratingData.environment,
+            business: location.state.ratingData.business,
+            education: location.state.ratingData.education,
+            freedom: location.state.ratingData.freedom,
+            safety: location.state.ratingData.safety,
+            social: location.state.ratingData.social,
+            economic: location.state.ratingData.economic,
+            infrastructure: location.state.ratingData.infrastructure,
+            governance: location.state.ratingData.governance,
+            health: location.state.ratingData.health,
+            living: location.state.ratingData.living,
         },
     ])
     
     useEffect(()=> {
+        setLoading(true)
         const data = localStorage.getItem("user-ratings");
 
         if (location.state == null){
@@ -113,6 +118,8 @@ const QuizResults = () =>{
                 )
             }
         
+        setLoading(false)
+
         getCounties(countyPage, countyPagesize, zip, userRatings[0].education, userRatings[0].freedom, userRatings[0].safety, userRatings[0].social, userRatings[0].business, userRatings[0].economic, userRatings[0].infrastructure, userRatings[0].governance, userRatings[0].health, userRatings[0].living, userRatings[0].environment) 
         .then(data => setCounties(data["results"]))
     }, [])
@@ -255,11 +262,16 @@ const QuizResults = () =>{
     ];
     const options = {sizePerPageList: [{text: '10', value: 10}, {text: '20', value: 20}, {text: '50', value: 50}
     ] };
+
+    if(loading){
+        return <div>
+            ...Loading
+        </div>
+    } else {
     return (
         <div>
             <Navbar />
             <PageHeader headertitle="Quiz Results"/>
-            
         
             <div className='w-75 m-auto'>
                 <BootstrapTable 
@@ -325,6 +337,7 @@ const QuizResults = () =>{
             <Footer />
         </div>  
     )
+}
 }
 
 export default QuizResults
