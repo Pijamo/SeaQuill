@@ -76,7 +76,7 @@ const QuizResults = () =>{
 
     const location = useLocation()
 
-    const [userRatings, setUserRatings] = useState([
+    const [userRatings, setUserRatings] = useState(
         {
             environment: location.state.ratingData.environment,
             business: location.state.ratingData.business,
@@ -90,7 +90,7 @@ const QuizResults = () =>{
             health: location.state.ratingData.health,
             living: location.state.ratingData.living,
         },
-    ])
+    )
     
     useEffect(()=> {
         setLoading(true)
@@ -120,7 +120,7 @@ const QuizResults = () =>{
         
         setLoading(false)
 
-        getCounties(countyPage, countyPagesize, zip, userRatings[0].education, userRatings[0].freedom, userRatings[0].safety, userRatings[0].social, userRatings[0].business, userRatings[0].economic, userRatings[0].infrastructure, userRatings[0].governance, userRatings[0].health, userRatings[0].living, userRatings[0].environment) 
+        getCounties(countyPage, countyPagesize, zip, userRatings.education, userRatings.freedom, userRatings.safety, userRatings.social, userRatings.business, userRatings.economic, userRatings.infrastructure, userRatings.governance, userRatings.health, userRatings.living, userRatings.environment) 
         .then(data => setCounties(data["results"]))
     }, [])
 
