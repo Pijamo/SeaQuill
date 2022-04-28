@@ -12,7 +12,9 @@ const Listings = () => {
     const [userData, setUserData] = useState([
         {
             state: "",
-            city: ""
+            city: "",
+            minPrice: null,
+            maxPrice: null
         },
     ])
 
@@ -27,7 +29,9 @@ const Listings = () => {
             setUserData(
                 {
                     state: location.state.stateData.state,
-                    city: location.state.stateData.city
+                    city: location.state.stateData.city,
+                    minPrice: location.state.stateData.minPrice,
+                    maxPrice: location.state.stateData.maxPrice
                  }
             )
         }

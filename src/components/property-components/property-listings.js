@@ -7,7 +7,7 @@ import axios from 'axios';
 import Sidebar from './filter'
 import config from '../../config.json'
 
-function PropertyListings({ userChoice: { state, city } }) {
+function PropertyListings({ userChoice: { state, city, minPrice, maxPrice } }) {
 	
 	const [posts, setPosts] = useState([]);
 	const [loading, setLoading] = useState(false);
@@ -19,7 +19,7 @@ function PropertyListings({ userChoice: { state, city } }) {
 			setLoading(true);
 			axios.request(options).then(function (response){
 				// console.log(response.data.data.home_search.results);
-				const res = {data: response.data.data.home_search.results}
+				const res = {data: response.data.data?.home_search.results}
 				// console.log(res);
 				setPosts(res.data);
 				setLoading(false);
@@ -36,7 +36,7 @@ function PropertyListings({ userChoice: { state, city } }) {
 		const options = {
 			method: 'GET',
 			url: 'https://us-real-estate.p.rapidapi.com/v2/for-sale',
-			params: {offset: '0', limit: '42', state_code: state, city: city, sort: 'newest'},
+			params: {offset: '0', limit: '42', state_code: state, city: city, sort: 'newest', price_min: minPrice, price_max: maxPrice},
 			headers: {
 				'X-RapidAPI-Host': config.API_host,
 				'X-RapidAPI-Key': config.API_key

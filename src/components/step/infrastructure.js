@@ -13,9 +13,8 @@ export default function Infrastructure() {
         <h2 className='text-4xl font-bold'> Infrastructure </h2>
         
         <p className='mt-10'>
-            Tation argumentum et usu, dicit viderer evertitur te has. Eu dictas
-            concludaturque usu, facete detracto patrioque an per, lucilius
-            pertinacia eu vel.
+            This pillar measures the quality of the infrastructure
+            that enables trade, and distortions in the market for goods and services.
         </p>
 
         <Rating 
