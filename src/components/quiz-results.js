@@ -78,17 +78,17 @@ const QuizResults = () =>{
 
     const [userRatings, setUserRatings] = useState([
         {
-            environment: location.state.ratingData.environment == null ? 1: location.state.ratingData.environment,
-            business: location.state.ratingData.business == null ? 1:  location.state.ratingData.business,
-            education: location.state.ratingData.education == null ? 1:  location.state.ratingData.education,
-            freedom: location.state.ratingData.freedom == null ? 1:  location.state.ratingData.freedom,
-            safety: location.state.ratingData.safety == null ? 1:  location.state.ratingData.safety,
-            social: location.state.ratingData.social == null ? 1:  location.state.ratingData.social,
-            economic: location.state.ratingData.economic == null ? 1:  location.state.ratingData.economic,
-            infrastructure: location.state.ratingData.infrastructure == null ? 1:  location.state.ratingData.infrastructure,
-            governance: location.state.ratingData.governance == null ? 1:  location.state.ratingData.governance,
-            health: location.state.ratingData.health == null ? 1:  location.state.ratingData.health,
-            living: location.state.ratingData.living == null ? 1:  location.state.ratingData.living,
+            environment: location.state?.ratingData.environment == null ? 1: location.state.ratingData.environment,
+            business: location.state?.ratingData.business == null ? 1:  location.state.ratingData.business,
+            education: location.state?.ratingData.education == null ? 1:  location.state.ratingData.education,
+            freedom: location.state?.ratingData.freedom == null ? 1:  location.state.ratingData.freedom,
+            safety: location.state?.ratingData.safety == null ? 1:  location.state.ratingData.safety,
+            social: location.state?.ratingData.social == null ? 1:  location.state.ratingData.social,
+            economic: location.state?.ratingData.economic == null ? 1:  location.state.ratingData.economic,
+            infrastructure: location.state?.ratingData.infrastructure == null ? 1:  location.state.ratingData.infrastructure,
+            governance: location.state?.ratingData.governance == null ? 1:  location.state.ratingData.governance,
+            health: location.state?.ratingData.health == null ? 1:  location.state.ratingData.health,
+            living: location.state?.ratingData.living == null ? 1:  location.state.ratingData.living,
         },
     ])
     
